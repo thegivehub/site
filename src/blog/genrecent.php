@@ -32,8 +32,8 @@ for ($i=0; $i < 5; $i++) {
     $obj->subtitle = $subtitle;
     $obj->title = $title;
     $obj->category = "Charity";
-    $obj->post_image = "/static/img/blog-{$cnt}.jpg";
-    $obj->link = "/static/blog/$outfile";
+    $obj->post_image = "/site/img/blog-{$cnt}.jpg";
+    $obj->link = "/site/blog/$outfile";
     if ($title != "") {
     $myposts[] = preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
         global $obj;
