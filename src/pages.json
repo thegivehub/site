@@ -134,6 +134,16 @@
         ]
     },
     {
+        "title": "Analytics",
+        "file": "analytics.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/analytics.html",
+            "components/end.html"
+        ]
+    },
+    {
         "title": "Volunteer",
         "file": "volunteer.html",
         "templates": [

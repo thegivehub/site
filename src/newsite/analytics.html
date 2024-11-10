@@ -72,11 +72,10 @@
                         <a href="about.html" class="nav-item nav-link">About</a>
                         <a href="causes.html" class="nav-item nav-link">Causes</a>
                         <a href="event.html" class="nav-item nav-link">Events</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="blog.php" class="nav-item nav-link">Blog</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
-                                <a href="single.html" class="dropdown-item">Detail Page</a>
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
                                 <a href="donate.html" class="dropdown-item">Donate Now</a>
@@ -96,78 +95,40 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Blog</h2>
+                        <h2>Analytics</h2>
                     </div>
                     <div class="col-12">
                         <a href="">Home</a>
-                        <a href="">Blog</a>
+                        <a href="">Analytics</a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Page Header End -->
-        <!-- Blog Start -->
-        <div class="blog">
-            <div class="container">
-                <div class="section-header text-center">
-                    <p>Our Blog</p>
-                    <h2>Latest news & articles directly from our blog</h2>
-                </div>
-                <div class="row">
-<?php
-$tpl = <<<EOL
-    <div class="col-lg-4">
-        <div class="blog-item">
-            <div class="blog-img">
-                <img src="%%post_image%%" alt="Image">
-            </div>
-            <div class="blog-text">
-                <h3><a href="%%url%%">%%title%%</a></h3>
-                <h4>%%subtitle%%</h4>
-                <p>
-                    %%excerpt%%
-                </p>
-            </div>
-            <div class="blog-meta">
-                <p><i class="fa fa-user"></i><a href="">Chris Robison</a></p>
-                <p><i class="fa fa-comments"></i><a href="">0 Comments</a></p>
+<div class="container">
+    <div class="row align-items-center" style="justify-content: center;">
+        <div class="col-lg-7">
+            <div class="analytics-content">
+                <h2>Analytics</h2>
+                 <p>The Give Hub is currently in its early development phase, focusing on
+                building the foundational infrastructure necessary for a transparent,
+                secure, and efficient crowdfunding platform. Our initial efforts are
+                directed toward setting up the Stellar blockchain and Soroban smart
+                contract integrations, as well as establishing partnerships and
+                compliance frameworks essential for operating in remote regions of Latin
+                America and Africa.</p>
+                <p>Without a fully operational platform and active user base, analytics
+                on donor behavior, project impact, and transaction data are not yet
+                available. We are prioritizing the implementation of key features and
+                systems first to ensure that, once launched, The Give Hub can capture
+                and deliver meaningful analytics from day one. Our plan includes
+                integrating a comprehensive analytics framework upon launch, allowing us
+                to provide insightful data on platform usage, funding flows, and project
+                success to our stakeholders in the near future.</p>
             </div>
         </div>
     </div>
-EOL;
-$link = new mysqli("localhost", "pimp", "pimpin", "givehub");
-$result = $link->query("select * from blog_posts order by id desc");
-while ($obj = $result->fetch_object()) {
-    //$obj->content = preg_replace("/^.+?<\/h1>/s", "", $obj->content);
-    //$c = preg_split("/\n/", $obj->content);
-    //array_shift($c);
-    //$obj->content = join("\n", $c);
-    $out = preg_replace_callback("/\%\%(.+?)\%\%/", function($m) {
-        global $obj;
-        if (isset($obj->{$m[1]})) {
-            return $obj->{$m[1]};
-        } else {
-            return "";
-        }
-    }, $tpl);
-    print $out;
-}
-?>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul> 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Blog End -->
+</div>
         <!-- Footer Start -->
         <div class="footer">
             <div class="container">
