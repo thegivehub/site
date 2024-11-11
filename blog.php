@@ -1,4 +1,3 @@
-<base href="https://thegivehub.com/site/"/>
 <!DOCTYPE html>
 <html lang="en">
     <head>

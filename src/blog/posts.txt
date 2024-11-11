@@ -17,4 +17,4 @@ direct-impact.md|Direct Impact: Stories of How Peer-to-Peer Giving is Changing L
 small-donations.md|Small Donations, Big Change: How Microgiving is Empowering Remote Communities|31
 trust-through-technology.md|Trust Through Technology: Building Credible Charity Platforms for the Digital Age|32
 inclusion.md|Financial Inclusion in Action: Real Stories from The Last Mile of Giving|33
-unbanked-billion.md|The Unbanked Billion: Why Traditional Aid Isn't Reaching Remote Regions (And How We're Changing That)|34
+unbanked-billion.md|The Unbanked Billion: Why Traditional Aid Isn't Reaching Remote Regions (And How We're Changing That)|35

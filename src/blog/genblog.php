@@ -34,49 +34,54 @@ foreach ($posts as $post) {
 
     $titleparts = preg_split("/:/", preg_replace("/\*\s*/", '', $parts[1]));
    
-
-    $cwd = getcwd();;
-    $cmd = "pandoc  --highlight-style breezedark -f markdown -t html5 md/{$parts[0]}";
-    
-    $content = `$cmd`;
-    $content = preg_replace("/^<h1.+?\/h1>/s", '', $content);
-
-    $link->query("UPDATE blog_posts set content='".mysqli_real_escape_string($link, $content)."' where id=$id");
-
-    $title = $titleparts[0];
-    $subtitle = $titleparts[1];
-    
-    $obj->content = $content;
-    $obj->fulltitle = $parts[1];
-    $obj->subtitle = $subtitle;
-    $obj->title = $title;
-    
-    $page = $start . preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
-        global $obj;
-        if (isset($obj->{$m[1]})) {
-            return $obj->{$m[1]};
-        } else {
-            return "";
-        }
-  
-    }, $header);
-
-    $obj->recent_posts = $recent;
-    $obj->tabs = $tabs;
-    $newcontent = preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
-        global $obj;
-        if (isset($obj->{$m[1]})) {
-            return $obj->{$m[1]};
-        } else {
-            return "";
-        }
-    }, $single);
-    $page .= $newcontent;
-    //$page .= $recent;
-    $page .= $end;
-
-    file_put_contents("html/".$outfile, $page);
-    print "Wrote ".strlen($page)." to html/$outfile\n";
+    if ($file && file_exists("md/{$file}")) {
+        $cwd = getcwd();;
+        $cmd = "pandoc  --highlight-style breezedark -f markdown -t html5 md/{$parts[0]}";
         
+        $content = `$cmd`;
+        $content = preg_replace("/^<h\d.+?\/h\d>/s", '', $content);
+        
+        if ($id && $content) {
+            $link->query("UPDATE blog_posts set content='".mysqli_real_escape_string($link, $content)."' where id=$id");
+        }
+        $result = $link->query("select * from blog_posts where id=$id");
+        $mobj = $result->fetch_object();
+        $title = $titleparts[0];
+        $subtitle = $titleparts[1];
+        
+        $obj->content = $content;
+        $obj->fulltitle = $parts[1];
+        $obj->subtitle = $subtitle;
+        $obj->title = $title;
+        $obj->post_image = $mobj->post_image;
+
+        $page = $start . preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
+            global $obj;
+            if (isset($obj->{$m[1]})) {
+                return $obj->{$m[1]};
+            } else {
+                return "";
+            }
+      
+        }, $header);
+
+        $obj->recent_posts = $recent;
+        $obj->tabs = $tabs;
+        $newcontent = preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
+            global $obj;
+            if (isset($obj->{$m[1]})) {
+                return $obj->{$m[1]};
+            } else {
+                return "";
+            }
+        }, $single);
+        $page .= $newcontent;
+        //$page .= $recent;
+        $page .= $end;
+
+        file_put_contents("html/".$outfile, $page);
+        print "Wrote ".strlen($page)." to html/$outfile\n";
+    }
 }
-   
+$exe = `./genblog3.php > ../components/blog3.html`;
+

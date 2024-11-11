@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Give Hub - Investment Pitch Deck</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --text: #1f2937;
+            --bg: #ffffff;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes scaleIn {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes rotateIn {
+            from { transform: rotate(-5deg) scale(0.95); opacity: 0; }
+            to { transform: rotate(0) scale(1); opacity: 1; }
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            overflow: hidden;
+        }
+        
+        .slides-container {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 4rem;
+            box-sizing: border-box;
+            opacity: 0;
+            transition: transform 0.8s ease, opacity 0.8s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow-y: auto;
+            transform: translateX(100%);
+        }
+        
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 1;
+        }
+
+        .slide.previous {
+            transform: translateX(-100%);
+        }
+        
+        .slide-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .slide.active h1 {
+            animation: slideIn 1s ease forwards;
+        }
+        
+        .slide.active h2 {
+            animation: fadeIn 1s ease 0.3s forwards;
+            opacity: 1;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin: 0 0 1rem 0;
+            transform: translateX(100%);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin: 0 0 2rem 0;
+        }
+        
+        ul {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        ul li {
+            opacity: 1;
+        }
+
+        .slide.active ul li {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .slide.active ul li:nth-child(1) { animation-delay: 0.3s; }
+        .slide.active ul li:nth-child(2) { animation-delay: 0.5s; }
+        .slide.active ul li:nth-child(3) { animation-delay: 0.7s; }
+        .slide.active ul li:nth-child(4) { animation-delay: 0.9s; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .box {
+            background: #f8fafc;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transform: scale(0.95);
+        }
+
+        .slide.active .box {
+            animation: scaleIn 0.6s ease forwards;
+        }
+
+        .slide.active .box:nth-child(1) { animation-delay: 0.2s; }
+        .slide.active .box:nth-child(2) { animation-delay: 0.4s; }
+        .slide.active .box:nth-child(3) { animation-delay: 0.6s; }
+        
+        .controls {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 10;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+        
+        button:hover {
+            background: var(--secondary);
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+        
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: #e2e8f0;
+            z-index: 10;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: var(--primary);
+            transition: width 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Floating animation for specific elements */
+        .slide.active .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Highlight animation */
+        .highlight {
+            position: relative;
+            display: inline-block;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .slide.active .highlight::after {
+            animation: highlightLine 1s ease forwards 1s;
+        }
+
+        @keyframes highlightLine {
+            to { transform: scaleX(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <div class="slides-container" id="slidesContainer">
+        <!-- Title Slide -->
+        <div class="slide active">
+            <div class="slide-content">
+                <h1>The Give Hub</h1>
+                <h2>Democratizing Global Giving Through <span class="highlight">Blockchain</span></h2>
+                <div class="box floating">
+                    <p style="font-size: 1.5rem; margin: 0;">Connecting remote communities with global donors through transparent, efficient blockchain technology</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem Slide -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>The Problem</h1>
+                <div class="grid">
+                    <div class="box floating">
+                        <h3>Access Gap</h3>
+                        <p>2.5 billion people live in underserved regions with limited access to traditional funding</p>
+                    </div>
+                    <div class="box">
+                        <h3>High Fees</h3>
+                        <p>Traditional platforms charge 5-8% fees, reducing impact of donations</p>
+                    </div>
+                    <div class="box floating">
+                        <h3>Lack of Transparency</h3>
+                        <p>Donors hesitate due to limited visibility into impact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Solution Slide -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Our Solution</h1>
+                <div class="grid">
+                    <div class="box">
+                        <h3>Blockchain-Powered</h3>
+                        <ul>
+                            <li>Near-zero transaction fees</li>
+                            <li>Real-time transparency</li>
+                            <li>Instant cross-border transfers</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Focus Markets</h3>
+                        <ul>
+                            <li>Remote regions in Africa</li>
+                            <li>Underserved areas in South America</li>
+                            <li>Direct local partnerships</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Traction Slide -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Notable Backing</h1>
+                <div class="grid">
+                    <div class="box">
+                        <h3>Government Support</h3>
+                        <p>Backed by Colombian Senator, providing strategic guidance on regional expansion</p>
+                    </div>
+                    <div class="box">
+                        <h3>Celebrity Ambassador</h3>
+                        <p>Fast Freddie Rodriguez, Professional Cyclist, serving as Brand Ambassador</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Slide -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Technology Stack</h1>
+                <div class="grid">
+                    <div class="box">
+                        <h3>Blockchain</h3>
+                        <ul>
+                            <li>Built on Stellar network</li>
+                            <li>Soroban smart contracts</li>
+                            <li>Transparent transactions</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js server</li>
+                            <li>MySQL database</li>
+                            <li>RESTful API</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>React.js</li>
+                            <li>Mobile-first design</li>
+                            <li>Real-time updates</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Operating Model</h1>
+                <div class="grid">
+                    <div class="box floating">
+                        <h3>Sustainable Operations</h3>
+                        <ul>
+                            <li>501(c)(3) non-profit organization</li>
+                            <li>1.5% operational fee from donations</li>
+                            <li>100% transparency in fund allocation</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h3>Impact Metrics</h3>
+                        <ul>
+                            <li>Number of communities served</li>
+                            <li>Project completion rate</li>
+                            <li>Donor engagement metrics</li>
+                        </ul>
+                    </div>
+                    <div class="box floating">
+                        <h3>3-Year Goals</h3>
+                        <ul>
+                            <li>50M+ in processed donations</li>
+                            <li>100+ communities served</li>
+                            <li>1,000+ completed projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Funding Requirements Slide (replaces Investment Opportunity slide) -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Initial Funding Requirements</h1>
+                <div class="grid">
+                    <div class="box floating">
+                        <h3>Seed Funding Needed</h3>
+                        <p style="font-size: 2rem; margin: 0;">$2.5M Grant Funding</p>
+                        <p>To establish operations and develop platform</p>
+                    </div>
+                    <div class="box">
+                        <h3>Fund Allocation</h3>
+                        <ul>
+                            <li>40% Technology Development
+                                <ul style="font-size: 0.9em; color: #666;">
+                                    <li>Blockchain infrastructure</li>
+                                    <li>Security audits</li>
+                                    <li>User platforms</li>
+                                </ul>
+                            </li>
+                            <li>25% Community Partnerships
+                                <ul style="font-size: 0.9em; color: #666;">
+                                    <li>Kenya operations</li>
+                                    <li>Colombia operations</li>
+                                    <li>Local team building</li>
+                                </ul>
+                            </li>
+                            <li>20% Operating Expenses
+                                <ul style="font-size: 0.9em; color: #666;">
+                                    <li>US-based team</li>
+                                    <li>Legal compliance</li>
+                                    <li>Administrative costs</li>
+                                </ul>
+                            </li>
+                            <li>15% Reserve Fund
+                                <ul style="font-size: 0.9em; color: #666;">
+                                    <li>Emergency operations</li>
+                                    <li>Opportunity fund</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="box" style="margin-top: 2rem;">
+                    <h3>Sustainability Plan</h3>
+                    <p>After initial funding, The Give Hub will be self-sustaining through:</p>
+                    <ul>
+                        <li>1.5% operational fee from donations</li>
+                        <li>Institutional grants and partnerships</li>
+                        <li>Corporate social responsibility programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="controls">
+        <button onclick="previousSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const progressBar = document.getElementById('progressBar');
+        
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'previous');
+                if (index < currentSlide) {
+                    slide.classList.add('previous');
+                }
+            });
+            slides[currentSlide].classList.add('active');
+            
+            const progress = ((currentSlide + 1) / slides.length) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+        
+        function nextSlide() {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        }
+        
+        function previousSlide() {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        }
+        
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // Add touch support for mobile devices
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const swipeLength = touchEndX - touchStartX;
+            
+            if (Math.abs(swipeLength) > swipeThreshold) {
+                if (swipeLength > 0) {
+                    previousSlide();
+                } else {
+                    nextSlide();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
