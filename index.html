@@ -16,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="/site/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="/site/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/site/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="/site/css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -48,8 +48,11 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="lang">
+                                <a href="/es/"><img class="lang-icon" src="/site/img/hola.svg"></a>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -68,20 +71,36 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
-                        <a href="blog.php" class="nav-item nav-link">Blog</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <a href="about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                             <div class="dropdown-menu">
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
-                                <a href="donate.html" class="dropdown-item">Donate Now</a>
-                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                                <a href="event.html" class="nav-item nav-link">Events</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
+                            <div class="dropdown-menu">
+                                <a href="donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                                <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
+                                <a href="register-cause.html" class="dropdown-item">Register Cause</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="user-docs.html" class="dropdown-item">User Documentation</a>
+                                <a href="api.html" class="dropdown-item">API Documentation</a>
+                                <a href="faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
+                                <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
+                            </div>
+                        </div>
+                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -95,7 +114,7 @@
                 <div class="owl-carousel">
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-1.jpg" alt="Image">
+                            <img src="/site/img/carousel-1.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Empower Communities, One Donation at a Time</h1>
@@ -104,13 +123,13 @@
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="donate.html">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://youtu.be/eOjkoQqnWAw?si=trM8aczr521zHf6g" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://youtube.com/embed/eOjkoQqnWAw" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-2.jpg" alt="Image">
+                            <img src="/site/img/carousel-2.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Connecting Hearts with Blockchain</h1>
@@ -119,13 +138,13 @@
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="donate.html">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://youtu.be/eOjkoQqnWAw?si=trM8aczr521zHf6g" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://youtube.com/embed/eOjkoQqnWAw" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img">
-                            <img src="img/carousel-3.jpg" alt="Image">
+                            <img src="/site/img/carousel-3.jpg" alt="Image">
                         </div>
                         <div class="carousel-text">
                             <h1>Unlock Potential, Ignite Hope</h1>
@@ -134,7 +153,7 @@
                             </p>
                             <div class="carousel-btn">
                                 <a class="btn btn-custom" href="donate.html">Donate Now</a>
-                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://youtu.be/eOjkoQqnWAw?si=trM8aczr521zHf6g" data-target="#videoModal">Watch Video</a>
+                                <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://youtube.com/embed/eOjkoQqnWAw" data-target="#videoModal">Watch Video</a>
                             </div>
                         </div>
                     </div>
@@ -154,7 +173,7 @@
                         </button>        
                         <!-- 16:9 aspect ratio -->
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" id="video" src="https://www.youtube.com/embed/eOjkoQqnWAw?si=JEcYi1txDKMT87b3" title="Introducing The Give Hub" frameborder="0" allowscriptaccess="always" muted allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" id="video" width="560" height="315" src="https://www.youtube.com/embed/eOjkoQqnWAw?si=_XHTnUfk1QZiJkz8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -167,7 +186,7 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <div class="about-img" data-parallax="scroll" data-image-src="img/about.jpg"></div>
+                        <div class="about-img" data-parallax="scroll" data-image-src="/site/img/about.jpg"></div>
                     </div>
                     <div class="col-lg-6">
                         <div class="section-header">
@@ -287,7 +306,7 @@
         
 
         <!-- Facts Start -->
-        <div class="facts" data-parallax="scroll" data-image-src="img/facts.jpg">
+        <div class="facts" data-parallax="scroll" data-image-src="/site/img/facts.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
@@ -339,111 +358,126 @@
                     <p>Popular Causes</p>
                     <h2>Here are some of the most popular charity causes around the world.</h2>
                 </div>
-                <div class="owl-carousel causes-carousel">
-                    <div class="causes-item">
+                <div class="owl-carousel causes-carousel">                    <div class="causes-item">
                         <div class="causes-img">
-                            <img src="img/causes-1.jpg" alt="Image">
+                            <img src="/site/img/causes-0.jpg" alt="Image">
                         </div>
                         <div class="causes-progress">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <span>60%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $75000</p>
+                                <p><strong>Goal:</strong> $125000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Clean Water Pipeline - Samburu County</h3>
+                            <p>Construction of a 5km water pipeline connecting remote villages to the main water supply, serving 2,500 residents and dramatically reducing water collection time for local families.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8f9a">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8f9a">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-1.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                    <span>15%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $30000</p>
+                                <p><strong>Goal:</strong> $200000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Solar-Powered Medical Clinic - Chocó</h3>
+                            <p>Construction of a permanent medical clinic serving 12 remote villages, powered by renewable energy and equipped with telemedicine capabilities.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8f9e">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8f9e">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-2.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $150000</p>
+                                <p><strong>Goal:</strong> $150000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Agricultural Training Center - Kilifi</h3>
+                            <p>Establishment of a demonstration farm and training facility to teach drought-resistant farming techniques to local farmers.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8fa0">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8fa0">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-3.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <span>30%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $52500</p>
+                                <p><strong>Goal:</strong> $175000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>School Infrastructure Project - Putumayo</h3>
+                            <p>Construction of 6 new classrooms, computer lab, and modern facilities to improve education access for 300+ children.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8fa2">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8fa2">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-4.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <span>100%</span>
                                 </div>
                             </div>
                             <div class="progress-text">
                                 <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
+                                <p><strong>Goal:</strong> $100000</p>
                             </div>
                         </div>
                         <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                            <h3>Community Health & Sanitation - Siaya County</h3>
+                            <p>Construction of 50 household sanitation facilities and implementation of community waste management system.</p>
                         </div>
                         <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8fa4">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8fa4">Donate Now</a>
                         </div>
-                    </div>
-                    <div class="causes-item">
-                        <div class="causes-img">
-                            <img src="img/causes-2.jpg" alt="Image">
-                        </div>
-                        <div class="causes-progress">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div>
-                        <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
-                        </div>
-                        <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
-                        </div>
-                    </div>
-                    <div class="causes-item">
-                        <div class="causes-img">
-                            <img src="img/causes-3.jpg" alt="Image">
-                        </div>
-                        <div class="causes-progress">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div>
-                        <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
-                        </div>
-                        <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
-                        </div>
-                    </div>
-                    <div class="causes-item">
-                        <div class="causes-img">
-                            <img src="img/causes-4.jpg" alt="Image">
-                        </div>
-                        <div class="causes-progress">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div>
-                        <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
-                        </div>
-                        <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
-                        </div>
-                    </div>
-                </div>
+                    </div>                </div>
             </div>
         </div>
-        <!-- Causes End -->
-        
-
-        <!-- Donate Start -->
-        <div class="donate" data-parallax="scroll" data-image-src="img/donate.jpg">
+        <!-- Causes End -->        <!-- Donate Start -->
+        <div class="donate" data-parallax="scroll" data-image-src="/site/img/donate.jpg">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7">
@@ -501,7 +535,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="event-item">
-                            <img src="img/event-1.jpg" alt="Image">
+                            <img src="/site/img/event-1.jpg" alt="Image">
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p><i class="fa fa-calendar-alt"></i>Dec 20, 2024</p>
@@ -520,7 +554,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="event-item">
-                            <img src="img/event-2.jpg" alt="Image">
+                            <img src="/site/img/event-2.jpg" alt="Image">
                             <div class="event-content">
                                 <div class="event-meta">
                                     <p><i class="fa fa-calendar-alt"></i>Jan 15, 2025</p>
@@ -554,16 +588,16 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/chris.png" alt="Team Image">
+                                <img src="/site/img/chris.png" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Christopher Robison</h2>
-                                <p>Founder & CEO</p>
+                                <p>Founder / CEO</p>
                                 <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
+                                    <a href="https://x.com/thechrisrobison"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://facebook.com/thechrisrobison"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://linkedin.com/in/crobison"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="https://instagram.com/thechrisrobison"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -571,53 +605,53 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/kevin.png" alt="Team Image">
+                                <img src="/site/img/kevin.png" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Kevin Ready</h2>
-                                <p>Founder</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                <p>Founder / CTO</p>
+                            <div class="team-social">
+                                <a href="https://x.com/kevintweets" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/kevin.ready/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.linkedin.com/in/planetkevin/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                <!--a href=""><i class="fab fa-instagram"></i></a-->
+                            </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/danny.png" alt="Team Image">
+                                <img src="/site/img/danny.png" alt="Team Image">
                             </div>
                             <div class="team-text">
-                                <h2>Danial Kanaan</h2>
-                                <p>Founder</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                <h2>Daniel Kanaan</h2>
+                                <p>Founder / Compliance Expert</p>
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/team-4.jpg" alt="Team Image">
+                                <img style="border-radius:50%;" src="/site/img/heath.jpg" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Heath Kornblum</h2>
-                                <p>Founder</p>
-                                <div class="team-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a href=""><i class="fab fa-instagram"></i></a>
-                                </div>
+                                <p>Founder / Blockchain Specialist</p>
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
                             </div>
-                        </div>
+                           </div>
+                         </div>
                     </div>
                 </div>
             </div>
@@ -625,7 +659,7 @@
         <!-- Team End -->
 
         <!-- Volunteer Start -->
-        <div class="volunteer" data-parallax="scroll" data-image-src="img/volunteer.jpg">
+        <div class="volunteer" data-parallax="scroll" data-image-src="/site/img/volunteer.jpg">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-5">
@@ -675,7 +709,7 @@
                 <div class="owl-carousel testimonials-carousel">
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/maria.jpg" alt="Image">
+                            <img src="/site/img/maria.jpg" alt="Image">
                             <div class="testimonial-name">
                                 <h3>Maria Gonzalez</h3>
                                 <p>Community Leader, Colombia</p>
@@ -689,7 +723,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/david.jpg" alt="Image">
+                            <img src="/site/img/david.jpg" alt="Image">
                             <div class="testimonial-name">
                                 <h3>David Ochieng</h3>
                                 <p>Healthcare Worker, Kenya</p>
@@ -703,7 +737,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/lisa.jpg" alt="Image">
+                            <img src="/site/img/lisa.jpg" alt="Image">
                             <div class="testimonial-name">
                                 <h3>Lisa Chen</h3>
                                 <p>Donor, United States</p>
@@ -717,7 +751,7 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/emily.jpg" alt="Image">
+                            <img src="/site/img/emily.jpg" alt="Image">
                             <div class="testimonial-name">
                                 <h3>Emily Rodriguez</h3>
                                 <p>Volunteer Coordinator, Canada</p>
@@ -731,7 +765,7 @@
                     </div>
                      <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/samuel.jpg" alt="Image">
+                            <img src="/site/img/samuel.jpg" alt="Image">
                             <div class="testimonial-name">
                                 <h3>Samuel Mensah</h3>
                                 <p>Social Entrepreneur, Ghana</p>
@@ -745,7 +779,7 @@
                     </div>
                      <div class="testimonial-item">
                         <div class="testimonial-profile">
-                            <img src="img/ahmed.jpg" alt="Image">
+                            <img src="/site/img/ahmed.jpg" alt="Image">
                             <div class="testimonial-name">
                                 <h3>Ahmed Hassan</h3>
                                 <p>Educator, Egypt</p>
@@ -770,7 +804,7 @@
                     <h2>Contact us for any questions!</h2>
                 </div>
                 <div class="contact-img">
-                    <img src="img/contact.jpg" alt="Image">
+                    <img src="/site/img/contact.jpg" alt="Image">
                 </div>
                 <div class="contact-form">
                         Complete the form below and hit the 'Send Message' button to send us a message.

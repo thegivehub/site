@@ -1071,12 +1071,13 @@ a:focus {
 .team .team-img {
     position: relative;
     overflow: hidden;
+    padding: 1em;
 }
 
 .team .team-img img {
     width: 100%;
-    transform: scale(1.1);
-    margin-bottom: -15px;
+    transform: scale(0.9);
+    margin-bottom: 0px;
     transition: .3s;
 }
 
@@ -1085,10 +1086,8 @@ a:focus {
 }
 
 .team .team-text {
-    position: absolute;
+    position: relative;
     width: calc(100% - 40px);
-    height: 96px;
-    bottom: 0;
     left: 20px;
     padding: 22px 0;
     text-align: center;
@@ -1344,6 +1343,9 @@ a:focus {
     position: relative;
     margin-left: 20px;
     padding-left: 20px;
+    padding-bottom: 1em;
+    height: 300px;
+    overflow: hidden;
 }
 
 .event .event-text::before {
@@ -1445,6 +1447,8 @@ a:focus {
 
 .blog .blog-text {
     padding: 30px 30px 15px 30px;
+    height: 300px;
+    overflow: hidden;
 }
 
 .blog .blog-text h3 {
@@ -2148,4 +2152,8 @@ a:focus {
         margin: 5px 0;
         text-align: center;
     }
+}
+.lang-icon {
+    height: 1.5em;
+    width: 4em;
 }

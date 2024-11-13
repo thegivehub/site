@@ -3,39 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Management Dashboard</title>
+    <title>Blog Management</title>
+    <link rel="icon" type="image/svg+xml" href="/site/img/favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js"></script>
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f3f4f6;
+            --text-color: #1f2937;
+            --border-color: #e5e7eb;
+            --success-color: #059669;
+            --danger-color: #dc2626;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --background-color: #f3f4f6;
-            --text-color: #1f2937;
-            --border-color: #e5e7eb;
+            font-family: system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background-color: var(--background-color);
+            background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.5;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 1rem;
         }
 
+        /* Header Styles */
         header {
-            background-color: white;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            background: white;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             padding: 1rem;
             margin-bottom: 2rem;
         }
@@ -44,47 +50,34 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1rem;
         }
 
-        .main-title {
+        .title {
             font-size: 1.5rem;
-            font-weight: bold;
             color: var(--primary-color);
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .new-post-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            cursor: pointer;
-            transition: background-color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .new-post-btn:hover {
-            background-color: var(--secondary-color);
-        }
-
-        .dashboard {
+        /* Main Content Grid */
+        .content-grid {
             display: grid;
             grid-template-columns: 250px 1fr;
             gap: 2rem;
         }
 
+        /* Sidebar Styles */
         .sidebar {
             background: white;
-            padding: 1rem;
+            padding: 1.5rem;
             border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
-
+        h1,h2,h3 {
+            margin-top: 1em;
+        }
         .nav-link {
             display: flex;
             align-items: center;
@@ -98,7 +91,7 @@
         }
 
         .nav-link:hover {
-            background-color: var(--background-color);
+            background-color: var(--bg-color);
         }
 
         .nav-link.active {
@@ -106,42 +99,79 @@
             color: white;
         }
 
-        .main-content {
+        /* Posts Section */
+        .posts-section {
             background: white;
             padding: 1.5rem;
             border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
-        .posts-list {
-            list-style: none;
-        }
-
-        .post-item {
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-color);
+        .filters {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.5rem 1rem 0.5rem 2.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.375rem;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+        }
+
+        .post-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .post-item:last-child {
             border-bottom: none;
         }
 
+        .post-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-right: 1rem;
+            border-radius: 0.375rem;
+        }
+
+        .post-details {
+            flex: 1;
+        }
+
         .post-title {
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
         }
 
         .post-meta {
-            color: #6b7280;
             font-size: 0.875rem;
+            color: #6b7280;
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .post-actions {
@@ -149,108 +179,377 @@
             gap: 0.5rem;
         }
 
-        .action-btn {
-            padding: 0.25rem 0.5rem;
-            border: 1px solid var(--border-color);
-            background: white;
-            border-radius: 0.25rem;
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            border: none;
             cursor: pointer;
-            transition: background-color 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .action-btn:hover {
-            background-color: var(--background-color);
-        }
-
-        .action-btn.delete {
-            color: #dc2626;
-            border-color: #dc2626;
-        }
-
-        .action-btn.delete:hover {
-            background-color: #fee2e2;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            max-width: 600px;
-        }
-
-        .modal-header {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
         }
 
-        .form-group {
-            margin-bottom: 1rem;
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
         }
 
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 0.5rem;
+        .btn-outline {
+            background: white;
             border: 1px solid var(--border-color);
-            border-radius: 0.375rem;
         }
 
-        .form-textarea {
-            min-height: 200px;
-            resize: vertical;
+        .btn-danger {
+            background: var(--danger-color);
+            color: white;
         }
 
         .status-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
             padding: 0.25rem 0.5rem;
             border-radius: 9999px;
             font-size: 0.75rem;
             font-weight: 500;
         }
 
-        .status-badge.published {
-            background-color: #dcfce7;
-            color: #166534;
+        .status-published {
+            background: #dcfce7;
+            color: var(--success-color);
         }
 
-        .status-badge.draft {
-            background-color: #f3f4f6;
-            color: #374151;
+        .status-draft {
+            background: var(--bg-color);
+            color: var(--text-color);
         }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+            }
+
+            .post-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .post-image {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 1rem;
+            }
+
+            .post-actions {
+                margin-top: 1rem;
+            }
+        }
+        .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+}
+
+.image-upload {
+    position: relative;
+    margin-top: 0.5rem;
+}
+
+.image-preview {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed var(--border-color);
+    border-radius: 0.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-preview i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #6b7280;
+}
+
+input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.form-actions {
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.loading {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.loading::after {
+    content: "...";
+}
+
+@media (max-width: 640px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.preview-content {
+    background: white;
+    width: 95%;
+    max-width: 900px;
+}
+ul li, ol li {
+    margin-left:3em;
+}
+ul li {
+    list-style-type: disc;
+}
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.preview-body {
+    padding: 2rem;
+    max-height: calc(90vh - 70px);
+    overflow-y: auto;
+}
+
+.blog-post {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post .post-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.blog-post .post-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.blog-post .post-subtitle {
+    font-size: 1.5rem;
+    color: #6b7280;
+    margin-bottom: 1rem;
+}
+
+.blog-post .post-meta {
+    font-size: 0.875rem;
+    color: #6b7280;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.blog-post .featured-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.blog-post .post-content {
+    line-height: 1.8;
+    font-size: 1.125rem;
+}
+
+/* Update the editor form buttons */
+.form-actions {
+    justify-content: space-between;
+}
+
+@media (max-width: 640px) {
+    .blog-post .post-title {
+        font-size: 2rem;
+    }
+
+    .blog-post .post-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .blog-post .featured-image {
+        height: 250px;
+    }
+}
+                    .editor-tips {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+}
+
+.markdown-help {
+    max-width: 600px;
+}
+
+.markdown-guide {
+    padding: 1.5rem;
+    overflow-y: auto;
+    max-height: calc(90vh - 100px);
+}
+
+.guide-section {
+    margin-bottom: 2rem;
+}
+
+.guide-section h3 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.guide-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.guide-table td:first-child {
+    width: 40%;
+    font-family: monospace;
+    background: var(--bg-color);
+    border-radius: 0.25rem;
+}
+
+/* SimpleMDE Customization */
+.CodeMirror {
+    border-radius: 0.375rem;
+    border-color: var(--border-color);
+}
+
+.editor-toolbar {
+    border-color: var(--border-color);
+    border-radius: 0.375rem 0.375rem 0 0;
+}
+
+.editor-toolbar button {
+    color: var(--text-color) !important;
+}
+
+.editor-toolbar button:hover {
+    background: var(--bg-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+.editor-toolbar.fullscreen {
+    background: white;
+}
+
+.editor-preview {
+    background: white;
+}
+
+.editor-preview h1,
+.editor-preview h2,
+.editor-preview h3 {
+    margin: 1em 0 0.5em;
+}
+
+.editor-preview p {
+    margin: 0.5em 0;
+}
     </style>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
-                <h1 class="main-title">
-                    <i class="fas fa-feather-alt"></i>
+                <h1 class="title">
+                    <i class="fas fa-blog"></i>
                     Blog Management
                 </h1>
-                <button class="new-post-btn" onclick="openNewPostModal()">
+                <button class="btn btn-primary" onclick="openPostEditor()">
                     <i class="fas fa-plus"></i>
                     New Post
                 </button>
@@ -259,162 +558,660 @@
     </header>
 
     <main class="container">
-        <div class="dashboard">
+        <div class="content-grid">
             <aside class="sidebar">
                 <nav>
                     <a href="#" class="nav-link active">
                         <i class="fas fa-file-alt"></i>
-                        Posts
+                        All Posts
                     </a>
                     <a href="#" class="nav-link">
-                        <i class="fas fa-tags"></i>
+                        <i class="fas fa-pencil-alt"></i>
+                        Drafts
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-check-circle"></i>
+                        Published
+                    </a>
+                    <a href="#" class="nav-link">
+                        <i class="fas fa-folder"></i>
                         Categories
                     </a>
                     <a href="#" class="nav-link">
-                        <i class="fas fa-comments"></i>
-                        Comments
-                    </a>
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-cog"></i>
-                        Settings
+                        <i class="fas fa-tags"></i>
+                        Tags
                     </a>
                 </nav>
             </aside>
 
-            <section class="main-content">
-                <ul class="posts-list" id="postsList">
+            <section class="posts-section">
+                <div class="filters">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search posts..." onkeyup="searchPosts(this.value)">
+                    </div>
+                    <div class="post-actions">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                        <button class="btn btn-outline">
+                            <i class="fas fa-sort"></i>
+                            Sort
+                        </button>
+                    </div>
+                </div>
+
+                <div id="posts-list">
                     <!-- Posts will be dynamically inserted here -->
-                </ul>
+                </div>
             </section>
         </div>
     </main>
+        </section>
+    </div>
+</main>
 
-    <div id="newPostModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <i class="fas fa-pen-to-square"></i>
-                <h2>New Post</h2>
+<!-- Add Editor Modal -->
+<div id="editor-modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="editor-title">
+                <i class="fas fa-edit"></i>
+                <span>New Post</span>
+            </h2>
+            <button class="close-btn" onclick="app.closeEditor()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <form id="post-form" onsubmit="app.savePost(event)">
+            <div class="form-group">
+                <label for="post-title">Title</label>
+                <input type="text" id="post-title" name="title" required>
             </div>
-            <form id="newPostForm" onsubmit="handleNewPost(event)">
+            
+            <div class="form-group">
+                <label for="post-subtitle">Subtitle</label>
+                <input type="text" id="post-subtitle" name="subtitle">
+            </div>
+
+            <div class="form-grid">
                 <div class="form-group">
-                    <label class="form-label" for="postTitle">Title</label>
-                    <input type="text" id="postTitle" class="form-input" required>
+                    <label for="post-category">Category</label>
+                    <select id="post-category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="Charity">Charity</option>
+                        <option value="Technology">Technology</option>
+                        <option value="Education">Education</option>
+                    </select>
                 </div>
+
                 <div class="form-group">
-                    <label class="form-label" for="postContent">Content</label>
-                    <textarea id="postContent" class="form-input form-textarea" required></textarea>
+                    <label for="post-status">Status</label>
+                    <select id="post-status" name="status" required>
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="new-post-btn">
-                        <i class="fas fa-paper-plane"></i>
-                        Publish
+            </div>
+
+            <div class="form-group">
+                <label for="post-content">Content</label>
+                <textarea id="post-content" name="content" required></textarea>
+                <div class="editor-tips">
+                    <button type="button" class="btn btn-outline btn-sm" onclick="app.toggleEditorHelp()">
+                        <i class="fas fa-question-circle"></i>
+                        Markdown Help
                     </button>
-                    <button type="button" class="action-btn" onclick="closeNewPostModal()">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Featured Image</label>
+                <div class="image-upload">
+                    <input type="file" id="post-image" name="image" accept="image/*" onchange="app.previewImage(event)">
+                    <div id="image-preview" class="image-preview">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <span>Click to upload image</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-outline" onclick="app.previewPost()">
+                    <i class="fas fa-eye"></i>
+                    Preview
+                </button>
+                <div class="action-buttons">
+                    <button type="button" class="btn btn-outline" onclick="app.closeEditor()">
                         <i class="fas fa-times"></i>
                         Cancel
                     </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        Save Post
+                    </button>
                 </div>
-            </form>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="preview-modal" class="modal">
+    <div class="modal-content preview-content">
+        <div class="modal-header">
+            <h2>
+                <i class="fas fa-eye"></i>
+                Post Preview
+            </h2>
+            <div class="modal-actions">
+                <button class="btn btn-outline" onclick="app.closePreview()">
+                    <i class="fas fa-times"></i>
+                    Close Preview
+                </button>
+            </div>
+        </div>
+        <div class="preview-body">
+            <div id="preview-area" class="blog-post"></div>
         </div>
     </div>
-
+</div>
+<div id="markdown-help-modal" class="modal">
+    <div class="modal-content markdown-help">
+        <div class="modal-header">
+            <h2>
+                <i class="fas fa-book"></i>
+                Markdown Guide
+            </h2>
+            <button class="close-btn" onclick="app.closeMarkdownHelp()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="markdown-guide">
+            <div class="guide-section">
+                <h3>Basic Syntax</h3>
+                <table class="guide-table">
+                    <tr>
+                        <td><code># Header 1</code></td>
+                        <td>Large Header</td>
+                    </tr>
+                    <tr>
+                        <td><code>## Header 2</code></td>
+                        <td>Medium Header</td>
+                    </tr>
+                    <tr>
+                        <td><code>**bold**</code></td>
+                        <td><strong>bold text</strong></td>
+                    </tr>
+                    <tr>
+                        <td><code>*italic*</code></td>
+                        <td><em>italic text</em></td>
+                    </tr>
+                    <tr>
+                        <td><code>[Link](url)</code></td>
+                        <td>Hyperlink</td>
+                    </tr>
+                    <tr>
+                        <td><code>![Alt](image-url)</code></td>
+                        <td>Image</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="guide-section">
+                <h3>Lists</h3>
+                <table class="guide-table">
+                    <tr>
+                        <td><code>- Item</code></td>
+                        <td>Unordered list item</td>
+                    </tr>
+                    <tr>
+                        <td><code>1. Item</code></td>
+                        <td>Ordered list item</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="guide-section">
+                <h3>Other Elements</h3>
+                <table class="guide-table">
+                    <tr>
+                        <td><code>> Quote</code></td>
+                        <td>Blockquote</td>
+                    </tr>
+                    <tr>
+                        <td><code>`code`</code></td>
+                        <td>Inline code</td>
+                    </tr>
+                    <tr>
+                        <td><code>---</code></td>
+                        <td>Horizontal line</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
     <script>
-        // Sample data
-        let posts = [
-            {
-                id: 1,
-                title: "Getting Started with Web Development",
-                date: "2024-11-10",
-                status: "Published"
-            },
-            {
-                id: 2,
-                title: "CSS Best Practices",
-                date: "2024-11-09",
-                status: "Draft"
-            }
-        ];
+(function() {
+    // Helper functions for DOM selection
+    const $ = str => document.querySelector(str);
+    const $$ = str => document.querySelectorAll(str);
 
-        // Render posts
-        function renderPosts() {
-            const postsList = document.getElementById('postsList');
-            postsList.innerHTML = posts.map(post => `
-                <li class="post-item">
-                    <div>
-                        <h3 class="post-title">
-                            <i class="fas fa-file-lines"></i>
-                            ${post.title}
-                        </h3>
+    // Main application object
+    const app = {
+        data: {
+            posts: [],
+            categories: [],
+            currentFilter: 'all'
+        },
+        
+        state: {
+            loaded: false,
+            editing: false,
+            currentPostId: null,
+            saving: false
+        },
+
+        init() {
+            // Initialize the application
+            app.bindEvents();
+            app.fetchPosts();
+            app.state.loaded = true;
+        },
+
+        bindEvents() {
+            // Bind event listeners
+            $('.search-box input').addEventListener('keyup', (e) => app.searchPosts(e.target.value));
+            $$('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    app.setActiveNavItem(e.target);
+                    app.filterPosts(e.target.dataset.filter);
+                });
+            });
+        },
+
+        fetch(url, callback) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    app.data = data;
+                    app.state.loaded = true;
+                    if (callback && typeof(callback) === "function") {
+                        callback(data);
+                    }
+                })
+                .catch(error => console.error('Fetch error:', error));
+        },
+
+        async fetchPosts() {
+            let resp = await fetch("blog_posts.json");
+            let posts = await resp.json();
+
+            app.data.posts = posts;
+            app.renderPosts(app.data.posts);
+
+            return posts;
+        },
+
+        renderPosts(postsToRender = app.data.posts) {
+            const postsList = $('#posts-list');
+            const postsHTML = postsToRender.map(post => app.createPostHTML(post)).join('');
+            postsList.innerHTML = postsHTML;
+        },
+
+        createPostHTML(post) {
+            return `
+                <div class="post-item" data-id="${post.id}">
+                    <img src="${post.post_image}" alt="${post.title}" class="post-image">
+                    <div class="post-details">
+                        <h3 class="post-title">${post.title}</h3>
                         <p class="post-meta">
-                            <i class="far fa-calendar"></i>
-                            ${post.date}
-                            <span class="status-badge ${post.status.toLowerCase()}">
-                                <i class="fas fa-${post.status === 'Published' ? 'check-circle' : 'clock'}"></i>
-                                ${post.status}
+                            <span><i class="fas fa-user"></i> ${post.author}</span>
+                            <span><i class="fas fa-calendar"></i> ${post.published_at}</span>
+                            <span><i class="fas fa-folder"></i> ${post.category}</span>
+                            <span class="status-badge ${post.status === 'published' ? 'status-published' : 'status-draft'}">
+                                <i class="fas fa-${post.status === 'published' ? 'check-circle' : 'clock'}"></i>
+                                ${post.status.charAt(0).toUpperCase() + post.status.slice(1)}
                             </span>
                         </p>
+                        <div class="post-actions">
+                            <button class="btn btn-outline" onclick="app.editPost(${post.id})">
+                                <i class="fas fa-edit"></i>
+                                Edit
+                            </button>
+                            <button class="btn btn-outline" onclick="app.previewPost(${post.id})">
+                                <i class="fas fa-eye"></i>
+                                Preview 
+                            </button>
+<button class="btn btn-danger" onclick="app.deletePost(${post.id})">
+                                <i class="fas fa-trash"></i>
+                                Delete
+                            </button>
+                        </div>
                     </div>
-                    <div class="post-actions">
-                        <button class="action-btn" onclick="editPost(${post.id})">
-                            <i class="fas fa-edit"></i>
-                            Edit
-                        </button>
-                        <button class="action-btn delete" onclick="deletePost(${post.id})">
-                            <i class="fas fa-trash"></i>
-                            Delete
-                        </button>
-                    </div>
-                </li>
-            `).join('');
-        }
+                </div>
+            `;
+        },
 
-        // Modal functions
-        function openNewPostModal() {
-            document.getElementById('newPostModal').style.display = 'block';
-        }
+        searchPosts(term) {
+            const filteredPosts = app.data.posts.filter(post => 
+                post.title.toLowerCase().includes(term.toLowerCase()) ||
+                post.subtitle.toLowerCase().includes(term.toLowerCase()) ||
+                post.category.toLowerCase().includes(term.toLowerCase())
+            );
+            app.renderPosts(filteredPosts);
+        },
 
-        function closeNewPostModal() {
-            document.getElementById('newPostModal').style.display = 'none';
-            document.getElementById('newPostForm').reset();
-        }
-
-        // Handle new post
-        function handleNewPost(event) {
-            event.preventDefault();
-            const title = document.getElementById('postTitle').value;
-            const content = document.getElementById('postContent').value;
-
-            const newPost = {
-                id: posts.length + 1,
-                title: title,
-                date: new Date().toISOString().split('T')[0],
-                status: 'Draft'
-            };
-
-            posts.unshift(newPost);
-            renderPosts();
-            closeNewPostModal();
-        }
-
-        // Edit post
-        function editPost(id) {
-            const post = posts.find(p => p.id === id);
-            if (post) {
-                // In a real application, you would open an edit modal
-                alert(`Editing post: ${post.title}`);
+        filterPosts(filter = 'all') {
+            app.data.currentFilter = filter;
+            let filteredPosts = app.data.posts;
+            
+            switch(filter) {
+                case 'published':
+                    filteredPosts = app.data.posts.filter(post => post.status === 'published');
+                    break;
+                case 'draft':
+                    filteredPosts = app.data.posts.filter(post => post.status === 'draft');
+                    break;
             }
-        }
+            
+            app.renderPosts(filteredPosts);
+        },
 
-        // Delete post
-        function deletePost(id) {
+        setActiveNavItem(element) {
+            $$('.nav-link').forEach(link => link.classList.remove('active'));
+            element.classList.add('active');
+        },
+
+        deletePost(id) {
             if (confirm('Are you sure you want to delete this post?')) {
-                posts = posts.filter(p => p.id !== id);
-                renderPosts();
+                app.data.posts = app.data.posts.filter(post => post.id !== id);
+                app.renderPosts();
             }
+        },
+
+        editPost(id) {
+            app.state.editing = true;
+            app.state.currentPostId = id;
+            const post = app.data.posts.find(post => post.id == id);
+            app.state.currentPost = post;
+
+            if (post) {
+                app.openEditor(post);
+            }
+        },
+
+        openEditor(post = null) {
+            const modal = $('#editor-modal');
+            const form = $('#post-form');
+            const editorTitle = $('#editor-title span');
+            
+            // Reset form
+            form.reset();
+            
+            if (post) {
+                editorTitle.textContent = 'Edit Post';
+                app.state.currentPostId = post.id;
+                
+                // Fill form with post data
+                $('#post-title').value = post.title;
+                $('#post-subtitle').value = post.subtitle;
+                $('#post-category').value = post.category;
+                $('#post-status').value = post.status;
+                $('#post-content').value = post.content;
+                
+                if (post.post_image) {
+                    $('#image-preview').style.backgroundImage = `url(${post.post_image})`;
+                    $('#image-preview').innerHTML = '';
+                }
+            } else {
+                editorTitle.textContent = 'New Post';
+                app.state.currentPostId = null;
+                $('#image-preview').style.backgroundImage = 'none';
+                $('#image-preview').innerHTML = `
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Click to upload image</span>
+                `;
+            }
+            
+            if (app.editor) {
+                app.editor.toTextArea();
+            }
+            app.initEditor();
+
+            if (post) {
+                app.editor.value(post.content || '');
+            }
+
+            modal.style.display = 'block';
+        },
+
+        closeEditor() {
+            $('#editor-modal').style.display = 'none';
+            app.state.editing = false;
+            app.state.currentPostId = null;
+        },
+
+        previewImage(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = $('#image-preview');
+                    preview.style.backgroundImage = `url(${e.target.result})`;
+                    preview.innerHTML = '';
+                };
+                reader.readAsDataURL(file);
+            }
+        },
+
+        async savePost(event) {
+            event.preventDefault();
+            if (app.state.saving) return;
+
+            const form = event.target;
+            const formData = new FormData(form);
+            app.state.saving = true;
+
+            try {
+                const submitButton = form.querySelector('button[type="submit"]');
+                submitButton.classList.add('loading');
+
+                const endpoint = app.state.currentPostId 
+                    ? `${API_ENDPOINT}/${app.state.currentPostId}`
+                    : API_ENDPOINT;
+
+                const method = app.state.currentPostId ? 'PUT' : 'POST';
+
+                const response = await fetch(endpoint, {
+                    method: method,
+                    body: formData
+                });
+
+                if (!response.ok) throw new Error('Save failed');
+
+                const savedPost = await response.json();
+
+                // Update local data
+                if (app.state.currentPostId) {
+                    const index = app.data.posts.findIndex(p => p.id === app.state.currentPostId);
+                    if (index !== -1) {
+                        app.data.posts[index] = savedPost;
+                    }
+                } else {
+                    app.data.posts.unshift(savedPost);
+                }
+
+                // Refresh display
+                app.renderPosts();
+                app.closeEditor();
+
+                // Show success message
+                alert('Post saved successfully!');
+
+            } catch (error) {
+                console.error('Save error:', error);
+                alert('Failed to save post. Please try again.');
+            } finally {
+                app.state.saving = false;
+                form.querySelector('button[type="submit"]').classList.remove('loading');
+            }
+        },
+
+        display(data, tgt) {
+            let out = "<table><thead><tr>";
+            const keys = Object.keys(data[0]);
+            if (keys) {
+                keys.forEach(key => {
+                    out += `<th>${key}</th>`;
+                });
+            }
+            out += "</tr></thead><tbody>";
+            data.forEach(item => {
+                out += `<tr>`;
+                keys.forEach(key => {
+                    out += `<td>${item[key]}</td>`;
+                });
+                out += `</tr>`;
+            });
+            out += "</tbody></table>";
+            if (tgt) {
+                tgt.innerHTML = out;
+            }
+            return out;
+        },
+        previewPost(id) {
+            let post;
+            if (id) {
+                post = app.data.posts.find(post => post.id == id);
+            }
+            let title, subtitle, content, category, imagePreview, imageUrl;
+            
+            if (post) {
+                title =  post.title;
+                subtitle = post.subtitle;
+                content = post.content;
+                category = post.category;
+                imagePreview = $('#image-preview').style.backgroundImage;
+                imageUrl = post.post_image;
+                imagePreview = imageUrl;
+            } else {
+                title = $('#post-title').value;
+                subtitle = $('#post-subtitle').value;
+                content = $('#post-content').value;
+                category = $('#post-category').value;
+                imagePreview = $('#image-preview').style.backgroundImage;
+                imageUrl = imagePreview.replace('url("', '').replace('")', '');
+            }
+
+            // Format the current date
+            const currentDate = new Date().toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Get the preview area and add the formatted HTML
+            const previewArea = $('#preview-area');
+            previewArea.innerHTML = `
+                <article class="blog-post">
+                    <header class="post-header">
+                        <h1 class="post-title">${title || 'Untitled Post'}</h1>
+                        ${subtitle ? `<h2 class="post-subtitle">${subtitle}</h2>` : ''}
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> ${currentDate}</span>
+                            <span><i class="fas fa-folder"></i> ${category || 'Uncategorized'}</span>
+                        </div>
+                    </header>
+
+                    ${imagePreview !== 'none' ? `
+                        <img src="${imageUrl}" alt="${title}" class="featured-image">
+                    ` : ''}
+
+                    <div class="post-content">
+                        ${app.formatContent(content)}
+                    </div>
+                </article>
+            `;
+
+            // Show the preview modal
+            $('#preview-modal').style.display = 'block';
+        },
+
+        closePreview() {
+            $('#preview-modal').style.display = 'none';
+        },
+
+        formatContent(content) {
+            if (!content) return '';
+
+            // Basic Markdown-like formatting
+            return content
+                // Convert line breaks to paragraphs
+                .split('\n\n')
+                .map(paragraph => paragraph.trim())
+                .filter(paragraph => paragraph)
+                .map(paragraph => `<p>${paragraph}</p>`)
+                .join('')
+                // Bold text
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                // Italic text
+                .replace(/\*(.*?)\*/g, '<em>$1</em>');
+        },
+        initEditor() {
+            app.editor = new SimpleMDE({
+                element: $('#post-content'),
+                spellChecker: true,
+                autosave: {
+                    enabled: true,
+                    unique_id: 'blog_post_content',
+                    delay: 1000,
+                },
+                toolbar: [
+                    'bold', 'italic', 'heading', '|',
+                    'quote', 'unordered-list', 'ordered-list', '|',
+                    'link', 'image', '|',
+                    'preview', 'side-by-side', 'fullscreen', '|',
+                    'guide'
+                ],
+                placeholder: 'Write your post content here...',
+                status: ['lines', 'words', 'cursor'],
+                renderingConfig: {
+                    singleLineBreaks: false,
+                    codeSyntaxHighlighting: true,
+                }
+            });
+
+            // Custom keyboard shortcuts
+            app.editor.codemirror.setOption('extraKeys', {
+                'Cmd-S': function(cm) {
+                    app.savePost();
+                },
+                'Ctrl-S': function(cm) {
+                    app.savePost();
+                },
+                'Esc': function(cm) {
+                    if (cm.getOption('fullScreen')) {
+                        cm.setOption('fullScreen', false);
+                    }
+                }
+            });
+        },
+
+        toggleEditorHelp() {
+            $('#markdown-help-modal').style.display = 'block';
+        },
+
+        closeMarkdownHelp() {
+            $('#markdown-help-modal').style.display = 'none';
         }
 
-        // Initial render
-        renderPosts();
+
+    };
+
+    // Make app globally available and initialize
+    window.app = app;
+    app.init();
+})();
     </script>
 </body>
 </html>

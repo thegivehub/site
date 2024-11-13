@@ -8,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="/site/img/favicon.ico" type="image/svg+xml" rel="icon">
+        <link href="/site/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="/site/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="/site/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/site/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="/site/css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -48,8 +48,11 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="lang">
+                                <a href="/es/"><img class="lang-icon" src="/site/img/hola.svg"></a>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -68,20 +71,36 @@
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
-                        <a href="blog.php" class="nav-item nav-link">Blog</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <a href="about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                             <div class="dropdown-menu">
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
-                                <a href="donate.html" class="dropdown-item">Donate Now</a>
-                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                                <a href="event.html" class="nav-item nav-link">Events</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
+                            <div class="dropdown-menu">
+                                <a href="donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                                <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
+                                <a href="register-cause.html" class="dropdown-item">Register Cause</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu">
+                                <a href="user-docs.html" class="dropdown-item">User Documentation</a>
+                                <a href="api.html" class="dropdown-item">API Documentation</a>
+                                <a href="faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
+                                <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
+                            </div>
+                        </div>
+                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -191,110 +210,125 @@
                     <p>Popular Causes</p>
                     <h2>Here are some of the most popular charity causes around the world.</h2>
                 </div>
-                <div class="owl-carousel causes-carousel">
-                    <div class="causes-item">
+                <div class="owl-carousel causes-carousel">                    <div class="causes-item">
                         <div class="causes-img">
-                            <img src="img/causes-1.jpg" alt="Image">
+                            <img src="/site/img/causes-0.jpg" alt="Image">
                         </div>
                         <div class="causes-progress">
                             <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <span>60%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $75000</p>
+                                <p><strong>Goal:</strong> $125000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Clean Water Pipeline - Samburu County</h3>
+                            <p>Construction of a 5km water pipeline connecting remote villages to the main water supply, serving 2,500 residents and dramatically reducing water collection time for local families.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8f9a">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8f9a">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-1.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                    <span>15%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $30000</p>
+                                <p><strong>Goal:</strong> $200000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Solar-Powered Medical Clinic - Chocó</h3>
+                            <p>Construction of a permanent medical clinic serving 12 remote villages, powered by renewable energy and equipped with telemedicine capabilities.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8f9e">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8f9e">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-2.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <span>100%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $150000</p>
+                                <p><strong>Goal:</strong> $150000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>Agricultural Training Center - Kilifi</h3>
+                            <p>Establishment of a demonstration farm and training facility to teach drought-resistant farming techniques to local farmers.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8fa0">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8fa0">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-3.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <span>30%</span>
+                                </div>
+                            </div>
+                            <div class="progress-text">
+                                <p><strong>Raised:</strong> $52500</p>
+                                <p><strong>Goal:</strong> $175000</p>
+                            </div>
+                        </div>
+                        <div class="causes-text">
+                            <h3>School Infrastructure Project - Putumayo</h3>
+                            <p>Construction of 6 new classrooms, computer lab, and modern facilities to improve education access for 300+ children.</p>
+                        </div>
+                        <div class="causes-btn">
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8fa2">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8fa2">Donate Now</a>
+                        </div>
+                    </div>                    <div class="causes-item">
+                        <div class="causes-img">
+                            <img src="/site/img/causes-4.jpg" alt="Image">
+                        </div>
+                        <div class="causes-progress">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                                    <span>100%</span>
                                 </div>
                             </div>
                             <div class="progress-text">
                                 <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
+                                <p><strong>Goal:</strong> $100000</p>
                             </div>
                         </div>
                         <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
+                            <h3>Community Health & Sanitation - Siaya County</h3>
+                            <p>Construction of 50 household sanitation facilities and implementation of community waste management system.</p>
                         </div>
                         <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
+                            <a class="btn btn-custom" href="https://app.thegivehub.com/campaign.html?id=65ee1a1b2f3a4b5c6d7e8fa4">Learn More</a>
+                            <a class="btn btn-custom" hfre="https://app.thegivehub.com/donatenow.html?id=65ee1a1b2f3a4b5c6d7e8fa4">Donate Now</a>
                         </div>
-                    </div>
-                    <div class="causes-item">
-                        <div class="causes-img">
-                            <img src="img/causes-2.jpg" alt="Image">
-                        </div>
-                        <div class="causes-progress">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div>
-                        <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
-                        </div>
-                        <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
-                        </div>
-                    </div>
-                    <div class="causes-item">
-                        <div class="causes-img">
-                            <img src="img/causes-3.jpg" alt="Image">
-                        </div>
-                        <div class="causes-progress">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div>
-                        <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
-                        </div>
-                        <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
-                        </div>
-                    </div>
-                    <div class="causes-item">
-                        <div class="causes-img">
-                            <img src="img/causes-4.jpg" alt="Image">
-                        </div>
-                        <div class="causes-progress">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-                            <div class="progress-text">
-                                <p><strong>Raised:</strong> $100000</p>
-                                <p><strong>Goal:</strong> $50000</p>
-                            </div>
-                        </div>
-                        <div class="causes-text">
-                            <h3>Lorem ipsum dolor sit</h3>
-                            <p>Lorem ipsum dolor sit amet elit. Phasell nec pretium mi. Curabit facilis ornare velit non vulputa</p>
-                        </div>
-                        <div class="causes-btn">
-                            <a class="btn btn-custom">Learn More</a>
-                            <a class="btn btn-custom">Donate Now</a>
-                        </div>
-                    </div>
-                </div>
+                    </div>                </div>
             </div>
         </div>
-        <!-- Causes End -->
-        
-
-        <!-- Footer Start -->
+        <!-- Causes End -->        <!-- Footer Start -->
         <div class="footer">
             <div class="container">
                 <div class="row">
