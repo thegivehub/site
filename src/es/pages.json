@@ -1,0 +1,177 @@
+[
+    {
+        "title": "The Give Hub",
+        "file": "index.html",
+        "templates": [
+            "components/start.html",
+            "components/carousel.html",
+            "components/videomodal.html",
+            "components/about.html",
+            "components/service.html",
+            "components/facts.html",
+            "components/causes.html",
+            "components/donate.html",
+            "components/event.html",
+            "components/team.html",
+            "components/volunteer.html",
+            "components/testimonial.html",
+            "components/contact.html",
+            "components/blog3.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "About Us",
+        "file": "about.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/about.html",
+            "components/team.html",
+            "components/testimonial.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Contact",
+        "file": "contact.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/contact.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Blog",
+        "file": "blog.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/blog.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Campaigns",
+        "file": "causes.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/service.html",
+            "components/causes.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Donate",
+        "file": "donate.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/donate.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Events",
+        "file": "event.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/event.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Services",
+        "file": "service.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/service.html",
+            "components/causes.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "The Team",
+        "file": "team.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/team.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Privacy Policy",
+        "file": "legal/privacy.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/privacy.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Cookie Policy",
+        "file": "legal/cookies.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/cookie-policy.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Terms of Service",
+        "file": "legal/tos.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/tos.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Analytics",
+        "file": "analytics.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/analytics.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Techincal Architecture",
+        "file": "architecture.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/architecture.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Volunteer",
+        "file": "volunteer.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/volunteer.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "FAQ's",
+        "file": "faqs.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/faqs.html",
+            "components/end.html"
+        ]
+    }
+]

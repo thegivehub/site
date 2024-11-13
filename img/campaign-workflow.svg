@@ -1,0 +1,78 @@
+<svg viewBox="0 0 900 600">
+  <!-- Styles -->
+  <defs>
+    <style>
+      .node { fill: #fff; stroke: #2563eb; stroke-width: 2; }
+      .decision { fill: #fff; stroke: #7c3aed; stroke-width: 2; }
+      .text { font-family: system-ui, sans-serif; font-size: 14px; fill: #1f2937; }
+      .small-text { font-family: system-ui, sans-serif; font-size: 12px; fill: #6b7280; }
+      .arrow { stroke: #9ca3af; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .status-active { fill: #22c55e; }
+      .status-pending { fill: #eab308; }
+      .status-complete { fill: #3b82f6; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <!-- Workflow Nodes -->
+  <!-- Campaign Creation -->
+  <rect x="50" y="50" width="150" height="60" rx="8" class="node"/>
+  <text x="125" y="85" text-anchor="middle" class="text">Campaign Creation</text>
+  <circle cx="60" cy="65" r="8" class="status-pending"/>
+
+  <!-- Initial Review -->
+  <rect x="50" y="170" width="150" height="60" rx="8" class="node"/>
+  <text x="125" y="205" text-anchor="middle" class="text">Initial Review</text>
+
+  <!-- Partner Assignment -->
+  <rect x="50" y="290" width="150" height="60" rx="8" class="node"/>
+  <text x="125" y="325" text-anchor="middle" class="text">Partner Assignment</text>
+
+  <!-- Verification Decision -->
+  <polygon points="350,290 425,240 500,290 425,340" class="decision"/>
+  <text x="425" y="295" text-anchor="middle" class="text">Verified?</text>
+
+  <!-- Active Campaign -->
+  <rect x="350" y="50" width="150" height="60" rx="8" class="node"/>
+  <text x="425" y="85" text-anchor="middle" class="text">Active Campaign</text>
+  <circle cx="360" cy="65" r="8" class="status-active"/>
+
+  <!-- Funding Progress -->
+  <rect x="600" y="50" width="150" height="60" rx="8" class="node"/>
+  <text x="675" y="75" text-anchor="middle" class="text">Funding Progress</text>
+  <text x="675" y="95" text-anchor="middle" class="small-text">Updates & Milestones</text>
+
+  <!-- Impact Verification -->
+  <rect x="600" y="170" width="150" height="60" rx="8" class="node"/>
+  <text x="675" y="195" text-anchor="middle" class="text">Impact Verification</text>
+  <text x="675" y="215" text-anchor="middle" class="small-text">Partner Validation</text>
+
+  <!-- Project Completion -->
+  <rect x="600" y="290" width="150" height="60" rx="8" class="node"/>
+  <text x="675" y="325" text-anchor="middle" class="text">Project Completion</text>
+  <circle cx="610" cy="305" r="8" class="status-complete"/>
+
+  <!-- Arrows -->
+  <path d="M 125,110 L 125,170" class="arrow"/>
+  <path d="M 125,230 L 125,290" class="arrow"/>
+  <path d="M 200,320 L 350,290" class="arrow"/>
+  <path d="M 425,240 L 425,110" class="arrow"/>
+  <path d="M 500,80 L 600,80" class="arrow"/>
+  <path d="M 675,110 L 675,170" class="arrow"/>
+  <path d="M 675,230 L 675,290" class="arrow"/>
+  
+  <!-- Rejection Path -->
+  <path d="M 500,290 C 550,290 550,400 125,400 L 125,350" class="arrow"/>
+
+  <!-- Legend -->
+  <rect x="50" y="450" width="200" height="100" rx="4" fill="#fff" stroke="#e5e7eb"/>
+  <text x="60" y="470" class="text">Status Legend:</text>
+  <circle cx="70" cy="490" r="8" class="status-pending"/>
+  <text x="90" y="495" class="small-text">Pending</text>
+  <circle cx="70" cy="515" r="8" class="status-active"/>
+  <text x="90" y="520" class="small-text">Active</text>
+  <circle cx="70" cy="540" r="8" class="status-complete"/>
+  <text x="90" y="545" class="small-text">Completed</text>
+</svg>

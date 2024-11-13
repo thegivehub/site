@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .node { fill: #fff; stroke: #2563eb; stroke-width: 2; }
+      .milestone { fill: #f0f9ff; stroke: #3b82f6; stroke-width: 2; }
+      .contract { fill: #fef2f2; stroke: #ef4444; stroke-width: 2; }
+      .verification { fill: #f0fdf4; stroke: #22c55e; stroke-width: 2; }
+      .text { font-family: system-ui, sans-serif; font-size: 14px; fill: #1f2937; }
+      .small-text { font-family: system-ui, sans-serif; font-size: 12px; fill: #6b7280; }
+      .time { font-family: system-ui, sans-serif; font-size: 11px; fill: #9ca3af; font-style: italic; }
+      .arrow { stroke: #9ca3af; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+      .release { fill: #fee2e2; stroke: #ef4444; stroke-width: 2; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9ca3af"/>
+    </marker>
+  </defs>
+
+  <!-- Initial Setup Phase -->
+  <rect x="50" y="50" width="200" height="60" rx="8" class="node"/>
+  <text x="150" y="75" text-anchor="middle" class="text">Campaign Registration</text>
+  <text x="150" y="95" text-anchor="middle" class="small-text">KYC &amp; Documentation</text>
+  <text x="150" y="30" text-anchor="middle" class="time">1-2 days</text>
+
+  <!-- Local Partner Connection -->
+  <rect x="50" y="170" width="200" height="60" rx="8" class="verification"/>
+  <text x="150" y="195" text-anchor="middle" class="text">Local Partner Assignment</text>
+  <text x="150" y="215" text-anchor="middle" class="small-text">Verification &amp; Agreement</text>
+  <text x="150" y="150" text-anchor="middle" class="time">3-5 days</text>
+
+  <!-- Smart Contract Setup -->
+  <rect x="50" y="290" width="200" height="60" rx="8" class="contract"/>
+  <text x="150" y="315" text-anchor="middle" class="text">Smart Contract Creation</text>
+  <text x="150" y="335" text-anchor="middle" class="small-text">Milestone-based Release Terms</text>
+  <text x="150" y="270" text-anchor="middle" class="time">2-3 days</text>
+
+  <!-- Campaign Launch -->
+  <rect x="350" y="50" width="200" height="60" rx="8" class="node"/>
+  <text x="450" y="75" text-anchor="middle" class="text">Campaign Launch</text>
+  <text x="450" y="95" text-anchor="middle" class="small-text">Public Fundraising Begins</text>
+  <text x="450" y="30" text-anchor="middle" class="time">Goes live within 24 hours</text>
+
+  <!-- Milestone 1 -->
+  <rect x="350" y="170" width="200" height="80" rx="8" class="milestone"/>
+  <text x="450" y="195" text-anchor="middle" class="text">Milestone 1: Initial Setup</text>
+  <text x="450" y="215" text-anchor="middle" class="small-text">20% Funds Release</text>
+  <text x="450" y="235" text-anchor="middle" class="small-text">Project Setup &amp; Planning</text>
+  <text x="450" y="150" text-anchor="middle" class="time">2-4 weeks</text>
+
+  <!-- Release 1 -->
+  <rect x="650" y="170" width="150" height="60" rx="8" class="release"/>
+  <text x="725" y="195" text-anchor="middle" class="text">Smart Contract</text>
+  <text x="725" y="215" text-anchor="middle" class="small-text">First Release</text>
+
+  <!-- Milestone 2 -->
+  <rect x="350" y="310" width="200" height="80" rx="8" class="milestone"/>
+  <text x="450" y="335" text-anchor="middle" class="text">Milestone 2: Development</text>
+  <text x="450" y="355" text-anchor="middle" class="small-text">40% Funds Release</text>
+  <text x="450" y="375" text-anchor="middle" class="small-text">Main Implementation Phase</text>
+  <text x="450" y="290" text-anchor="middle" class="time">1-3 months</text>
+
+  <!-- Release 2 -->
+  <rect x="650" y="310" width="150" height="60" rx="8" class="release"/>
+  <text x="725" y="335" text-anchor="middle" class="text">Smart Contract</text>
+  <text x="725" y="355" text-anchor="middle" class="small-text">Second Release</text>
+
+  <!-- Milestone 3 -->
+  <rect x="350" y="450" width="200" height="80" rx="8" class="milestone"/>
+  <text x="450" y="475" text-anchor="middle" class="text">Milestone 3: Completion</text>
+  <text x="450" y="495" text-anchor="middle" class="small-text">40% Funds Release</text>
+  <text x="450" y="515" text-anchor="middle" class="small-text">Final Verification &amp; Handover</text>
+  <text x="450" y="430" text-anchor="middle" class="time">2-4 weeks</text>
+
+  <!-- Release 3 -->
+  <rect x="650" y="450" width="150" height="60" rx="8" class="release"/>
+  <text x="725" y="475" text-anchor="middle" class="text">Smart Contract</text>
+  <text x="725" y="495" text-anchor="middle" class="small-text">Final Release</text>
+
+  <!-- Impact Report -->
+  <rect x="900" y="310" width="200" height="80" rx="8" class="verification"/>
+  <text x="1000" y="335" text-anchor="middle" class="text">Impact Verification</text>
+  <text x="1000" y="355" text-anchor="middle" class="small-text">Final Report &amp; Metrics</text>
+  <text x="1000" y="375" text-anchor="middle" class="small-text">Community Feedback</text>
+  <text x="1000" y="290" text-anchor="middle" class="time">1-2 weeks</text>
+
+  <!-- Arrows -->
+  <path d="M 150,110 L 150,170" class="arrow"/>
+  <path d="M 150,230 L 150,290" class="arrow"/>
+  <path d="M 250,320 L 350,80" class="arrow"/>
+  <path d="M 450,110 L 450,170" class="arrow"/>
+  <path d="M 450,250 L 450,310" class="arrow"/>
+  <path d="M 450,390 L 450,450" class="arrow"/>
+  <path d="M 550,210 L 650,200" class="arrow"/>
+  <path d="M 550,350 L 650,340" class="arrow"/>
+  <path d="M 550,490 L 650,480" class="arrow"/>
+  <path d="M 800,350 L 900,350" class="arrow"/>
+
+  <!-- Legend -->
+  <rect x="50" y="600" width="250" height="150" rx="4" fill="#fff" stroke="#e5e7eb"/>
+  <text x="60" y="620" class="text">Process Types:</text>
+  
+  <rect x="60" y="635" width="20" height="20" class="node"/>
+  <text x="90" y="650" class="small-text">Standard Process</text>
+  
+  <rect x="60" y="665" width="20" height="20" class="milestone"/>
+  <text x="90" y="680" class="small-text">Milestone Checkpoint</text>
+  
+  <rect x="60" y="695" width="20" height="20" class="contract"/>
+  <text x="90" y="710" class="small-text">Smart Contract Action</text>
+  
+  <rect x="60" y="725" width="20" height="20" class="verification"/>
+  <text x="90" y="740" class="small-text">Verification Required</text>
+</svg>

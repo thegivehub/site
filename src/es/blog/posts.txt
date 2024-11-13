@@ -1,0 +1,20 @@
+empowering-communities.md|Empoderando Comunidades: Cómo el Crowdfunding Está Cambiando Vidas en Regiones Remotas|36
+unbanked.md|El Rol del Blockchain en Alcanzar a los No Bancarizados: Un Caso de Crowdfunding en África y América del Sur|37
+growth.md|De la Donación al Crecimiento: Cómo las Donaciones Impulsan Oportunidades Económicas en Áreas Desatendidas|38
+bridging-gap.md|Cerrando la Brecha Financiera: Por Qué el Acceso al Crowdfunding es Esencial para los No Bancarizados|39
+philantropy.md|El Futuro de la Filantropía: Cómo la Tecnología Está Transformando las Donaciones en Comunidades Remotas|40
+essentials.md|Aspectos Esenciales del Crowdfunding: Apoyando Proyectos de Base en África y América del Sur|41
+banking.md|Confiando en Blockchain: Cómo Stellar y Soroban Facilitan Donaciones Transparentes|42
+barriers.md|Rompiendo Barreras al Acceso Financiero: La Importancia del Crowdfunding en Regiones Remotas|43
+beyond-borders.md|Más Allá de las Fronteras: Cómo las Donaciones Digitales Empoderan a los No Bancarizados en Todo el Mundo|44
+giving-impact.md|Donar con Impacto: Cómo las Donaciones Generan Cambios Reales en África y América del Sur|45
+beyond-banking.md|Más Allá de la Banca: Cómo Blockchain Está Revolucionando las Donaciones Caritativas en Comunidades Remotas|46
+smartphone-to-aid.md|Del Teléfono Inteligente a la Ayuda Inteligente: Cómo la Tecnología Móvil Está Transformando las Donaciones Rurales|47
+transparency.md|Transparencia en las Donaciones: Usando Blockchain para Rastrear Cada Dólar del Donante al Beneficiario|48
+breaking-down-borders.md|Rompiendo Fronteras: Cómo las Finanzas Descentralizadas Conectan a Donantes Globales con Comunidades Locales|49
+hidden-costs.md|Los Costos Ocultos de No Tener Banco: Por Qué la Inclusión Financiera es Importante en África Rural|50
+direct-impact.md|Impacto Directo: Historias de Cómo las Donaciones Peer-to-Peer Están Cambiando Vidas en América del Sur|51
+small-donations.md|Pequeñas Donaciones, Gran Cambio: Cómo el Microgiving Está Empoderando a las Comunidades Remotas|52
+trust-through-technology.md|Confianza a Través de la Tecnología: Construyendo Plataformas de Caridad Confiables para la Era Digital|53
+inclusion.md|Inclusión Financiera en Acción: Historias Reales desde la Última Milla de las Donaciones|54
+unbanked-billion.md|Los Mil Millones No Bancarizados: Por Qué la Ayuda Tradicional No Llega a las Regiones Remotas (Y Cómo lo Estamos Cambiando)|55

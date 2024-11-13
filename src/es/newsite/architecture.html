@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>The Give Hub - Conectando Donantes con Impacto</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="keywords" name="crowdfund,gofundme,caridad,causas sociales,stellar,blockchain">
+        <meta content="description" name="The Give Hub es una plataforma de crowdfunding basada en blockchain, diseñada para hacer que crear campañas y donar sea sencillo y fácil de usar.">
+
+        <!-- Favicon -->
+        <link href="/site/img/favicon.svg" type="image/svg+xml" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="/css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Top Bar Start -->
+        <div class="top-bar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="top-bar-left">
+                            <div class="text">
+                                <i class="fa fa-phone-alt"></i>
+                                <p>(415) 300-0180</p>
+                            </div>
+                            <div class="text">
+                                <i class="fa fa-envelope"></i>
+                                <p>info@thegivehub.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="top-bar-right">
+                            <div class="social">
+                                <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://youtube.com/@thegivehub"><i class="fab fa-youtube"></i></a>
+                                <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <div class="lang">
+                                <a href="/en/"><img class="lang-icon" src="/site/img/hello.svg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">The Give Hub</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
+                        <div class="nav-item dropdown">
+                            <a href="about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Acerca de</a>
+                            <div class="dropdown-menu">
+                                <a href="service.html" class="dropdown-item">Qué Hacemos</a>
+                                <a href="team.html" class="dropdown-item">Conoce al Equipo</a>
+                                <a href="event.html" class="dropdown-item">Eventos</a>
+                            </div>
+                        </div>
+                        <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causas</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participa</a>
+                            <div class="dropdown-menu">
+                                <a href="donate.html" class="dropdown-item">Dona Ahora</a>
+                                <a href="volunteer.html" class="dropdown-item">Hazte Voluntario</a>
+                                <a href="campaign.html" class="dropdown-item">Inicia una Campaña</a>
+                                <a href="register-cause.html" class="dropdown-item">Registrar Causa</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Páginas</a>
+                            <div class="dropdown-menu">
+                                <a href="user-docs.html" class="dropdown-item">Documentación del Usuario</a>
+                                <a href="api.html" class="dropdown-item">Documentación API</a>
+                                <a href="faqs.html" class="dropdown-item">Preguntas Frecuentes</a>
+                                <a href="architecture.html" class="dropdown-item">Arquitectura de la Plataforma</a>
+                                <a href="pitchdeck.html" class="dropdown-item">Presentación de Financiación</a>
+                            </div>
+                        </div>
+                         <a href="contact.html" class="nav-item nav-link">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+
+       <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Techincal Architecture</h2>
+                    </div>
+                    <div class="col-12">
+                        <a href="">Home</a>
+                        <a href="">Techincal Architecture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+<div class="container">
+    <div class="row align-items-center" style="justify-content: center;">
+        <div class="col-lg-7">
+            <div class="tos-content">
+                    <h2 id="platform-architecture">The Give Hub - Platform Architecture Documentation</h2>
+<h3 id="system-overview">System Overview</h3>
+<p>The Give Hub is a blockchain-enabled crowdfunding platform designed
+to facilitate secure, transparent, and verifiable donations to social
+causes in remote regions. Built on a distributed microservices
+architecture, the platform leverages the Stellar blockchain and Soroban
+smart contracts to ensure transparency, fund management, and real-time
+impact tracking.</p>
+<p>The architecture combines a robust API gateway, user-friendly
+frontend, and independently scalable backend services to handle campaign
+management, user interactions, transaction processing, and continuous
+project updates. This document outlines each core component, service,
+and key technical feature, including security, scalability, and disaster
+recovery strategies.</p>
+<h2 id="core-components">Core Components</h2>
+<pre><code>                                      ┌──────────────┐
+                                      │              │
+                      ┌───────────────┤   Frontend   ├───────────────┐
+                      │               │              │               │
+                      │               └──────────────┘               │
+                      ▼                                             ▼
+              ┌───────────────┐                             ┌───────────────┐
+              │               │                             │               │
+              │    API        │                             │  Auth Service │
+              │    Gateway    │                             │               │
+              │               │                             │               │
+              └───────┬───────┘                             └───────────────┘
+                     │
+         ┌──────────┼──────────┬─────────────┬─────────────┐
+         ▼          ▼          ▼             ▼             ▼
+┌──────────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐
+│              │ │         │ │         │ │         │ │         │
+│  Campaign    │ │ User    │ │ Impact  │ │ Payment │ │ Updates │
+│  Service     │ │ Service │ │ Service │ │ Service │ │ Service │
+│              │ │         │ │         │ │         │ │         │
+└──────┬───────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘
+       │              │           │           │           │
+       └──────────────┴───────────┴───────────┴───────────┘
+                              │
+                      ┌───────┴────────┐
+                      │                │
+                      │   Database     │
+                      │   Cluster      │
+                      │                │
+                      └───────┬────────┘
+                              │
+                      ┌───────┴────────┐
+                      │   Blockchain   │
+                      │   Network      │
+                      └────────────────┘</code></pre>
+<h3 id="frontend-layer">Frontend Layer</h3>
+<ul>
+<li><strong>Framework</strong>: Next.js 14 for an interactive,
+responsive user experience</li>
+<li><strong>UI Library</strong>: Material-UI for modern and accessible
+design components</li>
+<li><strong>State Management</strong>: React Query to manage
+asynchronous data fetching</li>
+<li><strong>Real-time Updates</strong>: WebSocket for live project and
+donation tracking</li>
+<li><strong>Authentication</strong>: OAuth2 and JWT-based sessions</li>
+</ul>
+<h3 id="api-layer">API Layer</h3>
+<ul>
+<li><strong>Gateway</strong>: Node.js/Express API gateway orchestrates
+requests across microservices.</li>
+<li><strong>Documentation</strong>: OpenAPI 3.0 provides well-documented
+API endpoints.</li>
+<li><strong>Rate Limiting &amp; Caching</strong>: Redis supports
+optimized query performance and secure request handling.</li>
+</ul>
+<h3 id="service-layer">Service Layer</h3>
+<p>Each service operates independently as a Docker container, managed by
+Kubernetes for seamless scaling and deployment.</p>
+<ol type="1">
+<li><strong>Campaign Service</strong>: Handles all aspects of campaign
+management, including creation, updates, and milestone
+verification.</li>
+<li><strong>User Service</strong>: Manages user profiles, KYC
+verification, role-based access, and secure session management.</li>
+<li><strong>Impact Service</strong>: Tracks real-time impact metrics
+aligned with Sustainable Development Goals (SDGs) to quantify and
+display project results.</li>
+<li><strong>Payment Service</strong>: Connects with the Stellar
+blockchain for secure, cross-currency transactions and smart contract
+management.</li>
+<li><strong>Updates Service</strong>: Manages real-time updates from
+campaigns, allowing project teams to share progress with donors through
+verified, multimedia updates.</li>
+</ol>
+<h3 id="blockchain-layer">Blockchain Layer</h3>
+<p>The Stellar network is central to The Give Hub’s transparency and
+verification: - <strong>Smart Contracts</strong>: Soroban contracts
+automate fund release based on milestone completion. -
+<strong>Multi-signature Verification</strong>: Ensures consensus from
+multiple stakeholders (e.g., project validators) before funds are
+released. - <strong>Transaction Tracking</strong>: Blockchain
+transactions offer immutable, publicly accessible records.</p>
+<h2 id="security-architecture">Security Architecture</h2>
+<ol type="1">
+<li><strong>Authentication and Authorization</strong>: The platform uses
+OAuth2 and JWT for session-based authentication and role-based access
+control, enforced through the API Gateway.</li>
+<li><strong>Data Security</strong>: End-to-end encryption ensures the
+security of data in transit and at rest. The system adheres to stringent
+security standards, with regular audits and SSL/TLS applied across all
+communication channels.</li>
+<li><strong>Role-Based Access Control</strong>: Each user role (admin,
+project manager, local partner, donor) is limited to necessary
+permissions, safeguarding sensitive actions and data.</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> roles <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">ADMIN</span><span class="op">:</span> [<span class="st">&#39;manage_system&#39;</span><span class="op">,</span> <span class="st">&#39;verify_projects&#39;</span><span class="op">,</span> <span class="st">&#39;manage_users&#39;</span>]<span class="op">,</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">PROJECT_MANAGER</span><span class="op">:</span> [<span class="st">&#39;manage_projects&#39;</span><span class="op">,</span> <span class="st">&#39;submit_updates&#39;</span>]<span class="op">,</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">LOCAL_PARTNER</span><span class="op">:</span> [<span class="st">&#39;verify_updates&#39;</span><span class="op">,</span> <span class="st">&#39;submit_reports&#39;</span>]<span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">DONOR</span><span class="op">:</span> [<span class="st">&#39;view_projects&#39;</span><span class="op">,</span> <span class="st">&#39;make_donations&#39;</span><span class="op">,</span> <span class="st">&#39;track_impact&#39;</span>]</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<h2 id="api-documentation">API Documentation</h2>
+<p>The API follows RESTful design principles, with well-documented
+endpoints available through OpenAPI 3.0, ensuring seamless integration
+with external systems.</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode typescript"><code class="sourceCode typescript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Campaigns API endpoint</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>POST   <span class="op">/</span>api<span class="op">/</span>campaigns           <span class="co">// Create a campaign</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>GET    <span class="op">/</span>api<span class="op">/</span>campaigns           <span class="co">// Retrieve campaigns</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>PUT    <span class="op">/</span>api<span class="op">/</span>campaigns<span class="op">/:</span>id       <span class="co">// Update campaign details</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>DELETE <span class="op">/</span>api<span class="op">/</span>campaigns<span class="op">/:</span>id       <span class="co">// Remove campaign</span></span></code></pre></div>
+<h2 id="smart-contract-integration">Smart Contract Integration</h2>
+<p>Soroban smart contracts execute milestone-based fund releases. An
+example of the contract logic:</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Milestone-based release contract</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>contract MilestoneRelease {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">milestone_count</span><span class="op">:</span> u32<span class="op">,</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">total_amount</span><span class="op">:</span> i128<span class="op">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">released_amount</span><span class="op">:</span> i128<span class="op">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">verified_by</span><span class="op">:</span> Vec<span class="op">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    fn <span class="fu">release_milestone</span>(<span class="dt">milestone_id</span><span class="op">:</span> u32) {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        <span class="pp">require</span>(self<span class="op">.</span><span class="fu">is_verified</span>(milestone_id))<span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> amount <span class="op">=</span> self<span class="op">.</span><span class="fu">calculate_release_amount</span>()<span class="op">;</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        self<span class="op">.</span><span class="fu">transfer_funds</span>(amount)<span class="op">;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h2 id="deployment-architecture">Deployment Architecture</h2>
+<ol type="1">
+<li><strong>Development</strong>: Local Docker containers and Stellar
+testnet simulate the production environment.</li>
+<li><strong>Staging</strong>: Kubernetes cluster with Stellar testnet
+for near-production testing, coupled with a CI/CD pipeline for
+continuous integration.</li>
+<li><strong>Production</strong>: A multi-region Kubernetes cluster
+supports failover and replication, leveraging Stellar’s mainnet for
+blockchain transactions.</li>
+</ol>
+<h2 id="monitoring-and-logging">Monitoring and Logging</h2>
+<h3 id="metrics-and-logging">Metrics and Logging</h3>
+<ul>
+<li><strong>Metrics Collection</strong>: Prometheus gathers system
+performance data, while application-specific metrics include transaction
+success rates and donation flow.</li>
+<li><strong>Centralized Logging</strong>: The ELK stack aggregates and
+analyzes logs, offering error tracking, transaction monitoring, and
+audit trail documentation.</li>
+</ul>
+<h3 id="alerting">Alerting</h3>
+<p>Real-time alerts for system anomalies and performance issues ensure
+high availability and proactive response to potential issues.</p>
+<h2 id="scalability-considerations">Scalability Considerations</h2>
+<p>The microservices architecture enables each component to scale
+independently. Key considerations include: - <strong>Horizontal
+Scaling</strong>: Kubernetes handles autoscaling, with database sharding
+and load balancing for improved performance. - <strong>Vertical
+Scaling</strong>: Resources are allocated based on need, ensuring
+efficient usage without compromising performance.</p>
+<h2 id="disaster-recovery">Disaster Recovery</h2>
+<ol type="1">
+<li><strong>Backup Strategy</strong>: Regular backups of all databases,
+transaction logs, and configuration files ensure data resilience.</li>
+<li><strong>Recovery Procedures</strong>: Comprehensive protocols for
+service restoration, data consistency checks, and smart contract state
+recovery protect platform stability.</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>The Give Hub’s architecture is built to deliver a transparent,
+efficient, and secure platform that uses Stellar and Soroban to empower
+donors and recipients in remote regions. This architecture supports
+transparency, scalability, and verifiability—core principles that
+position The Give Hub as a trusted platform for impactful
+crowdfunding.</p>
+            </div></div></div></div>
+        <!-- Footer Start -->
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-contact">
+                            <h2>Nuestra Oficina Central</h2>
+                            <p><i class="fa fa-map-marker-alt"></i>621 Holloway Ave, <br>San Francisco CA, USA</p>
+                            <p><i class="fa fa-phone-alt"></i>(415) 300-0180</p>
+                            <p><i class="fa fa-envelope"></i>info@thegivehub.com</p>
+                            <div class="footer-social">
+                                <a class="btn btn-custom" href="https://twitter.com/thegivehub"><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-custom" href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-custom" href="https://youtube.com/@thegivehub"><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-custom" href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Enlaces Populares</h2>
+                            <a href="about.html">Sobre Nosotros</a>
+                            <a href="contact.html">Contáctenos</a>
+                            <a href="causes.html">Causas Populares</a>
+                            <a href="event.html">Próximos Eventos</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-link">
+                            <h2>Enlaces Útiles</h2>
+                            <a href="legal/tos.html">Términos de Uso</a>
+                            <a href="legal/privacy.html">Política de Privacidad</a>
+                            <a href="legal/cookies.html">Política de Cookies</a>
+                            <a href="help.html">Ayuda</a>
+                            <a href="faq.html">Preguntas Frecuentes</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="footer-newsletter">
+                            <h2>Boletín Informativo</h2>
+                            <form>
+                                <input class="form-control" placeholder="Correo electrónico aquí">
+                                <button class="btn btn-custom">Enviar</button>
+                                <label>No te preocupes, no enviaremos spam</label>
+                            </form>
+                        </div>
+                        <div>
+                    </div>
+                </div>
+            </div>
+            <div class="container copyright">
+                <div class="row">
+                    <div class="col-md-6">
+                   </div>
+                    <div class="col-md-6">
+                        <p>&copy; <a href="#">The Give Hub</a>, Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="/js/main.js"></script>
+    </body>
+</html>

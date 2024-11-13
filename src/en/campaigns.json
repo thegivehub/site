@@ -1,0 +1,1044 @@
+{
+	"_id": {
+		"$oid": "65ee1a1b2f3a4b5c6d7e8f9a"
+	},
+	"title": "Clean Water Pipeline - Samburu County",
+	"description": "Construction of a 5km water pipeline connecting remote villages to the main water supply, serving 2,500 residents and dramatically reducing water collection time for local families.",
+	"location": {
+		"country": "Kenya",
+		"region": "Samburu County",
+		"coordinates": {
+			"latitude": {
+				"$numberDouble": "1.2833"
+			},
+			"longitude": {
+				"$numberDouble": "37.5333"
+			}
+		}
+	},
+	"funding": {
+		"goalAmount": {
+			"$numberInt": "125000"
+		},
+		"raisedAmount": {
+			"$numberInt": "75000"
+		},
+		"currency": "XLM",
+		"donorCount": {
+			"$numberInt": "184"
+		},
+		"transactions": [
+			{
+				"txHash": "67f54d3ba1ff4d7",
+				"amount": {
+					"$numberInt": "5000"
+				},
+				"timestamp": {
+					"$date": {
+						"$numberLong": "1710080551000"
+					}
+				},
+				"donorId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f01"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f3581b"
+				}
+			},
+			{
+				"txHash": "82g65e4cb2gg5e8",
+				"amount": {
+					"$numberInt": "10000"
+				},
+				"timestamp": {
+					"$date": {
+						"$numberLong": "1710148522000"
+					}
+				},
+				"donorId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f03"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f3581c"
+				}
+			}
+		]
+	},
+	"timeline": {
+		"created": {
+			"$date": {
+				"$numberLong": "1707984000000"
+			}
+		},
+		"startDate": {
+			"$date": {
+				"$numberLong": "1709251200000"
+			}
+		},
+		"endDate": {
+			"$date": {
+				"$numberLong": "1717200000000"
+			}
+		},
+		"milestones": [
+			{
+				"title": "Environmental Impact Assessment",
+				"description": "Complete required environmental studies and obtain permits",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1710460800000"
+					}
+				},
+				"completedDate": {
+					"$date": {
+						"$numberLong": "1710433800000"
+					}
+				},
+				"status": "completed",
+				"_id": {
+					"$oid": "67315ae4e085670420f3581d"
+				}
+			},
+			{
+				"title": "Pipeline Material Procurement",
+				"description": "Purchase and deliver all necessary materials",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1711929600000"
+					}
+				},
+				"completedDate": null,
+				"status": "pending",
+				"_id": {
+					"$oid": "67315ae4e085670420f3581e"
+				}
+			}
+		]
+	},
+	"impact": {
+		"beneficiariesCount": {
+			"$numberInt": "2500"
+		},
+		"metrics": [
+			{
+				"name": "Water Collection Time",
+				"baseline": {
+					"$numberInt": "240"
+				},
+				"current": {
+					"$numberInt": "240"
+				},
+				"target": {
+					"$numberInt": "15"
+				},
+				"unit": "minutes",
+				"_id": {
+					"$oid": "67315ae4e085670420f3581f"
+				}
+			},
+			{
+				"name": "Households Served",
+				"baseline": {
+					"$numberInt": "0"
+				},
+				"current": {
+					"$numberInt": "0"
+				},
+				"target": {
+					"$numberInt": "500"
+				},
+				"unit": "households",
+				"_id": {
+					"$oid": "67315ae4e085670420f35820"
+				}
+			}
+		],
+		"sdgGoals": [
+			{
+				"$numberInt": "6"
+			},
+			{
+				"$numberInt": "3"
+			}
+		]
+	},
+	"verification": {
+		"status": "verified",
+		"localPartners": [
+			{
+				"organizationId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f9c"
+				},
+				"role": "implementingPartner",
+				"verificationDocuments": [
+					"water_authority_approval.pdf"
+				],
+				"_id": {
+					"$oid": "67315ae4e085670420f35821"
+				}
+			}
+		],
+		"updates": [
+			{
+				"date": {
+					"$date": {
+						"$numberLong": "1710433800000"
+					}
+				},
+				"description": "Environmental impact assessment completed and approved",
+				"mediaUrls": [
+					"site_survey_photo1.jpg"
+				],
+				"verifiedBy": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f04"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f35822"
+				}
+			}
+		]
+	},
+	"media": [
+		{
+			"type": "image",
+			"url": "images/water_project/current_water_source.jpg",
+			"caption": "Current water source - 4 hour walk for local residents",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1707984000000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f35823"
+			}
+		},
+		{
+			"type": "document",
+			"url": "docs/water_project/technical_plan.pdf",
+			"caption": "Technical implementation plan",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1707984000000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f35824"
+			}
+		}
+	],
+	"category": "water-access",
+	"tags": [
+		"water",
+		"infrastructure",
+		"health",
+		"community"
+	],
+	"status": "active",
+	"visibility": "public",
+	"__v": {
+		"$numberInt": "0"
+	}
+}
+{
+	"_id": {
+		"$oid": "65ee1a1b2f3a4b5c6d7e8f9e"
+	},
+	"title": "Solar-Powered Medical Clinic - Chocó",
+	"description": "Construction of a permanent medical clinic serving 12 remote villages, powered by renewable energy and equipped with telemedicine capabilities.",
+	"location": {
+		"country": "Colombia",
+		"region": "Chocó",
+		"coordinates": {
+			"latitude": {
+				"$numberDouble": "5.6919"
+			},
+			"longitude": {
+				"$numberDouble": "-76.6583"
+			}
+		}
+	},
+	"funding": {
+		"goalAmount": {
+			"$numberInt": "200000"
+		},
+		"raisedAmount": {
+			"$numberInt": "30000"
+		},
+		"currency": "XLM",
+		"donorCount": {
+			"$numberInt": "45"
+		},
+		"transactions": [
+			{
+				"txHash": "89e32f1ca2ee5f8",
+				"amount": {
+					"$numberInt": "10000"
+				},
+				"timestamp": {
+					"$date": {
+						"$numberLong": "1710234922000"
+					}
+				},
+				"donorId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f05"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f35826"
+				}
+			}
+		]
+	},
+	"timeline": {
+		"created": {
+			"$date": {
+				"$numberLong": "1709251200000"
+			}
+		},
+		"startDate": {
+			"$date": {
+				"$numberLong": "1710028800000"
+			}
+		},
+		"endDate": {
+			"$date": {
+				"$numberLong": "1731196800000"
+			}
+		},
+		"milestones": [
+			{
+				"title": "Land Acquisition",
+				"description": "Secure and verify land for clinic construction",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1711929600000"
+					}
+				},
+				"status": "pending",
+				"_id": {
+					"$oid": "67315ae4e085670420f35827"
+				}
+			}
+		]
+	},
+	"impact": {
+		"beneficiariesCount": {
+			"$numberInt": "5000"
+		},
+		"metrics": [
+			{
+				"name": "Healthcare Access Time",
+				"baseline": {
+					"$numberInt": "180"
+				},
+				"current": {
+					"$numberInt": "180"
+				},
+				"target": {
+					"$numberInt": "30"
+				},
+				"unit": "minutes",
+				"_id": {
+					"$oid": "67315ae4e085670420f35828"
+				}
+			}
+		],
+		"sdgGoals": [
+			{
+				"$numberInt": "3"
+			}
+		]
+	},
+	"verification": {
+		"status": "verified",
+		"localPartners": [
+			{
+				"organizationId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f9d"
+				},
+				"role": "implementingPartner",
+				"verificationDocuments": [
+					"local_health_authority_approval.pdf"
+				],
+				"_id": {
+					"$oid": "67315ae4e085670420f35829"
+				}
+			}
+		],
+		"updates": []
+	},
+	"media": [
+		{
+			"type": "image",
+			"url": "images/clinic/proposed_site.jpg",
+			"caption": "Proposed clinic location",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1709251200000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f3582a"
+			}
+		}
+	],
+	"category": "healthcare",
+	"tags": [
+		"healthcare",
+		"renewable-energy",
+		"telemedicine"
+	],
+	"status": "active",
+	"visibility": "public",
+	"__v": {
+		"$numberInt": "0"
+	}
+}
+{
+	"_id": {
+		"$oid": "65ee1a1b2f3a4b5c6d7e8fa0"
+	},
+	"title": "Agricultural Training Center - Kilifi",
+	"description": "Establishment of a demonstration farm and training facility to teach drought-resistant farming techniques to local farmers.",
+	"location": {
+		"country": "Kenya",
+		"region": "Kilifi County",
+		"coordinates": {
+			"latitude": {
+				"$numberDouble": "-3.6305"
+			},
+			"longitude": {
+				"$numberDouble": "39.8499"
+			}
+		}
+	},
+	"funding": {
+		"goalAmount": {
+			"$numberInt": "150000"
+		},
+		"raisedAmount": {
+			"$numberInt": "150000"
+		},
+		"currency": "XLM",
+		"donorCount": {
+			"$numberInt": "312"
+		},
+		"transactions": [
+			{
+				"txHash": "92h76f5dc3hh6f9",
+				"amount": {
+					"$numberInt": "15000"
+				},
+				"timestamp": {
+					"$date": {
+						"$numberLong": "1697365800000"
+					}
+				},
+				"donorId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f02"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f3582c"
+				}
+			}
+		]
+	},
+	"timeline": {
+		"created": {
+			"$date": {
+				"$numberLong": "1696118400000"
+			}
+		},
+		"startDate": {
+			"$date": {
+				"$numberLong": "1697328000000"
+			}
+		},
+		"endDate": {
+			"$date": {
+				"$numberLong": "1707955200000"
+			}
+		},
+		"milestones": [
+			{
+				"title": "Facility Construction",
+				"description": "Complete main training facility building",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1702598400000"
+					}
+				},
+				"completedDate": {
+					"$date": {
+						"$numberLong": "1702398600000"
+					}
+				},
+				"status": "completed",
+				"_id": {
+					"$oid": "67315ae4e085670420f3582d"
+				}
+			},
+			{
+				"title": "First Training Batch",
+				"description": "Complete training for first group of 50 farmers",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1706745600000"
+					}
+				},
+				"completedDate": {
+					"$date": {
+						"$numberLong": "1706451600000"
+					}
+				},
+				"status": "completed",
+				"_id": {
+					"$oid": "67315ae4e085670420f3582e"
+				}
+			}
+		]
+	},
+	"impact": {
+		"beneficiariesCount": {
+			"$numberInt": "1200"
+		},
+		"metrics": [
+			{
+				"name": "Farmers Trained",
+				"baseline": {
+					"$numberInt": "0"
+				},
+				"current": {
+					"$numberInt": "200"
+				},
+				"target": {
+					"$numberInt": "200"
+				},
+				"unit": "farmers",
+				"_id": {
+					"$oid": "67315ae4e085670420f3582f"
+				}
+			},
+			{
+				"name": "Crop Yield Increase",
+				"baseline": {
+					"$numberInt": "0"
+				},
+				"current": {
+					"$numberInt": "40"
+				},
+				"target": {
+					"$numberInt": "35"
+				},
+				"unit": "percentage",
+				"_id": {
+					"$oid": "67315ae4e085670420f35830"
+				}
+			}
+		],
+		"sdgGoals": [
+			{
+				"$numberInt": "1"
+			},
+			{
+				"$numberInt": "2"
+			},
+			{
+				"$numberInt": "8"
+			}
+		]
+	},
+	"verification": {
+		"status": "completed",
+		"localPartners": [
+			{
+				"organizationId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8fa1"
+				},
+				"role": "implementingPartner",
+				"verificationDocuments": [
+					"training_completion_report.pdf"
+				],
+				"_id": {
+					"$oid": "67315ae4e085670420f35831"
+				}
+			}
+		],
+		"updates": [
+			{
+				"date": {
+					"$date": {
+						"$numberLong": "1707991200000"
+					}
+				},
+				"description": "Final project completion report submitted and verified",
+				"mediaUrls": [
+					"completion_ceremony.jpg",
+					"impact_report.pdf"
+				],
+				"verifiedBy": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f04"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f35832"
+				}
+			}
+		]
+	},
+	"media": [
+		{
+			"type": "image",
+			"url": "images/agri/training_session.jpg",
+			"caption": "Farmers during practical training session",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1706441400000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f35833"
+			}
+		},
+		{
+			"type": "document",
+			"url": "docs/agri/completion_report.pdf",
+			"caption": "Project Completion Report",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1707991200000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f35834"
+			}
+		}
+	],
+	"category": "agriculture",
+	"tags": [
+		"agriculture",
+		"education",
+		"sustainability"
+	],
+	"status": "completed",
+	"visibility": "public",
+	"__v": {
+		"$numberInt": "0"
+	}
+}
+{
+	"_id": {
+		"$oid": "65ee1a1b2f3a4b5c6d7e8fa2"
+	},
+	"title": "School Infrastructure Project - Putumayo",
+	"description": "Construction of 6 new classrooms, computer lab, and modern facilities to improve education access for 300+ children.",
+	"location": {
+		"country": "Colombia",
+		"region": "Putumayo",
+		"coordinates": {
+			"latitude": {
+				"$numberDouble": "1.1537"
+			},
+			"longitude": {
+				"$numberDouble": "-76.6478"
+			}
+		}
+	},
+	"funding": {
+		"goalAmount": {
+			"$numberInt": "175000"
+		},
+		"raisedAmount": {
+			"$numberInt": "52500"
+		},
+		"currency": "XLM",
+		"donorCount": {
+			"$numberInt": "89"
+		},
+		"transactions": [
+			{
+				"txHash": "73i87g6ed4ii7g0",
+				"amount": {
+					"$numberInt": "5000"
+				},
+				"timestamp": {
+					"$date": {
+						"$numberLong": "1706802300000"
+					}
+				},
+				"donorId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f01"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f35836"
+				}
+			}
+		]
+	},
+	"timeline": {
+		"created": {
+			"$date": {
+				"$numberLong": "1705276800000"
+			}
+		},
+		"startDate": {
+			"$date": {
+				"$numberLong": "1706745600000"
+			}
+		},
+		"endDate": {
+			"$date": {
+				"$numberLong": "1714521600000"
+			}
+		},
+		"milestones": [
+			{
+				"title": "Initial Planning Phase",
+				"description": "Complete architectural plans and permits",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1709251200000"
+					}
+				},
+				"completedDate": {
+					"$date": {
+						"$numberLong": "1710028800000"
+					}
+				},
+				"status": "completed",
+				"_id": {
+					"$oid": "67315ae4e085670420f35837"
+				}
+			}
+		]
+	},
+	"impact": {
+		"beneficiariesCount": {
+			"$numberInt": "300"
+		},
+		"metrics": [
+			{
+				"name": "Student Capacity",
+				"baseline": {
+					"$numberInt": "150"
+				},
+				"current": {
+					"$numberInt": "150"
+				},
+				"target": {
+					"$numberInt": "450"
+				},
+				"unit": "students",
+				"_id": {
+					"$oid": "67315ae4e085670420f35838"
+				}
+			}
+		],
+		"sdgGoals": [
+			{
+				"$numberInt": "4"
+			}
+		]
+	},
+	"verification": {
+		"status": "verified",
+		"updates": [
+			{
+				"date": {
+					"$date": {
+						"$numberLong": "1710257400000"
+					}
+				},
+				"description": "Campaign needs additional promotion to meet funding goal",
+				"mediaUrls": [
+					"current_school_conditions.jpg"
+				],
+				"verifiedBy": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f04"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f35839"
+				}
+			}
+		],
+		"localPartners": []
+	},
+	"media": [
+		{
+			"type": "image",
+			"url": "images/school/current_conditions.jpg",
+			"caption": "Current school facilities",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1705276800000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f3583a"
+			}
+		}
+	],
+	"category": "education",
+	"tags": [
+		"education",
+		"infrastructure",
+		"technology"
+	],
+	"status": "active",
+	"visibility": "public",
+	"__v": {
+		"$numberInt": "0"
+	}
+}
+{
+	"_id": {
+		"$oid": "65ee1a1b2f3a4b5c6d7e8fa4"
+	},
+	"title": "Community Health & Sanitation - Siaya County",
+	"description": "Construction of 50 household sanitation facilities and implementation of community waste management system.",
+	"location": {
+		"country": "Kenya",
+		"region": "Siaya County",
+		"coordinates": {
+			"latitude": {
+				"$numberDouble": "0.0607"
+			},
+			"longitude": {
+				"$numberDouble": "34.2881"
+			}
+		}
+	},
+	"funding": {
+		"goalAmount": {
+			"$numberInt": "100000"
+		},
+		"raisedAmount": {
+			"$numberInt": "100000"
+		},
+		"currency": "XLM",
+		"donorCount": {
+			"$numberInt": "256"
+		},
+		"transactions": [
+			{
+				"txHash": "45j98h7fg5kk8h1",
+				"amount": {
+					"$numberInt": "20000"
+				},
+				"timestamp": {
+					"$date": {
+						"$numberLong": "1707996000000"
+					}
+				},
+				"donorId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f05"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f3583c"
+				}
+			}
+		]
+	},
+	"timeline": {
+		"created": {
+			"$date": {
+				"$numberLong": "1706745600000"
+			}
+		},
+		"startDate": {
+			"$date": {
+				"$numberLong": "1707955200000"
+			}
+		},
+		"endDate": {
+			"$date": {
+				"$numberLong": "1721001600000"
+			}
+		},
+		"milestones": [
+			{
+				"title": "Community Assessment",
+				"description": "Complete community needs assessment and location planning",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1709251200000"
+					}
+				},
+				"completedDate": {
+					"$date": {
+						"$numberLong": "1709078400000"
+					}
+				},
+				"status": "completed",
+				"_id": {
+					"$oid": "67315ae4e085670420f3583d"
+				}
+			},
+			{
+				"title": "Initial Construction Phase",
+				"description": "Complete first 10 household sanitation facilities",
+				"targetDate": {
+					"$date": {
+						"$numberLong": "1711929600000"
+					}
+				},
+				"status": "in-progress",
+				"_id": {
+					"$oid": "67315ae4e085670420f3583e"
+				}
+			}
+		]
+	},
+	"impact": {
+		"beneficiariesCount": {
+			"$numberInt": "2000"
+		},
+		"metrics": [
+			{
+				"name": "Sanitation Facilities",
+				"baseline": {
+					"$numberInt": "0"
+				},
+				"current": {
+					"$numberInt": "0"
+				},
+				"target": {
+					"$numberInt": "50"
+				},
+				"unit": "facilities",
+				"_id": {
+					"$oid": "67315ae4e085670420f3583f"
+				}
+			},
+			{
+				"name": "Households with Access",
+				"baseline": {
+					"$numberInt": "0"
+				},
+				"current": {
+					"$numberInt": "0"
+				},
+				"target": {
+					"$numberInt": "400"
+				},
+				"unit": "households",
+				"_id": {
+					"$oid": "67315ae4e085670420f35840"
+				}
+			},
+			{
+				"name": "Waste Management Coverage",
+				"baseline": {
+					"$numberInt": "10"
+				},
+				"current": {
+					"$numberInt": "10"
+				},
+				"target": {
+					"$numberInt": "100"
+				},
+				"unit": "percentage",
+				"_id": {
+					"$oid": "67315ae4e085670420f35841"
+				}
+			}
+		],
+		"sdgGoals": [
+			{
+				"$numberInt": "3"
+			},
+			{
+				"$numberInt": "6"
+			}
+		]
+	},
+	"verification": {
+		"status": "verified",
+		"localPartners": [
+			{
+				"organizationId": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8fa1"
+				},
+				"role": "implementingPartner",
+				"verificationDocuments": [
+					"community_approval.pdf",
+					"site_assessment.pdf"
+				],
+				"_id": {
+					"$oid": "67315ae4e085670420f35842"
+				}
+			}
+		],
+		"updates": [
+			{
+				"date": {
+					"$date": {
+						"$numberLong": "1709136000000"
+					}
+				},
+				"description": "Community needs assessment completed and implementation plan approved",
+				"mediaUrls": [
+					"community_meeting.jpg",
+					"assessment_report.pdf"
+				],
+				"verifiedBy": {
+					"$oid": "65ee1a1b2f3a4b5c6d7e8f04"
+				},
+				"_id": {
+					"$oid": "67315ae4e085670420f35843"
+				}
+			}
+		]
+	},
+	"media": [
+		{
+			"type": "image",
+			"url": "images/sanitation/community_meeting.jpg",
+			"caption": "Community planning meeting",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1709044200000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f35844"
+			}
+		},
+		{
+			"type": "document",
+			"url": "docs/sanitation/implementation_plan.pdf",
+			"caption": "Detailed Implementation Plan",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1709136000000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f35845"
+			}
+		},
+		{
+			"type": "image",
+			"url": "images/sanitation/proposed_design.jpg",
+			"caption": "Proposed sanitation facility design",
+			"timestamp": {
+				"$date": {
+					"$numberLong": "1709136000000"
+				}
+			},
+			"_id": {
+				"$oid": "67315ae4e085670420f35846"
+			}
+		}
+	],
+	"category": "sanitation",
+	"tags": [
+		"sanitation",
+		"health",
+		"community",
+		"infrastructure"
+	],
+	"status": "active",
+	"visibility": "public",
+	"__v": {
+		"$numberInt": "0"
+	}
+}
