@@ -8,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="/site/img/favicon.svg" type="image/svg+xml" rel="icon">
+        <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="/site/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="/site/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/site/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="/site/css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -48,8 +48,11 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="lang">
+                                <a onclick="app.switchLang('es'); return false;" href="/es/"><img class="lang-icon" src="/site/img/hola.svg"></a>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -73,11 +76,11 @@
                             <div class="dropdown-menu">
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="event.html" class="nav-item nav-link">Events</a>
                             </div>
                         </div>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
                         <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
@@ -85,7 +88,6 @@
                                 <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
                                 <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
                                 <a href="register-cause.html" class="dropdown-item">Register Cause</a>
-                                <a href="pitchdeck.html" title="Become a donor today!" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -94,6 +96,7 @@
                                 <a href="user-docs.html" class="dropdown-item">User Documentation</a>
                                 <a href="api.html" class="dropdown-item">API Documentation</a>
                                 <a href="faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
                                 <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
@@ -129,97 +132,147 @@
                     <img src="/site/img/blog-7.jpg" />
                     <h2>Banking on Blockchain</h2>
                     <h3> How Stellar and Soroban Enable Transparent Giving</h3>
-                    # Banking on Blockchain: How Stellar and Soroban Enable Transparent Giving
-
-When Maria in rural Ecuador received a $500 donation for her coffee farm, something remarkable happened: every step of the money’s journey was visible, automated, and cost mere fractions of a cent. This wasn’t magic; it was the power of the Stellar blockchain and Soroban smart contracts at work. Let's explore how this technology is transforming charitable giving and creating unparalleled transparency in philanthropy.
-
-## Building on Blockchain Technology
-
-Stellar provides the infrastructure, supporting fast transactions (3–5 seconds), minimal fees (under $0.0001 per transaction), global accessibility, energy efficiency, and built-in currency exchange. With these features, funds travel swiftly and securely across borders, enabling direct impact with negligible fees and fewer intermediaries.
-
-Soroban, Stellar’s smart contract platform, adds another layer: programmable automation. Through Soroban, complex rules govern donations, such as fund distribution based on milestones, conditional transfers, and multi-signature validation. This ensures every contribution follows a precise path, meeting defined criteria before being released, while every action is traceable on the blockchain.
-
-## How Stellar and Soroban Revolutionize Giving
-
-### Transparent Giving in Action
-In a blockchain-powered donation process, transparency becomes a given, not an exception. Imagine this flow:
-
-- **Donor** sends funds.
-- **Smart Contract** verifies and holds the donation.
-- **Local Partner** confirms project needs.
-- **Beneficiary** receives funds upon milestone completion.
-
-Each step is timestamped, recording the amount, purpose, and verification status, so every stakeholder knows exactly where the funds are and when they move.
-
-### Automated Trust and Security
-Soroban’s smart contracts go beyond just transferring funds; they enforce trust. By programming conditions like multi-signature requirements, milestone-based releases, and validations, Soroban ensures funds reach intended recipients only when predefined conditions are met. Donors and organizations can verify that funds are used as intended, creating a permanent record of every transaction and reducing the risk of mismanagement.
-
-### Real-World Use Case: Village Water Project in Tanzania
-
-In rural Tanzania, a $12,000 project to build a water well uses Soroban’s programmable contracts to structure the funding and verification process across distinct milestones:
-
-1. **Material Purchase (30%)**: Released upon supplier verification.
-2. **Construction Phase (40%)**: Conditional upon progress photos and local engineering confirmation.
-3. **Completion and Community Handover (30%)**: Final release after community leaders verify the project is functional.
-
-This process, facilitated by blockchain, brings transparency and accountability, ensuring that the funds contribute to tangible progress at each stage.
-
-## Technical Foundation for Transparent Charitable Giving
-
-Soroban smart contracts allow detailed, programmatic control over how and when funds are distributed:
-
-- **Multi-signature validation**: Involving local partners, community leaders, and external verifiers.
-- **Milestone tracking**: Automating fund release based on confirmed project stages, with documented proof.
-- **Impact tracking**: Recording every fund transfer and project milestone, offering a complete, auditable record.
-
-### Simplified Example of a Soroban Smart Contract
-Using Rust, the code might look like this:
-
-```rust
-#[contract]
-pub struct CharitableProject {
-    total_raised: i128,
-    beneficiary: Address,
-    milestones: Vec<Milestone>,
-    validators: Vec<Address>
-}
-
-impl CharitableProject {
-    pub fn release_funds(milestone_id: u32, validator_signatures: Vec<Signature>) {
-        require(self.verify_signatures(&validator_signatures));
-        require(self.milestone_completed(milestone_id));
-        // Transfer funds to beneficiary
-    }
-}
-```
-
-This structure ensures funds are released only when milestones are achieved and verified, adding an extra layer of control and security.
-
-## Key Advantages of Blockchain-Powered Giving
-
-With Stellar and Soroban, cross-border efficiency becomes a practical reality. Instant settlements and currency conversion allow organizations to distribute funds directly to local projects, avoiding lengthy and costly bank transfers.
-
-Programmatic control means smart contracts automate the verification and reporting processes, eliminating the need for extensive manual oversight. Donors and organizations benefit from real-time updates, transparent tracking, and immediate impact metrics, making regulatory compliance and transparency effortless.
-
-## Best Practices for Implementation
-
-For a successful integration of blockchain in social impact projects, it’s essential to:
-
-- Design smart contracts that align with project goals and are easily auditable.
-- Establish a strong validation framework with clear criteria for milestones and sign-offs.
-- Implement multiple layers of security, including formal audits, multi-signature requirements, and dispute resolution mechanisms.
-
-## Looking Forward: The Future of Transparent Giving
-
-Blockchain offers incredible potential for the social impact sector. Imagine IoT-enabled devices reporting project progress in real-time, AI-powered analysis verifying milestone completion, or cross-chain interoperability allowing donations from any blockchain to support a single cause. These advancements will further reduce friction, improve transparency, and allow more funds to go directly where they’re needed.
-
-## Conclusion
-
-The combination of Stellar and Soroban isn’t just a technological solution—it’s a transformation in how we facilitate and track charitable giving. By providing transparency, security, and programmatic trust, this technology stack empowers more direct, impactful, and accountable giving programs worldwide. As blockchain-powered philanthropy grows, it’s clear that the future of transparent, effective giving is here. 
-
----
-
-*Ready to explore blockchain-powered giving? Whether you’re a developer, organization, or donor, the future of philanthropy awaits.*
+                    
+<p>When Maria in rural Ecuador received a $500 donation for her coffee
+farm, something remarkable happened: every step of the money’s journey
+was visible, automated, and cost mere fractions of a cent. This wasn’t
+magic; it was the power of the Stellar blockchain and Soroban smart
+contracts at work. Let’s explore how this technology is transforming
+charitable giving and creating unparalleled transparency in
+philanthropy.</p>
+<h2 id="building-on-blockchain-technology">Building on Blockchain
+Technology</h2>
+<p>Stellar provides the infrastructure, supporting fast transactions
+(3–5 seconds), minimal fees (under $0.0001 per transaction), global
+accessibility, energy efficiency, and built-in currency exchange. With
+these features, funds travel swiftly and securely across borders,
+enabling direct impact with negligible fees and fewer
+intermediaries.</p>
+<p>Soroban, Stellar’s smart contract platform, adds another layer:
+programmable automation. Through Soroban, complex rules govern
+donations, such as fund distribution based on milestones, conditional
+transfers, and multi-signature validation. This ensures every
+contribution follows a precise path, meeting defined criteria before
+being released, while every action is traceable on the blockchain.</p>
+<h2 id="how-stellar-and-soroban-revolutionize-giving">How Stellar and
+Soroban Revolutionize Giving</h2>
+<h3 id="transparent-giving-in-action">Transparent Giving in Action</h3>
+<p>In a blockchain-powered donation process, transparency becomes a
+given, not an exception. Imagine this flow:</p>
+<ul>
+<li><strong>Donor</strong> sends funds.</li>
+<li><strong>Smart Contract</strong> verifies and holds the
+donation.</li>
+<li><strong>Local Partner</strong> confirms project needs.</li>
+<li><strong>Beneficiary</strong> receives funds upon milestone
+completion.</li>
+</ul>
+<p>Each step is timestamped, recording the amount, purpose, and
+verification status, so every stakeholder knows exactly where the funds
+are and when they move.</p>
+<h3 id="automated-trust-and-security">Automated Trust and Security</h3>
+<p>Soroban’s smart contracts go beyond just transferring funds; they
+enforce trust. By programming conditions like multi-signature
+requirements, milestone-based releases, and validations, Soroban ensures
+funds reach intended recipients only when predefined conditions are met.
+Donors and organizations can verify that funds are used as intended,
+creating a permanent record of every transaction and reducing the risk
+of mismanagement.</p>
+<h3
+id="real-world-use-case-village-water-project-in-tanzania">Real-World
+Use Case: Village Water Project in Tanzania</h3>
+<p>In rural Tanzania, a $12,000 project to build a water well uses
+Soroban’s programmable contracts to structure the funding and
+verification process across distinct milestones:</p>
+<ol type="1">
+<li><strong>Material Purchase (30%)</strong>: Released upon supplier
+verification.</li>
+<li><strong>Construction Phase (40%)</strong>: Conditional upon progress
+photos and local engineering confirmation.</li>
+<li><strong>Completion and Community Handover (30%)</strong>: Final
+release after community leaders verify the project is functional.</li>
+</ol>
+<p>This process, facilitated by blockchain, brings transparency and
+accountability, ensuring that the funds contribute to tangible progress
+at each stage.</p>
+<h2
+id="technical-foundation-for-transparent-charitable-giving">Technical
+Foundation for Transparent Charitable Giving</h2>
+<p>Soroban smart contracts allow detailed, programmatic control over how
+and when funds are distributed:</p>
+<ul>
+<li><strong>Multi-signature validation</strong>: Involving local
+partners, community leaders, and external verifiers.</li>
+<li><strong>Milestone tracking</strong>: Automating fund release based
+on confirmed project stages, with documented proof.</li>
+<li><strong>Impact tracking</strong>: Recording every fund transfer and
+project milestone, offering a complete, auditable record.</li>
+</ul>
+<h3 id="simplified-example-of-a-soroban-smart-contract">Simplified
+Example of a Soroban Smart Contract</h3>
+<p>Using Rust, the code might look like this:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode rust"><code class="sourceCode rust"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="at">#[</span>contract<span class="at">]</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">struct</span> CharitableProject <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    total_raised<span class="op">:</span> <span class="dt">i128</span><span class="op">,</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    beneficiary<span class="op">:</span> Address<span class="op">,</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    milestones<span class="op">:</span> <span class="dt">Vec</span><span class="op">&lt;</span>Milestone<span class="op">&gt;,</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    validators<span class="op">:</span> <span class="dt">Vec</span><span class="op">&lt;</span>Address<span class="op">&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">impl</span> CharitableProject <span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">pub</span> <span class="kw">fn</span> release_funds(milestone_id<span class="op">:</span> <span class="dt">u32</span><span class="op">,</span> validator_signatures<span class="op">:</span> <span class="dt">Vec</span><span class="op">&lt;</span>Signature<span class="op">&gt;</span>) <span class="op">{</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        require(<span class="kw">self</span><span class="op">.</span>verify_signatures(<span class="op">&amp;</span>validator_signatures))<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        require(<span class="kw">self</span><span class="op">.</span>milestone_completed(milestone_id))<span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Transfer funds to beneficiary</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+<p>This structure ensures funds are released only when milestones are
+achieved and verified, adding an extra layer of control and
+security.</p>
+<h2 id="key-advantages-of-blockchain-powered-giving">Key Advantages of
+Blockchain-Powered Giving</h2>
+<p>With Stellar and Soroban, cross-border efficiency becomes a practical
+reality. Instant settlements and currency conversion allow organizations
+to distribute funds directly to local projects, avoiding lengthy and
+costly bank transfers.</p>
+<p>Programmatic control means smart contracts automate the verification
+and reporting processes, eliminating the need for extensive manual
+oversight. Donors and organizations benefit from real-time updates,
+transparent tracking, and immediate impact metrics, making regulatory
+compliance and transparency effortless.</p>
+<h2 id="best-practices-for-implementation">Best Practices for
+Implementation</h2>
+<p>For a successful integration of blockchain in social impact projects,
+it’s essential to:</p>
+<ul>
+<li>Design smart contracts that align with project goals and are easily
+auditable.</li>
+<li>Establish a strong validation framework with clear criteria for
+milestones and sign-offs.</li>
+<li>Implement multiple layers of security, including formal audits,
+multi-signature requirements, and dispute resolution mechanisms.</li>
+</ul>
+<h2 id="looking-forward-the-future-of-transparent-giving">Looking
+Forward: The Future of Transparent Giving</h2>
+<p>Blockchain offers incredible potential for the social impact sector.
+Imagine IoT-enabled devices reporting project progress in real-time,
+AI-powered analysis verifying milestone completion, or cross-chain
+interoperability allowing donations from any blockchain to support a
+single cause. These advancements will further reduce friction, improve
+transparency, and allow more funds to go directly where they’re
+needed.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The combination of Stellar and Soroban isn’t just a technological
+solution—it’s a transformation in how we facilitate and track charitable
+giving. By providing transparency, security, and programmatic trust,
+this technology stack empowers more direct, impactful, and accountable
+giving programs worldwide. As blockchain-powered philanthropy grows,
+it’s clear that the future of transparent, effective giving is here.</p>
+<hr />
+<p><em>Ready to explore blockchain-powered giving? Whether you’re a
+developer, organization, or donor, the future of philanthropy
+awaits.</em></p>
 
                 </div>
                 <div class="single-tags">
@@ -416,6 +469,71 @@ The combination of Stellar and Soroban isn’t just a technological solution—i
             </div>
         </div>
  
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-1.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Empoderando Comunidades</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-4.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Cerrando la Brecha Financiera</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-7.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Confiando en Blockchain</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-16.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Impacto Directo</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-20.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Los Mil Millones No Bancarizados</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
 </div><div id="popular" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
                 <img src="/site/img/blog-3.jpg" />
@@ -483,10 +601,10 @@ The combination of Stellar and Soroban isn’t just a technological solution—i
  
 </div><div id="latest" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-15.jpg" />
+                <img src="/img/blog-20.jpg" />
             </div>
             <div class="post-text">
-                <a href="">The Hidden Costs of Being Unbanked</a>
+                <a href="">Los Mil Millones No Bancarizados</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -496,10 +614,10 @@ The combination of Stellar and Soroban isn’t just a technological solution—i
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-2.jpg" />
+                <img src="/img/blog-14.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Unbanked Billions</a>
+                <a href="">Rompiendo Fronteras</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -509,10 +627,10 @@ The combination of Stellar and Soroban isn’t just a technological solution—i
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-19.jpg" />
+                <img src="/img/blog-15.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Financial Inclusion in Action</a>
+                <a href="">Los Costos Ocultos de No Tener Banco</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -522,10 +640,10 @@ The combination of Stellar and Soroban isn’t just a technological solution—i
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-18.jpg" />
+                <img src="/img/blog-16.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Trust Through Technology</a>
+                <a href="">Impacto Directo</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -535,10 +653,10 @@ The combination of Stellar and Soroban isn’t just a technological solution—i
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-17.jpg" />
+                <img src="/img/blog-17.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Small Donations, Big Change</a>
+                <a href="">Pequeñas Donaciones, Gran Cambio</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -636,17 +754,17 @@ The combination of Stellar and Soroban isn’t just a technological solution—i
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="/site/lib/easing/easing.min.js"></script>
-        <script src="/site/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="/site/lib/waypoints/waypoints.min.js"></script>
-        <script src="/site/lib/counterup/counterup.min.js"></script>
-        <script src="/site/lib/parallax/parallax.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
         
         <!-- Contact Javascript File -->
-        <script src="/site/mail/jqBootstrapValidation.min.js"></script>
-        <script src="/site/mail/contact.js"></script>
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="/site/js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>

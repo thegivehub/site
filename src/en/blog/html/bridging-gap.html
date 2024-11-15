@@ -8,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="/site/img/favicon.svg" type="image/svg+xml" rel="icon">
+        <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="/site/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="/site/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/site/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="/site/css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -48,8 +48,11 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="lang">
+                                <a onclick="app.switchLang('es'); return false;" href="/es/"><img class="lang-icon" src="/site/img/hola.svg"></a>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -73,11 +76,11 @@
                             <div class="dropdown-menu">
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="event.html" class="nav-item nav-link">Events</a>
                             </div>
                         </div>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
                         <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
@@ -85,7 +88,6 @@
                                 <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
                                 <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
                                 <a href="register-cause.html" class="dropdown-item">Register Cause</a>
-                                <a href="pitchdeck.html" title="Become a donor today!" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -94,6 +96,7 @@
                                 <a href="user-docs.html" class="dropdown-item">User Documentation</a>
                                 <a href="api.html" class="dropdown-item">API Documentation</a>
                                 <a href="faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
                                 <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
@@ -129,83 +132,140 @@
                     <img src="/site/img/blog-4.jpg" />
                     <h2>Bridging the Financial Gap</h2>
                     <h3> Why Access to Crowdfunding Is Essential for the Underbanked</h3>
-                    # Bridging the Financial Gap: Why Access to Crowdfunding Is Essential for the Underbanked
-
-In a small village in Mozambique, Ana Martinez runs a thriving vegetable stand that sustains hundreds of families. Yet just five years ago, she struggled to secure a mere $300 loan to expand her business. Lacking credit history, collateral, and formal documentation, Ana was deemed “high risk” by traditional banks. Her story changed—not because banks opened their doors, but because crowdfunding provided an alternative path to capital.
-
-## The Reality of Being Underbanked
-
-Globally, 1.7 billion adults are unbanked, and in regions like Sub-Saharan Africa, 67% lack traditional banking access. In Latin America, 45% operate entirely in cash, while women worldwide are 28% less likely to have formal financial access. Beyond lacking bank accounts, the underbanked face limitations in building credit, storing savings securely, and accessing emergency funds. Exclusion from digital finance leaves them vulnerable to high-fee informal lenders and financial instability.
-
-## The Traditional Banking Gap
-
-### Why Banks Shy Away
-Traditional financial institutions see the underbanked as costly to serve due to geographic isolation, lack of formal documentation, small transaction sizes, and the perceived high risk of lending without credit history. As a result, these populations are left with limited access to affordable financial services, reinforcing cycles of poverty.
-
-### The True Cost of Exclusion
-Without banking access, the underbanked face higher fees, limited savings opportunities, and reduced economic mobility. This exclusion restricts their ability to invest in business growth, manage finances, and build economic resilience.
-
-## Crowdfunding: A Bridge to Financial Inclusion
-
-### How Crowdfunding Works for the Underbanked
-Crowdfunding offers distinct advantages for underbanked individuals. Unlike traditional financial products, crowdfunding platforms don’t require credit history or collateral, relying instead on community trust and story-driven campaigns. These platforms operate with lower barriers to entry, minimal starting costs, and mobile-friendly interfaces, making it possible for those without formal banking access to reach potential donors worldwide.
-
-### Community Engagement and Transparency
-Through crowdfunding, donors connect directly with recipients, gaining transparency into fund use and real-time updates on campaign progress. This community-driven approach builds trust and offers a social validation system that can transform lives through collective support.
-
-## Success Stories: Crowdfunding in Action
-
-### The Market Women of Nigeria
-In rural Nigeria, 50 women market vendors raised $5,000 to build a shared cold storage facility. In just one year, they reduced food waste by 40%, increased average income by 35%, and created 15 new jobs. The facility also allowed them to reach nearby towns, expanding their market reach.
-
-### Peru’s Artisan Collective
-Indigenous artisans in Peru raised $3,500 through crowdfunding for raw materials and tools, benefiting 25 families and creating sustainable income. The project preserved traditional crafts and unlocked export opportunities, enabling financial stability while preserving cultural heritage.
-
-## The Benefits of Crowdfunding
-
-### Financial Education and Digital Integration
-For the underbanked, crowdfunding provides practical experience in budgeting, financial management, and digital transactions. Participants learn about digital payment systems, online banking, and global markets, gaining valuable skills that pave the way to financial independence.
-
-### Community Building
-Crowdfunding fosters support networks, business mentorship, and knowledge-sharing opportunities. The community-driven nature of crowdfunding helps entrepreneurs establish market connections and strengthens local economies through collective effort.
-
-## Technology Driving Crowdfunding Success
-
-### Key Innovations
-Technologies like mobile money, blockchain, and digital identity solutions are at the core of successful crowdfunding. Mobile money ensures wide accessibility and low fees, while blockchain provides transparency and cost efficiency. Digital identity solutions offer alternative credit scoring, reputation building, and verification tools, making it easier for the underbanked to build trust within the digital economy.
-
-## Overcoming Challenges
-
-### Digital Literacy and Connectivity
-Crowdfunding platforms address digital literacy gaps through simple user interfaces, local language support, and community training. Offline capabilities, SMS integration, and support centers mitigate connectivity challenges, ensuring accessibility even in areas with limited internet.
-
-### Building Trust
-Local partnerships and community ambassadors play a vital role in building trust in crowdfunding. Success stories and transparent processes help reduce skepticism and encourage wider participation among potential users.
-
-## The Path to Financial Inclusion
-
-Crowdfunding has both immediate and long-term benefits. In the short term, it provides access to emergency funds, business growth opportunities, and foundational financial literacy. Long-term, crowdfunding helps build credit history, support financial independence, and enhance economic stability within underbanked communities.
-
-## Best Practices for Successful Crowdfunding
-
-### For Fundraisers
-A compelling story, realistic goals, regular updates, and documented impact are essential for crowdfunding success. Engaging with supporters and showcasing achievements builds credibility and fosters ongoing support.
-
-### For Crowdfunding Platforms
-Platforms must prioritize user simplicity, provide local support, ensure transparency, and enable mobile access. Building trust mechanisms is critical to facilitate positive and secure experiences for fundraisers and donors alike.
-
-## The Future of Financial Inclusion
-
-### Emerging Trends
-Crowdfunding is evolving with hybrid models that combine elements of microfinance, savings programs, and peer-to-peer lending. Enhanced technology, like AI-driven risk assessment and improved analytics, are making platforms more efficient and user-friendly. Future expansions may include insurance products, investment opportunities, and educational resources to further support the underbanked.
-
-## Conclusion
-
-Crowdfunding is about more than just capital—it’s about dignity, opportunity, and economic empowerment. For billions of underbanked people worldwide, crowdfunding offers a critical pathway to financial inclusion and a means to break free from cycles of poverty.
-
----
-
-*Ready to help bridge the financial gap? Discover how you can support underbanked entrepreneurs and communities through crowdfunding.*
+                    
+<p>In a small village in Mozambique, Ana Martinez runs a thriving
+vegetable stand that sustains hundreds of families. Yet just five years
+ago, she struggled to secure a mere $300 loan to expand her business.
+Lacking credit history, collateral, and formal documentation, Ana was
+deemed “high risk” by traditional banks. Her story changed—not because
+banks opened their doors, but because crowdfunding provided an
+alternative path to capital.</p>
+<h2 id="the-reality-of-being-underbanked">The Reality of Being
+Underbanked</h2>
+<p>Globally, 1.7 billion adults are unbanked, and in regions like
+Sub-Saharan Africa, 67% lack traditional banking access. In Latin
+America, 45% operate entirely in cash, while women worldwide are 28%
+less likely to have formal financial access. Beyond lacking bank
+accounts, the underbanked face limitations in building credit, storing
+savings securely, and accessing emergency funds. Exclusion from digital
+finance leaves them vulnerable to high-fee informal lenders and
+financial instability.</p>
+<h2 id="the-traditional-banking-gap">The Traditional Banking Gap</h2>
+<h3 id="why-banks-shy-away">Why Banks Shy Away</h3>
+<p>Traditional financial institutions see the underbanked as costly to
+serve due to geographic isolation, lack of formal documentation, small
+transaction sizes, and the perceived high risk of lending without credit
+history. As a result, these populations are left with limited access to
+affordable financial services, reinforcing cycles of poverty.</p>
+<h3 id="the-true-cost-of-exclusion">The True Cost of Exclusion</h3>
+<p>Without banking access, the underbanked face higher fees, limited
+savings opportunities, and reduced economic mobility. This exclusion
+restricts their ability to invest in business growth, manage finances,
+and build economic resilience.</p>
+<h2 id="crowdfunding-a-bridge-to-financial-inclusion">Crowdfunding: A
+Bridge to Financial Inclusion</h2>
+<h3 id="how-crowdfunding-works-for-the-underbanked">How Crowdfunding
+Works for the Underbanked</h3>
+<p>Crowdfunding offers distinct advantages for underbanked individuals.
+Unlike traditional financial products, crowdfunding platforms don’t
+require credit history or collateral, relying instead on community trust
+and story-driven campaigns. These platforms operate with lower barriers
+to entry, minimal starting costs, and mobile-friendly interfaces, making
+it possible for those without formal banking access to reach potential
+donors worldwide.</p>
+<h3 id="community-engagement-and-transparency">Community Engagement and
+Transparency</h3>
+<p>Through crowdfunding, donors connect directly with recipients,
+gaining transparency into fund use and real-time updates on campaign
+progress. This community-driven approach builds trust and offers a
+social validation system that can transform lives through collective
+support.</p>
+<h2 id="success-stories-crowdfunding-in-action">Success Stories:
+Crowdfunding in Action</h2>
+<h3 id="the-market-women-of-nigeria">The Market Women of Nigeria</h3>
+<p>In rural Nigeria, 50 women market vendors raised $5,000 to build a
+shared cold storage facility. In just one year, they reduced food waste
+by 40%, increased average income by 35%, and created 15 new jobs. The
+facility also allowed them to reach nearby towns, expanding their market
+reach.</p>
+<h3 id="perus-artisan-collective">Peru’s Artisan Collective</h3>
+<p>Indigenous artisans in Peru raised $3,500 through crowdfunding for
+raw materials and tools, benefiting 25 families and creating sustainable
+income. The project preserved traditional crafts and unlocked export
+opportunities, enabling financial stability while preserving cultural
+heritage.</p>
+<h2 id="the-benefits-of-crowdfunding">The Benefits of Crowdfunding</h2>
+<h3 id="financial-education-and-digital-integration">Financial Education
+and Digital Integration</h3>
+<p>For the underbanked, crowdfunding provides practical experience in
+budgeting, financial management, and digital transactions. Participants
+learn about digital payment systems, online banking, and global markets,
+gaining valuable skills that pave the way to financial independence.</p>
+<h3 id="community-building">Community Building</h3>
+<p>Crowdfunding fosters support networks, business mentorship, and
+knowledge-sharing opportunities. The community-driven nature of
+crowdfunding helps entrepreneurs establish market connections and
+strengthens local economies through collective effort.</p>
+<h2 id="technology-driving-crowdfunding-success">Technology Driving
+Crowdfunding Success</h2>
+<h3 id="key-innovations">Key Innovations</h3>
+<p>Technologies like mobile money, blockchain, and digital identity
+solutions are at the core of successful crowdfunding. Mobile money
+ensures wide accessibility and low fees, while blockchain provides
+transparency and cost efficiency. Digital identity solutions offer
+alternative credit scoring, reputation building, and verification tools,
+making it easier for the underbanked to build trust within the digital
+economy.</p>
+<h2 id="overcoming-challenges">Overcoming Challenges</h2>
+<h3 id="digital-literacy-and-connectivity">Digital Literacy and
+Connectivity</h3>
+<p>Crowdfunding platforms address digital literacy gaps through simple
+user interfaces, local language support, and community training. Offline
+capabilities, SMS integration, and support centers mitigate connectivity
+challenges, ensuring accessibility even in areas with limited
+internet.</p>
+<h3 id="building-trust">Building Trust</h3>
+<p>Local partnerships and community ambassadors play a vital role in
+building trust in crowdfunding. Success stories and transparent
+processes help reduce skepticism and encourage wider participation among
+potential users.</p>
+<h2 id="the-path-to-financial-inclusion">The Path to Financial
+Inclusion</h2>
+<p>Crowdfunding has both immediate and long-term benefits. In the short
+term, it provides access to emergency funds, business growth
+opportunities, and foundational financial literacy. Long-term,
+crowdfunding helps build credit history, support financial independence,
+and enhance economic stability within underbanked communities.</p>
+<h2 id="best-practices-for-successful-crowdfunding">Best Practices for
+Successful Crowdfunding</h2>
+<h3 id="for-fundraisers">For Fundraisers</h3>
+<p>A compelling story, realistic goals, regular updates, and documented
+impact are essential for crowdfunding success. Engaging with supporters
+and showcasing achievements builds credibility and fosters ongoing
+support.</p>
+<h3 id="for-crowdfunding-platforms">For Crowdfunding Platforms</h3>
+<p>Platforms must prioritize user simplicity, provide local support,
+ensure transparency, and enable mobile access. Building trust mechanisms
+is critical to facilitate positive and secure experiences for
+fundraisers and donors alike.</p>
+<h2 id="the-future-of-financial-inclusion">The Future of Financial
+Inclusion</h2>
+<h3 id="emerging-trends">Emerging Trends</h3>
+<p>Crowdfunding is evolving with hybrid models that combine elements of
+microfinance, savings programs, and peer-to-peer lending. Enhanced
+technology, like AI-driven risk assessment and improved analytics, are
+making platforms more efficient and user-friendly. Future expansions may
+include insurance products, investment opportunities, and educational
+resources to further support the underbanked.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Crowdfunding is about more than just capital—it’s about dignity,
+opportunity, and economic empowerment. For billions of underbanked
+people worldwide, crowdfunding offers a critical pathway to financial
+inclusion and a means to break free from cycles of poverty.</p>
+<hr />
+<p><em>Ready to help bridge the financial gap? Discover how you can
+support underbanked entrepreneurs and communities through
+crowdfunding.</em></p>
 
                 </div>
                 <div class="single-tags">
@@ -402,6 +462,71 @@ Crowdfunding is about more than just capital—it’s about dignity, opportunity
             </div>
         </div>
  
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-1.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Empoderando Comunidades</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-4.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Cerrando la Brecha Financiera</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-7.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Confiando en Blockchain</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-16.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Impacto Directo</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-20.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Los Mil Millones No Bancarizados</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
 </div><div id="popular" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
                 <img src="/site/img/blog-3.jpg" />
@@ -469,10 +594,10 @@ Crowdfunding is about more than just capital—it’s about dignity, opportunity
  
 </div><div id="latest" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-15.jpg" />
+                <img src="/img/blog-20.jpg" />
             </div>
             <div class="post-text">
-                <a href="">The Hidden Costs of Being Unbanked</a>
+                <a href="">Los Mil Millones No Bancarizados</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -482,10 +607,10 @@ Crowdfunding is about more than just capital—it’s about dignity, opportunity
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-2.jpg" />
+                <img src="/img/blog-14.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Unbanked Billions</a>
+                <a href="">Rompiendo Fronteras</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -495,10 +620,10 @@ Crowdfunding is about more than just capital—it’s about dignity, opportunity
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-19.jpg" />
+                <img src="/img/blog-15.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Financial Inclusion in Action</a>
+                <a href="">Los Costos Ocultos de No Tener Banco</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -508,10 +633,10 @@ Crowdfunding is about more than just capital—it’s about dignity, opportunity
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-18.jpg" />
+                <img src="/img/blog-16.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Trust Through Technology</a>
+                <a href="">Impacto Directo</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -521,10 +646,10 @@ Crowdfunding is about more than just capital—it’s about dignity, opportunity
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-17.jpg" />
+                <img src="/img/blog-17.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Small Donations, Big Change</a>
+                <a href="">Pequeñas Donaciones, Gran Cambio</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -622,17 +747,17 @@ Crowdfunding is about more than just capital—it’s about dignity, opportunity
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="/site/lib/easing/easing.min.js"></script>
-        <script src="/site/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="/site/lib/waypoints/waypoints.min.js"></script>
-        <script src="/site/lib/counterup/counterup.min.js"></script>
-        <script src="/site/lib/parallax/parallax.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
         
         <!-- Contact Javascript File -->
-        <script src="/site/mail/jqBootstrapValidation.min.js"></script>
-        <script src="/site/mail/contact.js"></script>
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="/site/js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>

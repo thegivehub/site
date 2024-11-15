@@ -26,7 +26,7 @@ $page = $start . $header;
 $jsout = [];
 $cnt = 1;
 
-$result = $link->query("select * from blog_posts where language='es'");
+$result = $link->query("select * from posts where language='es'");
 while ($post = $result->fetch_object()) {
     $obj = $post;
     
@@ -55,7 +55,15 @@ while ($post = $result->fetch_object()) {
     //$page .= $recent;
     $page .= $end;
     $outfile = preg_replace("/.+\//", '', $obj->url);
+    /*
+        $mdfile = 'md/' . preg_replace("/\.html/", '.md', $outfile);
 
+    if (file_exists($mdfile)) {
+        $mdtxt = file_get_contents($mdfile);
+        $link->query("update posts set markdown='".$link->real_escape_string($mdtxt)."' where id=".$obj->id);
+        print "Updated " . $link->affected_rows." rows\n";
+    }
+     */
     file_put_contents("html/".$outfile, $page);
     print "Wrote ".strlen($page)." to html/$outfile\n";
     ++$cnt;

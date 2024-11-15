@@ -8,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="/site/img/favicon.svg" type="image/svg+xml" rel="icon">
+        <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="/site/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="/site/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/site/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="/site/css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -48,8 +48,11 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="lang">
+                                <a onclick="app.switchLang('es'); return false;" href="/es/"><img class="lang-icon" src="/site/img/hola.svg"></a>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -73,11 +76,11 @@
                             <div class="dropdown-menu">
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="event.html" class="nav-item nav-link">Events</a>
                             </div>
                         </div>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
                         <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
@@ -85,7 +88,6 @@
                                 <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
                                 <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
                                 <a href="register-cause.html" class="dropdown-item">Register Cause</a>
-                                <a href="pitchdeck.html" title="Become a donor today!" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -94,6 +96,7 @@
                                 <a href="user-docs.html" class="dropdown-item">User Documentation</a>
                                 <a href="api.html" class="dropdown-item">API Documentation</a>
                                 <a href="faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
                                 <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
@@ -129,79 +132,110 @@
                     <img src="/site/img/blog-1.jpg" />
                     <h2>Empowering Communities</h2>
                     <h3> How Crowdfunding Is Changing Lives in Remote Regions</h3>
-                    # Empowering Communities: How Crowdfunding Is Changing Lives in Remote Regions
-
-In the heart of rural Tanzania, Sarah Makenzi's dream of providing clean water to her village seemed impossibly out of reach. Traditional banks wouldn't help, and government aid was scarce. But through the power of digital crowdfunding, Sarah's community raised $12,000 from 230 global donors, enough to drill a well that now serves 1,500 people. This is just one example of how crowdfunding is revolutionizing charitable giving and community development in the world's most remote regions.
-
-## The Traditional Aid Gap
-
-For decades, remote communities have faced a persistent challenge: despite billions in global aid, many vital local projects remain unfunded. Traditional aid often gets caught in bureaucratic structures, with only a fraction reaching those most in need. Meanwhile, conventional banking systems have largely ignored these regions, deeming them too risky or unprofitable to serve.
-
-## The Digital Bridge to Development
-
-Enter blockchain-based crowdfunding – a game-changing approach that connects remote communities directly with global donors. This technology eliminates traditional barriers by:
-
-- **Removing intermediaries:** Funds flow directly from donors to communities
-- **Increasing transparency:** Every transaction is tracked and verified on the blockchain
-- **Reducing costs:** Lower fees mean more money reaches its intended destination
-- **Enabling micro-donations:** Even small contributions can make a significant impact
-
-## Real Impact, Real Stories
-
-Beyond Sarah's water project, the transformative power of crowdfunding is evident across remote regions:
-
-### Agricultural Innovation in Peru
-In the Andean highlands, a farming cooperative raised $8,000 to purchase drought-resistant seeds and modern irrigation equipment. The result? Crop yields increased by 40%, providing food security and additional income for 50 families.
-
-### Solar Power in Mali
-A remote village crowdfunded $15,000 for solar panels, bringing electricity to homes for the first time. Children can now study after dark, and small businesses have emerged, creating a ripple effect of economic growth.
-
-### Education in Rural Indonesia
-Local teachers raised $6,000 to build a community library and purchase educational materials, giving 200 children access to books and digital learning resources they never had before.
-
-## The Technology Making It Possible
-
-Modern crowdfunding platforms leverage several key technologies:
-
-1. **Blockchain Networks:** Ensuring secure, transparent transactions
-2. **Mobile Payment Systems:** Making donations accessible to anyone with a smartphone
-3. **Smart Contracts:** Automating fund distribution and project milestones
-4. **Digital Verification:** Confirming project legitimacy and tracking outcomes
-
-## Challenges and Solutions
-
-While digital crowdfunding offers immense potential, several challenges remain:
-
-### Internet Access
-**Challenge:** Many remote regions have limited internet connectivity.
-**Solution:** Platforms are developing offline capabilities and leveraging mobile networks, which have broader reach than traditional internet.
-
-### Digital Literacy
-**Challenge:** Some communities struggle with technical aspects of digital platforms.
-**Solution:** Local ambassadors are trained to bridge the technology gap, helping communities tell their stories and manage projects.
-
-### Trust Building
-**Challenge:** Donors want assurance their contributions make an impact.
-**Solution:** Blockchain technology provides unprecedented transparency, while regular project updates and verification systems build confidence.
-
-## The Road Ahead
-
-The future of crowdfunding in remote regions looks promising. As technology becomes more accessible and platforms more sophisticated, we're seeing:
-
-- Increased participation from previously unbanked communities
-- Growing trust in digital funding mechanisms
-- More successful projects inspiring others to launch their own initiatives
-- Stronger connections between global donors and local communities
-
-## Making a Difference Today
-
-The power of crowdfunding lies not just in the technology, but in its ability to connect human stories with global support. Every successful project demonstrates that geographic isolation no longer means economic isolation.
-
-For communities like Sarah's, crowdfunding isn't just about raising money – it's about empowerment, dignity, and the ability to shape their own destiny. As more platforms embrace blockchain technology and focus on underserved regions, we're witnessing the democratization of development aid, one project at a time.
-
----
-
-*Ready to make a difference? Explore active projects in remote communities and start your giving journey today.*
+                    
+<p>In the heart of rural Tanzania, Sarah Makenzi’s dream of providing
+clean water to her village seemed impossibly out of reach. Traditional
+banks wouldn’t help, and government aid was scarce. But through the
+power of digital crowdfunding, Sarah’s community raised $12,000 from 230
+global donors, enough to drill a well that now serves 1,500 people. This
+is just one example of how crowdfunding is revolutionizing charitable
+giving and community development in the world’s most remote regions.</p>
+<h2 id="the-traditional-aid-gap">The Traditional Aid Gap</h2>
+<p>For decades, remote communities have faced a persistent challenge:
+despite billions in global aid, many vital local projects remain
+unfunded. Traditional aid often gets caught in bureaucratic structures,
+with only a fraction reaching those most in need. Meanwhile,
+conventional banking systems have largely ignored these regions, deeming
+them too risky or unprofitable to serve.</p>
+<h2 id="the-digital-bridge-to-development">The Digital Bridge to
+Development</h2>
+<p>Enter blockchain-based crowdfunding – a game-changing approach that
+connects remote communities directly with global donors. This technology
+eliminates traditional barriers by:</p>
+<ul>
+<li><strong>Removing intermediaries:</strong> Funds flow directly from
+donors to communities</li>
+<li><strong>Increasing transparency:</strong> Every transaction is
+tracked and verified on the blockchain</li>
+<li><strong>Reducing costs:</strong> Lower fees mean more money reaches
+its intended destination</li>
+<li><strong>Enabling micro-donations:</strong> Even small contributions
+can make a significant impact</li>
+</ul>
+<h2 id="real-impact-real-stories">Real Impact, Real Stories</h2>
+<p>Beyond Sarah’s water project, the transformative power of
+crowdfunding is evident across remote regions:</p>
+<h3 id="agricultural-innovation-in-peru">Agricultural Innovation in
+Peru</h3>
+<p>In the Andean highlands, a farming cooperative raised $8,000 to
+purchase drought-resistant seeds and modern irrigation equipment. The
+result? Crop yields increased by 40%, providing food security and
+additional income for 50 families.</p>
+<h3 id="solar-power-in-mali">Solar Power in Mali</h3>
+<p>A remote village crowdfunded $15,000 for solar panels, bringing
+electricity to homes for the first time. Children can now study after
+dark, and small businesses have emerged, creating a ripple effect of
+economic growth.</p>
+<h3 id="education-in-rural-indonesia">Education in Rural Indonesia</h3>
+<p>Local teachers raised $6,000 to build a community library and
+purchase educational materials, giving 200 children access to books and
+digital learning resources they never had before.</p>
+<h2 id="the-technology-making-it-possible">The Technology Making It
+Possible</h2>
+<p>Modern crowdfunding platforms leverage several key technologies:</p>
+<ol type="1">
+<li><strong>Blockchain Networks:</strong> Ensuring secure, transparent
+transactions</li>
+<li><strong>Mobile Payment Systems:</strong> Making donations accessible
+to anyone with a smartphone</li>
+<li><strong>Smart Contracts:</strong> Automating fund distribution and
+project milestones</li>
+<li><strong>Digital Verification:</strong> Confirming project legitimacy
+and tracking outcomes</li>
+</ol>
+<h2 id="challenges-and-solutions">Challenges and Solutions</h2>
+<p>While digital crowdfunding offers immense potential, several
+challenges remain:</p>
+<h3 id="internet-access">Internet Access</h3>
+<p><strong>Challenge:</strong> Many remote regions have limited internet
+connectivity. <strong>Solution:</strong> Platforms are developing
+offline capabilities and leveraging mobile networks, which have broader
+reach than traditional internet.</p>
+<h3 id="digital-literacy">Digital Literacy</h3>
+<p><strong>Challenge:</strong> Some communities struggle with technical
+aspects of digital platforms. <strong>Solution:</strong> Local
+ambassadors are trained to bridge the technology gap, helping
+communities tell their stories and manage projects.</p>
+<h3 id="trust-building">Trust Building</h3>
+<p><strong>Challenge:</strong> Donors want assurance their contributions
+make an impact. <strong>Solution:</strong> Blockchain technology
+provides unprecedented transparency, while regular project updates and
+verification systems build confidence.</p>
+<h2 id="the-road-ahead">The Road Ahead</h2>
+<p>The future of crowdfunding in remote regions looks promising. As
+technology becomes more accessible and platforms more sophisticated,
+we’re seeing:</p>
+<ul>
+<li>Increased participation from previously unbanked communities</li>
+<li>Growing trust in digital funding mechanisms</li>
+<li>More successful projects inspiring others to launch their own
+initiatives</li>
+<li>Stronger connections between global donors and local
+communities</li>
+</ul>
+<h2 id="making-a-difference-today">Making a Difference Today</h2>
+<p>The power of crowdfunding lies not just in the technology, but in its
+ability to connect human stories with global support. Every successful
+project demonstrates that geographic isolation no longer means economic
+isolation.</p>
+<p>For communities like Sarah’s, crowdfunding isn’t just about raising
+money – it’s about empowerment, dignity, and the ability to shape their
+own destiny. As more platforms embrace blockchain technology and focus
+on underserved regions, we’re witnessing the democratization of
+development aid, one project at a time.</p>
+<hr />
+<p><em>Ready to make a difference? Explore active projects in remote
+communities and start your giving journey today.</em></p>
 
                 </div>
                 <div class="single-tags">
@@ -398,6 +432,71 @@ For communities like Sarah's, crowdfunding isn't just about raising money – it
             </div>
         </div>
  
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-1.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Empoderando Comunidades</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-4.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Cerrando la Brecha Financiera</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-7.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Confiando en Blockchain</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-16.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Impacto Directo</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-20.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Los Mil Millones No Bancarizados</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
 </div><div id="popular" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
                 <img src="/site/img/blog-3.jpg" />
@@ -465,10 +564,10 @@ For communities like Sarah's, crowdfunding isn't just about raising money – it
  
 </div><div id="latest" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-15.jpg" />
+                <img src="/img/blog-20.jpg" />
             </div>
             <div class="post-text">
-                <a href="">The Hidden Costs of Being Unbanked</a>
+                <a href="">Los Mil Millones No Bancarizados</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -478,10 +577,10 @@ For communities like Sarah's, crowdfunding isn't just about raising money – it
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-2.jpg" />
+                <img src="/img/blog-14.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Unbanked Billions</a>
+                <a href="">Rompiendo Fronteras</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -491,10 +590,10 @@ For communities like Sarah's, crowdfunding isn't just about raising money – it
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-19.jpg" />
+                <img src="/img/blog-15.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Financial Inclusion in Action</a>
+                <a href="">Los Costos Ocultos de No Tener Banco</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -504,10 +603,10 @@ For communities like Sarah's, crowdfunding isn't just about raising money – it
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-18.jpg" />
+                <img src="/img/blog-16.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Trust Through Technology</a>
+                <a href="">Impacto Directo</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -517,10 +616,10 @@ For communities like Sarah's, crowdfunding isn't just about raising money – it
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-17.jpg" />
+                <img src="/img/blog-17.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Small Donations, Big Change</a>
+                <a href="">Pequeñas Donaciones, Gran Cambio</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -618,17 +717,17 @@ For communities like Sarah's, crowdfunding isn't just about raising money – it
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="/site/lib/easing/easing.min.js"></script>
-        <script src="/site/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="/site/lib/waypoints/waypoints.min.js"></script>
-        <script src="/site/lib/counterup/counterup.min.js"></script>
-        <script src="/site/lib/parallax/parallax.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
         
         <!-- Contact Javascript File -->
-        <script src="/site/mail/jqBootstrapValidation.min.js"></script>
-        <script src="/site/mail/contact.js"></script>
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="/site/js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>

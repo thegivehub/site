@@ -8,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="/site/img/favicon.svg" type="image/svg+xml" rel="icon">
+        <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="/site/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="/site/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/site/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="/site/css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -48,8 +48,11 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="lang">
+                                <a onclick="app.switchLang('es'); return false;" href="/es/"><img class="lang-icon" src="/site/img/hola.svg"></a>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -73,11 +76,11 @@
                             <div class="dropdown-menu">
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="event.html" class="nav-item nav-link">Events</a>
                             </div>
                         </div>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
                         <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
@@ -85,7 +88,6 @@
                                 <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
                                 <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
                                 <a href="register-cause.html" class="dropdown-item">Register Cause</a>
-                                <a href="pitchdeck.html" title="Become a donor today!" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -94,6 +96,7 @@
                                 <a href="user-docs.html" class="dropdown-item">User Documentation</a>
                                 <a href="api.html" class="dropdown-item">API Documentation</a>
                                 <a href="faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
                                 <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
@@ -129,36 +132,52 @@
                     <img src="/site/img/blog-14.jpg" />
                     <h2>Breaking Down Borders</h2>
                     <h3> How Decentralized Finance is Connecting Global Donors with Local Communities</h3>
-                    # Breaking Down Borders: How Decentralized Finance is Connecting Global Donors with Local Communities
-
-A farmers' cooperative in rural Uganda needed $3,000 to buy drought-resistant seeds. Within 48 hours, they received the funds from donors across 15 countries, bypassing banks and paying fees of less than a dollar. This isn’t a future scenario—it's happening now, as decentralized finance (DeFi) reshapes how global capital flows to local communities.
-
-## The DeFi Revolution in Charitable Giving
-
-### Traditional Financial Barriers vs. DeFi Solutions
-
-Traditional donation processes face banking restrictions, high transfer fees, currency conversion costs, and complex documentation requirements. DeFi, on the other hand, offers borderless transactions, minimal fees, instant settlement, and automatic currency conversion, all without the regulatory obstacles of traditional systems. This makes DeFi a game-changer for bringing global donations directly to those who need them most.
-
-## How DeFi Removes Barriers to Donations
-
-### Key DeFi Components for Global Giving
-
-1. **Smart Contracts**: Automated execution, multi-currency support, instant settlement, impact tracking, and transparent records make smart contracts ideal for managing donations and ensuring accountability.
-  
-2. **Decentralized Exchange (DEX)**: DEXs handle efficient currency conversion, maintain liquidity, ensure price stability, and provide low-slippage transactions, making it easier to fund projects in local currencies.
-
-### Sample DeFi Donation Protocol
-In a basic donation protocol, smart contracts handle funds, converting currencies and distributing donations to project wallets while updating impact metrics. This structure automates processes that would otherwise require costly intermediaries:
-
-```solidity
-// Example DeFi Donation Protocol
+                    
+<p>A farmers’ cooperative in rural Uganda needed $3,000 to buy
+drought-resistant seeds. Within 48 hours, they received the funds from
+donors across 15 countries, bypassing banks and paying fees of less than
+a dollar. This isn’t a future scenario—it’s happening now, as
+decentralized finance (DeFi) reshapes how global capital flows to local
+communities.</p>
+<h2 id="the-defi-revolution-in-charitable-giving">The DeFi Revolution in
+Charitable Giving</h2>
+<h3 id="traditional-financial-barriers-vs.-defi-solutions">Traditional
+Financial Barriers vs. DeFi Solutions</h3>
+<p>Traditional donation processes face banking restrictions, high
+transfer fees, currency conversion costs, and complex documentation
+requirements. DeFi, on the other hand, offers borderless transactions,
+minimal fees, instant settlement, and automatic currency conversion, all
+without the regulatory obstacles of traditional systems. This makes DeFi
+a game-changer for bringing global donations directly to those who need
+them most.</p>
+<h2 id="how-defi-removes-barriers-to-donations">How DeFi Removes
+Barriers to Donations</h2>
+<h3 id="key-defi-components-for-global-giving">Key DeFi Components for
+Global Giving</h3>
+<ol type="1">
+<li><p><strong>Smart Contracts</strong>: Automated execution,
+multi-currency support, instant settlement, impact tracking, and
+transparent records make smart contracts ideal for managing donations
+and ensuring accountability.</p></li>
+<li><p><strong>Decentralized Exchange (DEX)</strong>: DEXs handle
+efficient currency conversion, maintain liquidity, ensure price
+stability, and provide low-slippage transactions, making it easier to
+fund projects in local currencies.</p></li>
+</ol>
+<h3 id="sample-defi-donation-protocol">Sample DeFi Donation
+Protocol</h3>
+<p>In a basic donation protocol, smart contracts handle funds,
+converting currencies and distributing donations to project wallets
+while updating impact metrics. This structure automates processes that
+would otherwise require costly intermediaries:</p>
+<pre class="solidity"><code>// Example DeFi Donation Protocol
 contract GlobalGiving {
     struct Project {
         address payable recipient;
         uint256 goal;
         uint256 raised;
         string location;
-        mapping(address => uint256) donors;
+        mapping(address =&gt; uint256) donors;
     }
 
     function donate(uint256 projectId) public payable {
@@ -166,62 +185,92 @@ contract GlobalGiving {
         // Transfer to project wallet
         // Update impact metrics
     }
-}
-```
-
-## Real Impact: Stories of DeFi in Action
-
-### Colombia’s Coffee Collective
-Previously, Colombian coffee farmers faced 12% bank transfer fees and lengthy processing times. With DeFi, they saw transfer fees drop to 0.1%, received funds instantly, and gained global market access through automatic currency conversion and digital verification. The project raised $25,000, empowering 45 farmers and tripling their income.
-
-### Women’s Microfinance in Kenya
-A DeFi-powered microfinance project in Kenya funded 100 women entrepreneurs with $50,000, providing individual wallets, peer-to-peer lending, and a digital marketplace. Automated repayments and direct market access fostered financial independence and sustainable growth within the community.
-
-## Building DeFi Infrastructure for Community Empowerment
-
-### Decentralized Infrastructure and Local Integration
-
-DeFi platforms rely on decentralized infrastructure, allowing users to donate from anywhere and ensuring liquidity for currency exchanges. Local integration—using mobile wallets, offline capabilities, and community support—bridges the digital divide, making DeFi accessible to even the most remote communities.
-
-### Real-Time Impact Tracking
-Impact tracking, a hallmark of DeFi giving, allows for real-time metrics, automated reporting, and community validation. Donors receive updates via dashboards, giving them a direct line to the project’s progress and the impact of their contributions.
-
-## Benefits of DeFi for Donors and Communities
-
-### For Donors
-DeFi donations minimize fees, offer instant transfers, and provide complete transparency. Donors enjoy real-time updates, a direct line of communication with recipients, and clear impact visualization, strengthening their connection to the projects they support.
-
-### For Communities
-Communities gain access to a global donor base, quick funding, fair exchange rates, and financial autonomy. DeFi empowers communities to create and sustain their projects with direct control, building skills, networks, and long-term financial independence.
-
-## Implementing DeFi in Community Projects
-
-### Technical Setup and Local Integration
-
-DeFi platforms focus on creating secure, user-friendly infrastructure. This includes wallet creation, network connectivity, and simple interfaces to ensure ease of use. Training programs and support networks further facilitate adoption, preparing communities to navigate and benefit from DeFi donations.
-
-### Community Training and Trust-Building
-With DeFi’s decentralized nature, trust-building is critical. Platforms integrate community-led validation, transparent processes, regular updates, and success stories, fostering a trustworthy ecosystem where communities and donors work hand-in-hand.
-
-## Future of DeFi in Charitable Giving
-
-As DeFi continues to evolve, features like DAO governance, yield generation, impact tokens, and automated markets promise to further enhance global giving. Cross-chain solutions and identity protocols will expand DeFi’s reach, creating even more robust, inclusive, and effective models for charitable giving.
-
-## Measuring Success and Sustainable Impact
-
-### Quantitative Metrics
-Success metrics like transaction volumes, processing time, user adoption, and impact figures provide a clear measure of DeFi’s effectiveness. Lower costs, faster transfers, and higher donation volumes demonstrate DeFi’s transformative potential.
-
-### Qualitative Indicators
-Beyond numbers, community empowerment, knowledge transfer, donor satisfaction, and sustainable growth indicate the broader impact of DeFi, validating it as a force for economic inclusion and social change.
-
-## Conclusion
-
-DeFi is more than a technological innovation—it’s a bridge connecting global donors with local communities, enabling more efficient, transparent, and impactful giving. By removing traditional barriers and empowering local recipients, DeFi is redefining global charitable giving, creating a more inclusive and connected world.
-
----
-
-*Ready to break down borders? Join the DeFi revolution in global giving and help build direct connections between donors and communities worldwide.*
+}</code></pre>
+<h2 id="real-impact-stories-of-defi-in-action">Real Impact: Stories of
+DeFi in Action</h2>
+<h3 id="colombias-coffee-collective">Colombia’s Coffee Collective</h3>
+<p>Previously, Colombian coffee farmers faced 12% bank transfer fees and
+lengthy processing times. With DeFi, they saw transfer fees drop to
+0.1%, received funds instantly, and gained global market access through
+automatic currency conversion and digital verification. The project
+raised $25,000, empowering 45 farmers and tripling their income.</p>
+<h3 id="womens-microfinance-in-kenya">Women’s Microfinance in Kenya</h3>
+<p>A DeFi-powered microfinance project in Kenya funded 100 women
+entrepreneurs with $50,000, providing individual wallets, peer-to-peer
+lending, and a digital marketplace. Automated repayments and direct
+market access fostered financial independence and sustainable growth
+within the community.</p>
+<h2 id="building-defi-infrastructure-for-community-empowerment">Building
+DeFi Infrastructure for Community Empowerment</h2>
+<h3
+id="decentralized-infrastructure-and-local-integration">Decentralized
+Infrastructure and Local Integration</h3>
+<p>DeFi platforms rely on decentralized infrastructure, allowing users
+to donate from anywhere and ensuring liquidity for currency exchanges.
+Local integration—using mobile wallets, offline capabilities, and
+community support—bridges the digital divide, making DeFi accessible to
+even the most remote communities.</p>
+<h3 id="real-time-impact-tracking">Real-Time Impact Tracking</h3>
+<p>Impact tracking, a hallmark of DeFi giving, allows for real-time
+metrics, automated reporting, and community validation. Donors receive
+updates via dashboards, giving them a direct line to the project’s
+progress and the impact of their contributions.</p>
+<h2 id="benefits-of-defi-for-donors-and-communities">Benefits of DeFi
+for Donors and Communities</h2>
+<h3 id="for-donors">For Donors</h3>
+<p>DeFi donations minimize fees, offer instant transfers, and provide
+complete transparency. Donors enjoy real-time updates, a direct line of
+communication with recipients, and clear impact visualization,
+strengthening their connection to the projects they support.</p>
+<h3 id="for-communities">For Communities</h3>
+<p>Communities gain access to a global donor base, quick funding, fair
+exchange rates, and financial autonomy. DeFi empowers communities to
+create and sustain their projects with direct control, building skills,
+networks, and long-term financial independence.</p>
+<h2 id="implementing-defi-in-community-projects">Implementing DeFi in
+Community Projects</h2>
+<h3 id="technical-setup-and-local-integration">Technical Setup and Local
+Integration</h3>
+<p>DeFi platforms focus on creating secure, user-friendly
+infrastructure. This includes wallet creation, network connectivity, and
+simple interfaces to ensure ease of use. Training programs and support
+networks further facilitate adoption, preparing communities to navigate
+and benefit from DeFi donations.</p>
+<h3 id="community-training-and-trust-building">Community Training and
+Trust-Building</h3>
+<p>With DeFi’s decentralized nature, trust-building is critical.
+Platforms integrate community-led validation, transparent processes,
+regular updates, and success stories, fostering a trustworthy ecosystem
+where communities and donors work hand-in-hand.</p>
+<h2 id="future-of-defi-in-charitable-giving">Future of DeFi in
+Charitable Giving</h2>
+<p>As DeFi continues to evolve, features like DAO governance, yield
+generation, impact tokens, and automated markets promise to further
+enhance global giving. Cross-chain solutions and identity protocols will
+expand DeFi’s reach, creating even more robust, inclusive, and effective
+models for charitable giving.</p>
+<h2 id="measuring-success-and-sustainable-impact">Measuring Success and
+Sustainable Impact</h2>
+<h3 id="quantitative-metrics">Quantitative Metrics</h3>
+<p>Success metrics like transaction volumes, processing time, user
+adoption, and impact figures provide a clear measure of DeFi’s
+effectiveness. Lower costs, faster transfers, and higher donation
+volumes demonstrate DeFi’s transformative potential.</p>
+<h3 id="qualitative-indicators">Qualitative Indicators</h3>
+<p>Beyond numbers, community empowerment, knowledge transfer, donor
+satisfaction, and sustainable growth indicate the broader impact of
+DeFi, validating it as a force for economic inclusion and social
+change.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>DeFi is more than a technological innovation—it’s a bridge connecting
+global donors with local communities, enabling more efficient,
+transparent, and impactful giving. By removing traditional barriers and
+empowering local recipients, DeFi is redefining global charitable
+giving, creating a more inclusive and connected world.</p>
+<hr />
+<p><em>Ready to break down borders? Join the DeFi revolution in global
+giving and help build direct connections between donors and communities
+worldwide.</em></p>
 
                 </div>
                 <div class="single-tags">
@@ -418,6 +467,71 @@ DeFi is more than a technological innovation—it’s a bridge connecting global
             </div>
         </div>
  
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-1.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Empoderando Comunidades</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-4.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Cerrando la Brecha Financiera</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-7.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Confiando en Blockchain</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-16.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Impacto Directo</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-20.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Los Mil Millones No Bancarizados</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
 </div><div id="popular" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
                 <img src="/site/img/blog-3.jpg" />
@@ -485,10 +599,10 @@ DeFi is more than a technological innovation—it’s a bridge connecting global
  
 </div><div id="latest" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-15.jpg" />
+                <img src="/img/blog-20.jpg" />
             </div>
             <div class="post-text">
-                <a href="">The Hidden Costs of Being Unbanked</a>
+                <a href="">Los Mil Millones No Bancarizados</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -498,10 +612,10 @@ DeFi is more than a technological innovation—it’s a bridge connecting global
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-2.jpg" />
+                <img src="/img/blog-14.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Unbanked Billions</a>
+                <a href="">Rompiendo Fronteras</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -511,10 +625,10 @@ DeFi is more than a technological innovation—it’s a bridge connecting global
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-19.jpg" />
+                <img src="/img/blog-15.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Financial Inclusion in Action</a>
+                <a href="">Los Costos Ocultos de No Tener Banco</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -524,10 +638,10 @@ DeFi is more than a technological innovation—it’s a bridge connecting global
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-18.jpg" />
+                <img src="/img/blog-16.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Trust Through Technology</a>
+                <a href="">Impacto Directo</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -537,10 +651,10 @@ DeFi is more than a technological innovation—it’s a bridge connecting global
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-17.jpg" />
+                <img src="/img/blog-17.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Small Donations, Big Change</a>
+                <a href="">Pequeñas Donaciones, Gran Cambio</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -638,17 +752,17 @@ DeFi is more than a technological innovation—it’s a bridge connecting global
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="/site/lib/easing/easing.min.js"></script>
-        <script src="/site/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="/site/lib/waypoints/waypoints.min.js"></script>
-        <script src="/site/lib/counterup/counterup.min.js"></script>
-        <script src="/site/lib/parallax/parallax.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
         
         <!-- Contact Javascript File -->
-        <script src="/site/mail/jqBootstrapValidation.min.js"></script>
-        <script src="/site/mail/contact.js"></script>
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="/site/js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>

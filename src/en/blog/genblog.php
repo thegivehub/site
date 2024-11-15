@@ -24,72 +24,50 @@ $tabs = file_get_contents("tabs.html");
 
 $page = $start . $header;
 $jsout = [];
-foreach ($posts as $post) {
-    $obj = new stdClass();
+$cnt = 1;
 
-    $parts = preg_split("/\|/", $post);
-    $file = trim($parts[0]);
-    $id = $parts[2];
-    $outfile = preg_replace("/\.md/", '.html', $file);
-
-    $titleparts = preg_split("/:/", preg_replace("/\*\s*/", '', $parts[1]));
-   
-    if ($file && file_exists("md/{$file}")) {
-        $cwd = getcwd();;
-        $cmd = "pandoc  --highlight-style breezedark -f markdown -t html5 md/{$file}";
-        
-        $content = `$cmd`;
-        $content = preg_replace("/^<h\d.+?\/h\d>/s", '', $content);
-        
-        if ($id && $content) {
-            $link->query("UPDATE blog_posts set content='".mysqli_real_escape_string($link, $content)."' where id=$id");
+$result = $link->query("select * from posts where language='en'");
+while ($post = $result->fetch_object()) {
+    $obj = $post;
+    
+    $page = $start . preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
+        global $obj;
+        if (isset($obj->{$m[1]})) {
+            return $obj->{$m[1]};
+        } else {
+            return "";
         }
-        $result = $link->query("select * from blog_posts where id=$id");
-        $mobj = $result->fetch_object();
-        $title = $titleparts[0];
-        $subtitle = $titleparts[1];
+  
+    }, $header);
+    $jsout[] = $obj;
 
-        $obj->markdown = file_get_contents("md/{$file}");
-        $obj->content = $obj->markdown;  // $content
-        $obj->fulltitle = $parts[1];
-        $obj->subtitle = $subtitle;
-        $obj->title = $title;
-        $obj->published_at = date("M j, Y", strtotime($mobj->published_at));
-        $obj->updated_at = $mobj->updated_at;
-        $obj->post_image = $mobj->post_image;
-        $obj->status = $mobj->status;
-        $obj->author = $mobj->author;
-        $obj->category = $mobj->category;
-        $obj->id = $mobj->id;
+    $obj->recent_posts = $recent;
+    $obj->tabs = $tabs;
+    $newcontent = preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
+        global $obj;
+        if (isset($obj->{$m[1]})) {
+            return $obj->{$m[1]};
+        } else {
+            return "";
+        }
+    }, $single);
+    $page .= $newcontent;
+    //$page .= $recent;
+    $page .= $end;
+    $outfile = preg_replace("/.+\//", '', $obj->url);
+   
+    /*
+     * $mdfile = 'md/' . preg_replace("/\.html/", '.md', $outfile);
 
-        $page = $start . preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
-            global $obj;
-            if (isset($obj->{$m[1]})) {
-                return $obj->{$m[1]};
-            } else {
-                return "";
-            }
-      
-        }, $header);
-        $jsout[] = $obj;
-
-        $obj->recent_posts = $recent;
-        $obj->tabs = $tabs;
-        $newcontent = preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
-            global $obj;
-            if (isset($obj->{$m[1]})) {
-                return $obj->{$m[1]};
-            } else {
-                return "";
-            }
-        }, $single);
-        $page .= $newcontent;
-        //$page .= $recent;
-        $page .= $end;
-
-        file_put_contents("html/".$outfile, $page);
-        print "Wrote ".strlen($page)." to html/$outfile\n";
+    if (file_exists($mdfile)) {
+        $mdtxt = file_get_contents($mdfile);
+        $link->query("update posts set markdown='".$link->real_escape_string($mdtxt)."' where id=".$obj->id);
+        print "Updated " . $link->affected_rows." rows\n";
     }
+    */ 
+    file_put_contents("html/".$outfile, $page);
+    print "Wrote ".strlen($page)." to html/$outfile\n";
+    ++$cnt;
 }
 file_put_contents("blog_posts.json", json_encode($jsout));
 

@@ -8,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="/site/img/favicon.svg" type="image/svg+xml" rel="icon">
+        <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="/site/lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="/site/lib/animate/animate.min.css" rel="stylesheet">
-        <link href="/site/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="/site/css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -48,8 +48,11 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
                             </div>
+                            <div class="lang">
+                                <a onclick="app.switchLang('es'); return false;" href="/es/"><img class="lang-icon" src="/site/img/hola.svg"></a>
+                            </div>
+ 
                         </div>
                     </div>
                 </div>
@@ -73,11 +76,11 @@
                             <div class="dropdown-menu">
                                 <a href="service.html" class="dropdown-item">What We Do</a>
                                 <a href="team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="event.html" class="nav-item nav-link">Events</a>
                             </div>
                         </div>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
                         <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
@@ -85,7 +88,6 @@
                                 <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
                                 <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
                                 <a href="register-cause.html" class="dropdown-item">Register Cause</a>
-                                <a href="pitchdeck.html" title="Become a donor today!" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
@@ -94,6 +96,7 @@
                                 <a href="user-docs.html" class="dropdown-item">User Documentation</a>
                                 <a href="api.html" class="dropdown-item">API Documentation</a>
                                 <a href="faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
                                 <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
@@ -129,56 +132,102 @@
                     <img src="/site/img/blog-18.jpg" />
                     <h2>Trust Through Technology</h2>
                     <h3> Building Credible Charity Platforms for the Digital Age</h3>
-                    # Trust Through Technology: Building Credible Charity Platforms for the Digital Age
-
-Imagine a donor in New York sending $100 to support a school in rural Ethiopia. How can they be confident that their money makes a real impact? Today, technology is doing more than just simplifying the act of giving—it’s transforming how trust is built and verified in charitable giving. Through blockchain, smart contracts, and digital verification, transparency in philanthropy is reaching unprecedented levels.
-
-## The Challenge of Building Trust
-
-Traditional charitable giving has long struggled with limited fund tracking, high administrative costs, and uncertain impact. Donors often receive updates only after long delays, with few ways to verify the actual use of funds. Technology is tackling these issues by creating immutable records, enabling real-time tracking, and automating verification processes.
-
-### How Technology Is Reinventing Trust
-
-At the core of trust-building in digital philanthropy are tools like blockchain, smart contracts, and community-driven verification. Blockchain creates a public ledger for every transaction, making funds traceable from donor to recipient. Smart contracts automate fund distribution based on predefined milestones, so that each dollar moves only when specific goals are met. Community verification adds another layer by enabling local leaders and members to validate progress and impact.
-
-## Real-World Trust Building: A Health Clinic in Rural Tanzania
-
-A rural health clinic project in Tanzania highlights the impact of these trust-building tools. The project, with a budget of $25,000, used blockchain and smart contracts to ensure transparent fund tracking. The technology allowed for real-time documentation and automated milestone verification, with the community actively involved in approving each step.
-
-This approach led to:
-- Full transparency in fund allocation
-- A 48-hour verification process for each milestone
-- Zero loss of funds to administrative inefficiencies
-- Real-time impact data accessible to donors
-The clinic went on to serve thousands of patients, establish satellite clinics, and train healthcare workers, all while maintaining a complete audit trail.
-
-## The Key Components of a Trustworthy Digital Platform
-
-### Transparent Tracking and Automated Verification
-Transparency is the cornerstone of modern charity platforms. Blockchain records every transaction, providing a complete history that donors can access anytime. With automated smart contracts, funds are released only when specific milestones are met, reducing the chance of mismanagement. Verification from local leaders adds an additional layer of security, using tools like photo evidence, GPS data, and timestamped updates.
-
-### Simple User Experience and Strong Community Engagement
-Credible charity platforms make it easy for donors to track their impact. They provide a user-friendly interface for real-time tracking, direct communication with recipients, and visualization of outcomes. For the communities involved, tools are designed to be accessible, with mobile and offline capabilities, local language options, and simplified reporting systems to support ongoing engagement and feedback.
-
-## Measuring Success and Building Lasting Trust
-
-Success in trust-building goes beyond data—it also depends on the relationships created between donors and recipients. Quantitative metrics like transaction speed, verification time, and response rate are important, but so are qualitative indicators such as donor confidence, community satisfaction, and clear communication. Regular updates and accessible documentation ensure that every stakeholder feels connected to the project’s impact.
-
-## Overcoming Common Challenges
-
-Digital charity platforms face challenges, particularly around accessibility in remote areas and the ongoing need to establish trust. Solutions include mobile-first design for low-bandwidth environments, simple interfaces, and local support teams. Building trust involves progressive verification, regular communication, and involving the community every step of the way.
-
-## The Future of Trust in Philanthropy
-
-Looking ahead, advancements like AI verification, IoT for real-time monitoring, and biometric authentication will further enhance trust in charitable giving. We may soon see impact tokens that donors can use to directly influence project milestones, community DAOs that enable decentralized decision-making, and reputation systems that reward organizations based on transparent impact.
-
-## Conclusion
-
-Building trust in digital charity platforms isn’t only about technology; it’s about creating a new standard of transparency, verification, and engagement. Blockchain, smart contracts, and community-driven verification are paving the way for a future where every donation is traceable, verifiable, and measurable for impact. By combining modern technology with the age-old value of trust, we’re building a philanthropy ecosystem that empowers donors and communities alike.
-
----
-
-*Ready to explore trust in digital giving? Discover how modern platforms are revolutionizing charitable contributions with transparency and verification.*
+                    
+<p>Imagine a donor in New York sending $100 to support a school in rural
+Ethiopia. How can they be confident that their money makes a real
+impact? Today, technology is doing more than just simplifying the act of
+giving—it’s transforming how trust is built and verified in charitable
+giving. Through blockchain, smart contracts, and digital verification,
+transparency in philanthropy is reaching unprecedented levels.</p>
+<h2 id="the-challenge-of-building-trust">The Challenge of Building
+Trust</h2>
+<p>Traditional charitable giving has long struggled with limited fund
+tracking, high administrative costs, and uncertain impact. Donors often
+receive updates only after long delays, with few ways to verify the
+actual use of funds. Technology is tackling these issues by creating
+immutable records, enabling real-time tracking, and automating
+verification processes.</p>
+<h3 id="how-technology-is-reinventing-trust">How Technology Is
+Reinventing Trust</h3>
+<p>At the core of trust-building in digital philanthropy are tools like
+blockchain, smart contracts, and community-driven verification.
+Blockchain creates a public ledger for every transaction, making funds
+traceable from donor to recipient. Smart contracts automate fund
+distribution based on predefined milestones, so that each dollar moves
+only when specific goals are met. Community verification adds another
+layer by enabling local leaders and members to validate progress and
+impact.</p>
+<h2
+id="real-world-trust-building-a-health-clinic-in-rural-tanzania">Real-World
+Trust Building: A Health Clinic in Rural Tanzania</h2>
+<p>A rural health clinic project in Tanzania highlights the impact of
+these trust-building tools. The project, with a budget of $25,000, used
+blockchain and smart contracts to ensure transparent fund tracking. The
+technology allowed for real-time documentation and automated milestone
+verification, with the community actively involved in approving each
+step.</p>
+<p>This approach led to: - Full transparency in fund allocation - A
+48-hour verification process for each milestone - Zero loss of funds to
+administrative inefficiencies - Real-time impact data accessible to
+donors The clinic went on to serve thousands of patients, establish
+satellite clinics, and train healthcare workers, all while maintaining a
+complete audit trail.</p>
+<h2 id="the-key-components-of-a-trustworthy-digital-platform">The Key
+Components of a Trustworthy Digital Platform</h2>
+<h3 id="transparent-tracking-and-automated-verification">Transparent
+Tracking and Automated Verification</h3>
+<p>Transparency is the cornerstone of modern charity platforms.
+Blockchain records every transaction, providing a complete history that
+donors can access anytime. With automated smart contracts, funds are
+released only when specific milestones are met, reducing the chance of
+mismanagement. Verification from local leaders adds an additional layer
+of security, using tools like photo evidence, GPS data, and timestamped
+updates.</p>
+<h3 id="simple-user-experience-and-strong-community-engagement">Simple
+User Experience and Strong Community Engagement</h3>
+<p>Credible charity platforms make it easy for donors to track their
+impact. They provide a user-friendly interface for real-time tracking,
+direct communication with recipients, and visualization of outcomes. For
+the communities involved, tools are designed to be accessible, with
+mobile and offline capabilities, local language options, and simplified
+reporting systems to support ongoing engagement and feedback.</p>
+<h2 id="measuring-success-and-building-lasting-trust">Measuring Success
+and Building Lasting Trust</h2>
+<p>Success in trust-building goes beyond data—it also depends on the
+relationships created between donors and recipients. Quantitative
+metrics like transaction speed, verification time, and response rate are
+important, but so are qualitative indicators such as donor confidence,
+community satisfaction, and clear communication. Regular updates and
+accessible documentation ensure that every stakeholder feels connected
+to the project’s impact.</p>
+<h2 id="overcoming-common-challenges">Overcoming Common Challenges</h2>
+<p>Digital charity platforms face challenges, particularly around
+accessibility in remote areas and the ongoing need to establish trust.
+Solutions include mobile-first design for low-bandwidth environments,
+simple interfaces, and local support teams. Building trust involves
+progressive verification, regular communication, and involving the
+community every step of the way.</p>
+<h2 id="the-future-of-trust-in-philanthropy">The Future of Trust in
+Philanthropy</h2>
+<p>Looking ahead, advancements like AI verification, IoT for real-time
+monitoring, and biometric authentication will further enhance trust in
+charitable giving. We may soon see impact tokens that donors can use to
+directly influence project milestones, community DAOs that enable
+decentralized decision-making, and reputation systems that reward
+organizations based on transparent impact.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Building trust in digital charity platforms isn’t only about
+technology; it’s about creating a new standard of transparency,
+verification, and engagement. Blockchain, smart contracts, and
+community-driven verification are paving the way for a future where
+every donation is traceable, verifiable, and measurable for impact. By
+combining modern technology with the age-old value of trust, we’re
+building a philanthropy ecosystem that empowers donors and communities
+alike.</p>
+<hr />
+<p><em>Ready to explore trust in digital giving? Discover how modern
+platforms are revolutionizing charitable contributions with transparency
+and verification.</em></p>
 
                 </div>
                 <div class="single-tags">
@@ -375,6 +424,71 @@ Building trust in digital charity platforms isn’t only about technology; it’
             </div>
         </div>
  
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-1.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Empoderando Comunidades</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-4.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Cerrando la Brecha Financiera</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-7.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Confiando en Blockchain</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-16.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Impacto Directo</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-20.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="">Los Mil Millones No Bancarizados</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Charity</a></p>
+                </div>
+            </div>
+        </div>
+ 
 </div><div id="popular" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
                 <img src="/site/img/blog-3.jpg" />
@@ -442,10 +556,10 @@ Building trust in digital charity platforms isn’t only about technology; it’
  
 </div><div id="latest" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-15.jpg" />
+                <img src="/img/blog-20.jpg" />
             </div>
             <div class="post-text">
-                <a href="">The Hidden Costs of Being Unbanked</a>
+                <a href="">Los Mil Millones No Bancarizados</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -455,10 +569,10 @@ Building trust in digital charity platforms isn’t only about technology; it’
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-2.jpg" />
+                <img src="/img/blog-14.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Unbanked Billions</a>
+                <a href="">Rompiendo Fronteras</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -468,10 +582,10 @@ Building trust in digital charity platforms isn’t only about technology; it’
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-19.jpg" />
+                <img src="/img/blog-15.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Financial Inclusion in Action</a>
+                <a href="">Los Costos Ocultos de No Tener Banco</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -481,10 +595,10 @@ Building trust in digital charity platforms isn’t only about technology; it’
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-18.jpg" />
+                <img src="/img/blog-16.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Trust Through Technology</a>
+                <a href="">Impacto Directo</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -494,10 +608,10 @@ Building trust in digital charity platforms isn’t only about technology; it’
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-17.jpg" />
+                <img src="/img/blog-17.jpg" />
             </div>
             <div class="post-text">
-                <a href="">Small Donations, Big Change</a>
+                <a href="">Pequeñas Donaciones, Gran Cambio</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -595,17 +709,17 @@ Building trust in digital charity platforms isn’t only about technology; it’
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="/site/lib/easing/easing.min.js"></script>
-        <script src="/site/lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="/site/lib/waypoints/waypoints.min.js"></script>
-        <script src="/site/lib/counterup/counterup.min.js"></script>
-        <script src="/site/lib/parallax/parallax.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
         
         <!-- Contact Javascript File -->
-        <script src="/site/mail/jqBootstrapValidation.min.js"></script>
-        <script src="/site/mail/contact.js"></script>
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="/site/js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
