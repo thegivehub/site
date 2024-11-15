@@ -1,4 +1,3 @@
-<base href="https://thegivehub.com/site/"/>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" type="image/svg+xml" rel="icon">
+        <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -49,7 +48,9 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="lang">
+                                <a href="/en/"><img class="lang-icon" src="/img/hello.svg"></a>
                             </div>
                         </div>
                     </div>
@@ -68,28 +69,42 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
-                        <a href="blog.html" class="nav-item nav-link">Blog</a>
+                        <a href="index.html" class="nav-item nav-link">Inicio</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                            <a href="about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Acerca de</a>
                             <div class="dropdown-menu">
-                                <a href="single.html" class="dropdown-item">Detail Page</a>
-                                <a href="service.html" class="dropdown-item">What We Do</a>
-                                <a href="team.html" class="dropdown-item">Meet The Team</a>
-                                <a href="donate.html" class="dropdown-item">Donate Now</a>
-                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                                <a href="service.html" class="dropdown-item">Qué Hacemos</a>
+                                <a href="team.html" class="dropdown-item">Conoce al Equipo</a>
+                                <a href="event.html" class="dropdown-item">Eventos</a>
                             </div>
                         </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                        <a href="blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="causes.html" class="nav-item nav-link">Causas</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participa</a>
+                            <div class="dropdown-menu">
+                                <a href="donate.html" class="dropdown-item">Dona Ahora</a>
+                                <a href="volunteer.html" class="dropdown-item">Hazte Voluntario</a>
+                                <a href="campaign.html" class="dropdown-item">Inicia una Campaña</a>
+                                <a href="register-cause.html" class="dropdown-item">Registrar Causa</a>
+                            </div>
+                        </div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Páginas</a>
+                            <div class="dropdown-menu">
+                                <a href="user-docs.html" class="dropdown-item">Documentación del Usuario</a>
+                                <a href="api.html" class="dropdown-item">Documentación API</a>
+                                <a href="faqs.html" class="dropdown-item">Preguntas Frecuentes</a>
+                                <a href="architecture.html" class="dropdown-item">Arquitectura de la Plataforma</a>
+                                <a href="pitchdeck.html" class="dropdown-item">Presentación de Financiación</a>
+                            </div>
+                        </div>
+                         <a href="contact.html" class="nav-item nav-link">Contacto</a>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Nav Bar End -->
-
 
        <!-- Page Header Start -->
         <div class="page-header">
@@ -99,8 +114,8 @@
                         <h2>Blog</h2>
                     </div>
                     <div class="col-12">
-                        <a href="">Home</a>
-                        <a href="">Blog</a>
+                        <a href="/es/">Inicio</a>
+                        <a href="/es/blog/">Blog</a>
                     </div>
                 </div>
             </div>
@@ -110,37 +125,51 @@
         <div class="blog">
             <div class="container">
                 <div class="section-header text-center">
-                    <p>Our Blog</p>
-                    <h2>Latest news & articles directly from our blog</h2>
+                    <p>Nuestro blog</p>
+                    <h2>Últimas noticias y artículos directamente desde nuestro blog</h2>
                 </div>
                 <div class="row">
 <?php
 $tpl = <<<EOL
     <div class="col-lg-4">
         <div class="blog-item">
+            <div class="blog-head">
+                <h4><a href="%%url%%">“%%title%%”</a></h3>
+                <h4 style="font-size: 16px;font-weight:400;"><a href="%%url%%">%%subtitle%%</a></h4>
+            </div>
             <div class="blog-img">
                 <img src="%%post_image%%" alt="Image">
             </div>
             <div class="blog-text">
-                <h3><a href="%%url%%">%%title%%</a></h3>
                 <p>
                     %%excerpt%%
                 </p>
             </div>
-            <div class="blog-meta">
-                <p><i class="fa fa-user"></i><a href="">Christopher Robison</a></p>
-                <p><i class="fa fa-comments"></i><a href="">0 Comments</a></p>
+            <div class="blog-foot" style="margin:0.5em 1em 1em;text-align:right;padding-right:3em;font-size:15px;"><a style="color:#00c;text-decoration:underline;" href="%%url%%">Mas...</a></div>
+            <div class="blog-meta" style="white-space: nowrap;">
+                <p><i class="fa fa-user"></i><a href="">Chris Robison</a></p>
+                <p><i class="fa fa-clock"></i>%%readtime%%</p>
+                <p><i class="fa fa-comments"></i><a href="">0</a></p>
             </div>
         </div>
     </div>
 EOL;
+$in = $_REQUEST;
+$page =  (isset($in['page'])) ? $in['page'] : 0;
+$xtra = " LIMIT " . ($page * 6) . ", 6";
+
 $link = new mysqli("localhost", "pimp", "pimpin", "givehub");
-$result = $link->query("select * from blog_posts order by id desc");
+$result = $link->query("SELECT count(*) as posts FROM posts where language='es'");
+$postCount = $result->fetch_object();
+
+$result = $link->query("SELECT * FROM posts WHERE language='es' ORDER BY ID DESC $xtra");
 while ($obj = $result->fetch_object()) {
     //$obj->content = preg_replace("/^.+?<\/h1>/s", "", $obj->content);
     //$c = preg_split("/\n/", $obj->content);
     //array_shift($c);
     //$obj->content = join("\n", $c);
+    $words = preg_split("/\s+/", $obj->markdown);
+    $obj->readtime = ceil(count($words) / 200) . " min";
     $out = preg_replace_callback("/\%\%(.+?)\%\%/", function($m) {
         global $obj;
         if (isset($obj->{$m[1]})) {
@@ -156,11 +185,37 @@ while ($obj = $result->fetch_object()) {
                 <div class="row">
                     <div class="col-12">
                         <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+<?php
+
+$perpage = 6;
+$prevDisabled = "";
+$nextDisabled = "";
+$prevpage = $page - 1;
+$nextpage = $page + 1;
+if ($page == 0) {
+    $prevDisabled = " disabled";
+    $prevpage = 0;
+} 
+if ($page > (floor($postCount->posts / $perpage)-1))  {
+    $nextDisabled = " disabled";
+    $nextpage = 0;
+}
+$lastpage = (floor($postCount->posts / $perpage));
+
+print <<<EOT
+<li class="page-item{$prevDisabled}"><a class="page-link" href="blog.php?page=0">&lt;&lt;</a></li>
+<li class="page-item{$prevDisabled}"><a class="page-link" href="blog.php?page={$prevpage}">&lt;</a></li>
+EOT;
+
+for ($i=0; $i<ceil($postCount->posts / $perpage); $i++) {
+    $active = ($page == $i) ? ' active' : ''; 
+    print '<li class="page-item' . $active . '"><a class="page-link" href="blog.php?page='.$i.'">'.($i + 1).'</a></li>';
+}
+print <<<EOT
+<li class="page-item{$nextDisabled}"><a class="page-link" href="blog.php?page={$nextpage}">&gt;</a></li>
+<li class="page-item{$nextDisabled}"><a class="page-link" href="blog.php?page={$lastpage}">&gt;&gt;</a></li>
+EOT;
+?>
                         </ul> 
                     </div>
                 </div>
@@ -173,7 +228,7 @@ while ($obj = $result->fetch_object()) {
                 <div class="row">
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-contact">
-                            <h2>Our Head Office</h2>
+                            <h2>Nuestra Oficina Central</h2>
                             <p><i class="fa fa-map-marker-alt"></i>621 Holloway Ave, <br>San Francisco CA, USA</p>
                             <p><i class="fa fa-phone-alt"></i>(415) 300-0180</p>
                             <p><i class="fa fa-envelope"></i>info@thegivehub.com</p>
@@ -188,30 +243,30 @@ while ($obj = $result->fetch_object()) {
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
-                            <h2>Popular Links</h2>
-                            <a href="about.html">About Us</a>
-                            <a href="contact.html">Contact Us</a>
-                            <a href="causes.html">Popular Causes</a>
-                            <a href="event.html">Upcoming Events</a>
+                            <h2>Enlaces Populares</h2>
+                            <a href="about.html">Sobre Nosotros</a>
+                            <a href="contact.html">Contáctenos</a>
+                            <a href="causes.html">Causas Populares</a>
+                            <a href="event.html">Próximos Eventos</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
-                            <h2>Useful Links</h2>
-                            <a href="legal/tos.html">Terms of use</a>
-                            <a href="legal/privacy.html">Privacy policy</a>
-                            <a href="legal/cookies.html">Cookies</a>
-                            <a href="help.html">Help</a>
-                            <a href="faq.html">FAQs</a>
+                            <h2>Enlaces Útiles</h2>
+                            <a href="legal/tos.html">Términos de Uso</a>
+                            <a href="legal/privacy.html">Política de Privacidad</a>
+                            <a href="legal/cookies.html">Política de Cookies</a>
+                            <a href="help.html">Ayuda</a>
+                            <a href="faq.html">Preguntas Frecuentes</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-newsletter">
-                            <h2>Newsletter</h2>
+                            <h2>Boletín Informativo</h2>
                             <form>
-                                <input class="form-control" placeholder="Email goes here">
-                                <button class="btn btn-custom">Submit</button>
-                                <label>Don't worry, we don't spam!</label>
+                                <input class="form-control" placeholder="Correo electrónico aquí">
+                                <button class="btn btn-custom">Enviar</button>
+                                <label>No te preocupes, no enviaremos spam</label>
                             </form>
                         </div>
                         <div>
@@ -223,7 +278,7 @@ while ($obj = $result->fetch_object()) {
                     <div class="col-md-6">
                    </div>
                     <div class="col-md-6">
-                        <p>&copy; <a href="#">The Give Hub</a>, All Right Reserved.</p>
+                        <p>&copy; <a href="#">The Give Hub</a>, Todos los derechos reservados.</p>
                     </div>
                     <div class="col-md-6">
                     </div>
@@ -243,17 +298,17 @@ while ($obj = $result->fetch_object()) {
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/parallax/parallax.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
         
         <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>

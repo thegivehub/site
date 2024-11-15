@@ -1,4 +1,3 @@
-<base href="https://thegivehub.com/site/"/>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,7 +8,7 @@
         <meta content="description" name="The Give Hub is a blockchain backed crowdfunding platform designed to make running campaigns and donating simple and easy to use.">
 
         <!-- Favicon -->
-        <link href="img/favicon.ico" type="image/svg+xml" rel="icon">
+        <link href="/img/favicon.ico" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -17,12 +16,12 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+        <link href="/lib/animate/animate.min.css" rel="stylesheet">
+        <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
         <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet">
     </head>
 
     <body>
@@ -49,7 +48,9 @@
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://linkedin.com/company/thegivehub"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="https://www.instagram.com/the_givehub/"><i class="fab fa-instagram"></i></a>
+                            </div>
+                            <div class="lang">
+                                <a href="/en/"><img class="lang-icon" src="/site/img/hello.svg"></a>
                             </div>
                         </div>
                     </div>
@@ -118,29 +119,43 @@
 $tpl = <<<EOL
     <div class="col-lg-4">
         <div class="blog-item">
+            <div class="blog-head">
+                <h4 style="text-align:center;background-color:#333;"><a style="color:#eee;" href="%%url%%">“%%title%%”</a></h3>
+                <h4 style="font-size: 16px;font-weight:400;"><a style="color:#eee;" href="%%url%%">%%subtitle%%</a></h4>
+            </div>
             <div class="blog-img">
                 <img src="%%post_image%%" alt="Image">
             </div>
             <div class="blog-text">
-                <h3><a href="%%url%%">%%title%%</a></h3>
                 <p>
                     %%excerpt%%
                 </p>
             </div>
-            <div class="blog-meta">
-                <p><i class="fa fa-user"></i><a href="">Christopher Robison</a></p>
-                <p><i class="fa fa-comments"></i><a href="">0 Comments</a></p>
+            <div class="blog-foot" style="margin:0.5em 1em 1em;text-align:right;padding-right:3em;font-size:15px;"><a style="color:#00c;text-decoration:underline;" href="%%url%%">Read more...</a></div>
+            <div class="blog-meta" style="white-space: nowrap;">
+                <p><i class="fa fa-user"></i><a href="">Chris Robison</a></p>
+                <p><i class="fa fa-clock"></i>%%readtime%%</p>
+                <p><i class="fa fa-comments"></i><a href="">0</a></p>
             </div>
         </div>
     </div>
 EOL;
+$in = $_REQUEST;
+$page =  (isset($in['page'])) ? $in['page'] : 0;
+$xtra = " LIMIT " . ($page * 6) . ", 6";
+
 $link = new mysqli("localhost", "pimp", "pimpin", "givehub");
-$result = $link->query("select * from blog_posts order by id desc");
+$result = $link->query("SELECT COUNT(*) AS posts FROM posts WHERE language='en'");
+$postCount = $result->fetch_object();
+
+$result = $link->query("SELECT * FROM posts WHERE language='en' ORDER BY ID DESC $xtra");
 while ($obj = $result->fetch_object()) {
     //$obj->content = preg_replace("/^.+?<\/h1>/s", "", $obj->content);
     //$c = preg_split("/\n/", $obj->content);
     //array_shift($c);
     //$obj->content = join("\n", $c);
+    $words = preg_split("/\s+/", $obj->markdown);
+    $obj->readtime = ceil(count($words) / 200) . " min";
     $out = preg_replace_callback("/\%\%(.+?)\%\%/", function($m) {
         global $obj;
         if (isset($obj->{$m[1]})) {
@@ -156,12 +171,38 @@ while ($obj = $result->fetch_object()) {
                 <div class="row">
                     <div class="col-12">
                         <ul class="pagination justify-content-center">
-                            <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul> 
+<?php
+
+$perpage = 6;
+$prevDisabled = "";
+$nextDisabled = "";
+$prevpage = $page - 1;
+$nextpage = $page + 1;
+if ($page == 0) {
+    $prevDisabled = " disabled";
+    $prevpage = 0;
+} 
+if ($page > (floor($postCount->posts / $perpage)-1))  {
+    $nextDisabled = " disabled";
+    $nextpage = 0;
+}
+$lastpage = (floor($postCount->posts / $perpage));
+
+print <<<EOT
+<li class="page-item{$prevDisabled}"><a class="page-link" href="blog.php?page=0">&lt;&lt;</a></li>
+<li class="page-item{$prevDisabled}"><a class="page-link" href="blog.php?page={$prevpage}">&lt;</a></li>
+EOT;
+
+for ($i=0; $i<ceil($postCount->posts / $perpage); $i++) {
+    $active = ($page == $i) ? ' active' : ''; 
+    print '<li class="page-item' . $active . '"><a class="page-link" href="blog.php?page='.$i.'">'.($i + 1).'</a></li>';
+}
+print <<<EOT
+<li class="page-item{$nextDisabled}"><a class="page-link" href="blog.php?page={$nextpage}">&gt;</a></li>
+<li class="page-item{$nextDisabled}"><a class="page-link" href="blog.php?page={$lastpage}">&gt;&gt;</a></li>
+EOT;
+?>
+                       </ul> 
                     </div>
                 </div>
             </div>
@@ -243,17 +284,17 @@ while ($obj = $result->fetch_object()) {
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/parallax/parallax.min.js"></script>
+        <script src="/lib/easing/easing.min.js"></script>
+        <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="/lib/waypoints/waypoints.min.js"></script>
+        <script src="/lib/counterup/counterup.min.js"></script>
+        <script src="/lib/parallax/parallax.min.js"></script>
         
         <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+        <script src="/mail/jqBootstrapValidation.min.js"></script>
+        <script src="/mail/contact.js"></script>
 
         <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+        <script src="/js/main.js"></script>
     </body>
 </html>
