@@ -507,7 +507,7 @@
                     </div>
                 </div>
                 `}).join('');
-
+            $("#categories-container").innerHTML = categoriesHTML;
         },
 
         filterByCategory(category_id) {
