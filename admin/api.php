@@ -53,13 +53,26 @@ print json_encode($out);
 
 function get($rsc="posts", $id="") {
     global $link;
-        
+    
+    $cond = [];
+
+    if ($_GET['language']) {
+        $cond[] = "language='".$_GET['language']."'";
+    }
+
     $sql = "SELECT * FROM {$rsc}";
 
     if (isset($id) && $id!="") {
-        $sql .= " WHERE id='".$link->real_escape_string($id)."'";
+        if (is_numeric($id)) {
+            $cond[] = "id='".$link->real_escape_string($id)."'";
+        } else {
+            $cond[] = "$id";
+        }
     }
-
+    
+    if (count($cond)) {
+        $sql .= " WHERE ".join(' AND ', $cond);
+    }
     $out = [];
     $results = $link->query($sql);
 
