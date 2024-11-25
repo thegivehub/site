@@ -26,7 +26,7 @@ $itemtpl = file_get_contents("templates/post-item.html");
 
 $out .= '<div id="featured" class="container tab-pane active show">';
 
-$sql = "SELECT * FROM blog_posts WHERE featured=1";
+$sql = "SELECT * FROM blog_posts WHERE language='en' AND featured=1";
 $result = $link->query($sql);
 
 while ($obj = $result->fetch_object()) {
@@ -44,7 +44,7 @@ $out .= '</div>';
 // now do 'popular'
 $out .= '<div id="popular" class="container tab-pane">';
 
-$sql = "SELECT * FROM post_metrics order by views_count desc limit 5";
+$sql = "SELECT * FROM post_metrics where language='en' order by views_count desc limit 5";
 $result = $link->query($sql);
 
 while ($obj = $result->fetch_object()) {
@@ -65,7 +65,7 @@ $out .= "</div>";
 
 $out .= '<div id="latest" class="container tab-pane">';
 
-$sql = "SELECT * FROM blog_posts order by published_at desc limit 5";
+$sql = "SELECT * FROM blog_posts where language='en' order by published_at desc limit 5";
 $result = $link->query($sql);
 
 while ($obj = $result->fetch_object()) {

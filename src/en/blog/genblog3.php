@@ -5,7 +5,7 @@ $link = mysqli_connect($env->db->host, $env->db->user, $env->db->pass, "givehub"
 
 $tpl = file_get_contents("templates/blog3-item.html");
 
-$result = $link->query("select * from blog_posts order by id desc limit 3");
+$result = $link->query("select * from blog_posts where language='en' order by id desc limit 3");
 $out = <<<EOT
         <!-- Blog Start -->
         <div class="blog">

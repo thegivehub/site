@@ -1,5 +1,5 @@
-# FAQ's for **The Give Hub** platform:
-## For Donors and Causes / Campaigns
+# Frequently Asked Questions
+## For Donors, Loaners, Borrowers and Campaigns
 
 ---
 

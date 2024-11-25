@@ -78,4 +78,4 @@ EOT;
 file_put_contents("components/causes.html", $out);
 
 
-print $out;
+//print $out;

@@ -6,6 +6,9 @@ cd blog
 cd ..
 ./build-site
 
-cp -r newsite/* ..
+./gencauses.php
+
+cp -r blog/html/* ../../../en/blog/
+cp -r newsite/* ../../../en/
 
 

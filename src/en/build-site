@@ -7,7 +7,7 @@ if (!file_exists("newsite")) mkdir("newsite");
 
 foreach ($pages as $page) {
     $out = "";
-    print "Working on {$page->title}\n";
+    print "Working on {$page->title} (";
     foreach ($page->templates as $tpl) {
         $out .= preg_replace_callback("/\%\%(.+?)\%\%/", function($m) {
             global $page;
@@ -17,14 +17,13 @@ foreach ($pages as $page) {
                 return "";
             }
         }, file_get_contents("{$tpl}")); 
-        print "\tAdded $tpl\n";
+        print preg_replace("/\..*/", '', preg_replace("/^components\//", '', $tpl)) . ", ";
     }
-    
     $dir = dirname($page->file);
     if (!file_exists("newsite/".$dir)) {
         mkdir("newsite/".$dir);
     }
     file_put_contents("newsite/" . $page->file, $out);
-    print "Created {$page->file} [".strlen($out)." bytes]\n";
+    print ") Wrote {$page->file} [".strlen($out)." bytes]\n";
 
 }

@@ -68,6 +68,7 @@ Each service operates independently as a Docker container, managed by Kubernetes
 
 ### Blockchain Layer
 The Stellar network is central to The Give Hub’s transparency and verification:
+
 - **Smart Contracts**: Soroban contracts automate fund release based on milestone completion.
 - **Multi-signature Verification**: Ensures consensus from multiple stakeholders (e.g., project validators) before funds are released.
 - **Transaction Tracking**: Blockchain transactions offer immutable, publicly accessible records.
@@ -137,6 +138,7 @@ Real-time alerts for system anomalies and performance issues ensure high availab
 ## Scalability Considerations
 
 The microservices architecture enables each component to scale independently. Key considerations include:
+
 - **Horizontal Scaling**: Kubernetes handles autoscaling, with database sharding and load balancing for improved performance.
 - **Vertical Scaling**: Resources are allocated based on need, ensuring efficient usage without compromising performance.
 

@@ -2,7 +2,8 @@
 <?php
 include("/simple/.env");
 $link = mysqli_connect($env->db->host, $env->db->user, $env->db->pass, "givehub");
-$txt = file_get_contents("posts.txt");
+
+$results = $link->query("select * from posts order by id desc limit 5");
 
 $posts = preg_split("/\n/", $txt);
 
@@ -15,13 +16,10 @@ $start = file_get_contents("templates/recent-posts.html");
 $mypost = file_get_contents("templates/recent-post.html");
 $myposts = [];
 $cnt = 1;
-for ($i=0; $i < 5; $i++) {
-    $post = $posts[$i];
+while ($post = $results->fetch_object()) {
     $obj = new stdClass();
 
-    $parts = preg_split("/\|/", $post);
-    $file = trim($parts[0]);
-    $outfile = preg_replace("/\.md/", '.html', $file);
+    $outfile = preg_replace("/\.md/", '.html', $post->url);
 
     $titleparts = preg_split("/:/", preg_replace("/\*\s*/", '', $parts[1]));
    
