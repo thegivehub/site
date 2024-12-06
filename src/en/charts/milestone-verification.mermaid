@@ -1,0 +1,10 @@
+flowchart LR
+    A[Digital Nomad] -->|Submits Proof| B[Verification Queue]
+    B --> C{Automated Checks}
+    C -->|Passed| D[Store Proof Hash]
+    C -->|Failed| A
+    D --> E[Update Contract]
+    E --> F{Fund Release}
+    F -->|Success| G[Update Campaign]
+    F -->|Fail| H[Alert Admin]
+    G --> I[Notify Stakeholders]

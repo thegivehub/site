@@ -1,0 +1,23 @@
+graph LR
+    subgraph Input
+        A[Campaign Creation]
+        B[Donations]
+        C[Milestone Updates]
+    end
+
+    subgraph Processing
+        D[Validation Layer]
+        E[Business Logic]
+        F[Blockchain Operations]
+    end
+
+    subgraph Storage
+        G[(MongoDB)]
+        H[Smart Contracts]
+        I[File Storage]
+    end
+
+    A & B & C --> D
+    D --> E
+    E --> F
+    F --> G & H & I

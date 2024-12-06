@@ -1,0 +1,22 @@
+sequenceDiagram
+    participant D as Donor
+    participant F as Frontend
+    participant B as Backend
+    participant S as Stellar
+    participant SC as Soroban Contract
+    
+    note over D,SC: Campaign Donation Flow
+    D->>F: Initiate Donation
+    F->>B: Create Transaction
+    B->>S: Create Stellar Transaction
+    S->>SC: Lock Funds in Contract
+    SC-->>B: Confirm Fund Lock
+    B-->>F: Update UI
+    F-->>D: Show Confirmation
+
+    note over D,SC: Milestone Release Flow
+    B->>SC: Submit Verification
+    SC->>SC: Verify Milestone
+    SC->>S: Release Funds
+    S-->>B: Confirm Release
+    B-->>F: Update Campaign Status

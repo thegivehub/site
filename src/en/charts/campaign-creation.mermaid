@@ -1,0 +1,11 @@
+flowchart TD
+    A[Community Member] -->|Creates Campaign| B[Campaign Form]
+    B --> C{Validation}
+    C -->|Valid| D[Create Campaign]
+    C -->|Invalid| B
+    D --> E[Deploy Smart Contract]
+    E --> F[Set Milestones]
+    F --> G[Activate Campaign]
+    G --> H{Review Status}
+    H -->|Approved| I[Public Campaign]
+    H -->|Needs Changes| B

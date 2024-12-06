@@ -1,0 +1,27 @@
+graph TD
+    subgraph User Layer
+        A[Donors]
+        B[Communities]
+        C[Digital Nomads]
+    end
+
+    subgraph Application Layer
+        D[Campaign Manager]
+        E[Impact Tracker]
+        F[Milestone Verifier]
+    end
+
+    subgraph Database Layer
+        G[(MongoDB)]
+        H[(Redis Cache)]
+    end
+
+    subgraph Blockchain Layer
+        I[Stellar Network]
+        J[Soroban Contracts]
+        K[Asset Bridge]
+    end
+
+    A & B & C --> D & E & F
+    D & E & F --> G & H
+    D & E & F --> I & J & K
