@@ -10,15 +10,56 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/monokai.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="header-content">
                 <h1 style="margin-top:0;" class="title">
-                    <i class="fas fa-blog"></i>
+                    <img src="blog-logo.svg" height="32"> 
                     Blog Management
                 </h1>
+                <div class="filters">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input id="search" type="text" placeholder="Search posts..." onkeyup="searchPosts(this.value)">
+                    </div>
+                    <div class="post-actions">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-filter"></i>
+                            Filter
+                        </button>
+                        <details class="btn btn-outline btn-sort" class="btn btn-outline">
+                            <summary>
+                                Sort
+                            </summary>
+                            <div class="sort-select">
+                                <form onsubmit="app.changeSort(); return false;" onchange="app.changeSort();return false;">
+                                    <select size="6" id="sort-by">
+                                        <option value="created_at">Date Created</option>
+                                        <option value="modified_at">Date Modified</option>
+                                        <option value="published_at" selected>Date Published</option>
+                                        <option value="category_id">Category</option>
+                                        <option value="title">Title</option>
+                                        <option value="author">Author</option>
+                                    </select>
+                                    <div class="sort-dir-wrap">
+                                        <span>
+                                            <input type="radio" name="sort-dir" id="sort-dir-asc" value="1"> 
+                                            <label for="sort-dir-asc">ASC</label>
+                                        </span>
+                                        <span>
+                                            <input type="radio" name="sort-dir" id="sort-dir-desc" checked value="-1"> 
+                                            <label for="sort-dir-desc">DESC</label>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
                 <button class="btn btn-primary" onclick="app.openEditor()">
                     <i class="fas fa-plus"></i>
                     New Post
@@ -62,23 +103,6 @@
             </aside>
 
             <section class="posts-section">
-                <div class="filters">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search posts..." onkeyup="searchPosts(this.value)">
-                    </div>
-                    <div class="post-actions">
-                        <button class="btn btn-outline">
-                            <i class="fas fa-filter"></i>
-                            Filter
-                        </button>
-                        <button class="btn btn-outline">
-                            <i class="fas fa-sort"></i>
-                            Sort
-                        </button>
-                    </div>
-                </div>
-
                 <div id="posts-list">
                     <!-- Posts will be dynamically inserted here -->
                 </div>
@@ -174,7 +198,7 @@
 
 
             <div class="form-group">
-                <label>Featured Image</label>
+                <label for="post-image">Featured Image</label>
                 <div class="image-upload">
                     <input type="file" id="post-image" name="image" accept="image/*" onchange="app.previewImage(event)">
                     <div id="image-preview" class="image-preview">

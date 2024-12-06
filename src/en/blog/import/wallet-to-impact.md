@@ -17,6 +17,7 @@ Many platforms, like **The Give Hub**, allow you to browse specific projects or 
 Once you hit "send," your cryptocurrency is transferred through the blockchain. Unlike traditional payment methods, where transactions pass through banks or third-party processors, blockchain donations are direct and decentralized. 
 
 This process offers several advantages:
+
 - **Speed**: Transactions are near-instant, even for cross-border donations.
 - **Cost-Effectiveness**: Minimal transaction fees ensure more of your money reaches the intended cause.
 - **Security**: Blockchain’s cryptographic nature ensures that your donation is tamper-proof and secure.
@@ -28,6 +29,7 @@ Each transaction is recorded on the blockchain’s public ledger, creating an im
 ### 3. **Smart Contracts: Ensuring Accountability**
 
 Smart contracts, the programmable layer of blockchain, take over at this stage. These self-executing contracts are designed to ensure that your donation is used exactly as intended. For example:
+
 - A smart contract for a school-building project might release funds incrementally as construction milestones are met.
 - For disaster relief, contracts might be tied to delivering supplies or providing shelter within a specific timeframe.
 
@@ -48,6 +50,7 @@ With platforms like **The Give Hub**, recipients can receive donations in their 
 One of the most exciting aspects of blockchain donations is the ability to track your contribution in real time. Platforms provide updates on how funds are allocated and spent, offering a clear line of sight from wallet to impact.
 
 For example:
+
 - A water project might show photos of the completed well funded by your donation.
 - An education program could send updates on the supplies purchased and the students benefiting from your contribution.
 
@@ -66,6 +69,7 @@ For donors, the ability to see the long-term impact of their contributions foste
 ### Real-Life Example: A Blockchain Donation in Action
 
 Imagine you’re donating to a clean energy project in Africa through **The Give Hub**:
+
 1. **Step 1**: You select a project to install solar panels in a rural village and send your donation using Stellar Lumens (XLM) via your digital wallet. 
 2. **Step 2**: The donation is recorded on the blockchain, visible to both you and the charity. 
 3. **Step 3**: A smart contract ensures funds are released only when the solar panels are purchased and installed.
@@ -80,4 +84,4 @@ Blockchain technology has transformed the simple act of donating into a transpar
 
 From wallet to impact, every step of the journey is designed to maximize trust, engagement, and results. Platforms like **The Give Hub** are leading this revolution, connecting donors and recipients in ways that were never before possible.
 
-Are you ready to make a difference? Start your blockchain donation journey today and watch the impact unfold, one transaction at a time. Together, we can build a more transparent and impactful future for giving.
+Are you ready to make a difference? [Start your blockchain donation journey today](https://app.thegivehub.com/registration.html) and watch the impact unfold, one transaction at a time. Together, we can build a more transparent and impactful future for giving.

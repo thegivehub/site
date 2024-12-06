@@ -135,6 +135,26 @@
         ]
     },
     {
+        "title": "Success Criteria",
+        "file": "success.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/success.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Go To Market Strategy",
+        "file": "go-to-market.html",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/go-to-market.html",
+            "components/end.html"
+        ]
+    },
+    {
         "title": "Analytics",
         "file": "analytics.html",
         "templates": [

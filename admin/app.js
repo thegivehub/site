@@ -11,28 +11,80 @@
             currentFilter: 'all',
             posts: [],
             categories: [
-                { id: 1, name: 'Community Development', slug: 'community', color: '#6366f1', desc: 'Includes: Infrastructure, housing, community centers, disaster resilience', post_count: 5 },
-                { id: 2, name: 'Education & Skills', slug: 'education', color: '#8b5cf6', desc: 'Includes: Schools, training programs, educational materials, teacher support, digital literacy', post_count: 6 },
-                { id: 3, name: 'Water & Sanitation', slug: 'water', color: '#2563eb', desc: 'Includes: Clean water access, sanitation facilities, hygiene programs, water infrastructure', post_count: 5 },
-                { id: 4, name: 'Health & Wellbeing', slug: 'health', color: '#ef4444', desc: 'Includes: Medical facilities, healthcare access, nutrition programs, mental health support', post_count: 5 },
-                { id: 5, name: 'Climate & Environment', slug: 'climate', color: '#10b981', desc: 'Includes: Renewable energy, conservation, sustainability initiatives, waste management', post_count: 6 },
-                { id: 6, name: 'Economic Empowerment', slug: 'economic', color: '#f59e0b', desc: 'Includes: Microenterprises, job training, women\'s empowerment, agricultural development', post_count: 6 },
-                { id: 7, name: 'Infrastructure', slug: 'infrastructure',color: '#3366cc', desc: 'Includes: Repair of roads, bridges and dams, build/expand school buildings', post_count: 7 }
-            ]
+                {
+                    "name": "Charity",
+                    "id": "8",
+                    "language": "en",
+                    "icon": "/img/charity.svg",
+                    "post_count": "19"
+                },
+                {
+                    "name": "Climate & Environment",
+                    "id": "5",
+                    "language": "en",
+                    "icon": "/img/climate.svg",
+                    "post_count": "4"
+                },
+                {
+                    "name": "Community Development",
+                    "id": "1",
+                    "language": "en",
+                    "icon": "/img/community.svg",
+                    "post_count": "1"
+                },
+                {
+                    "name": "Economic Empowerment",
+                    "id": "6",
+                    "language": "en",
+                    "icon": "/img/economic.svg",
+                    "post_count": "3"
+                },
+                {
+                    "name": "Education & Skills",
+                    "id": "2",
+                    "language": "en",
+                    "icon": "/img/education.svg",
+                    "post_count": "3"
+                },
+                {
+                    "name": "Health & Wellbeing",
+                    "id": "4",
+                    "language": "en",
+                    "icon": "/img/health.svg",
+                    "post_count": "2"
+                },
+                {
+                    "name": "Infrastructure",
+                    "id": "7",
+                    "language": "en",
+                    "icon": "/img/infrastructure.svg",
+                    "post_count": "2"
+                },
+                {
+                    "name": "Water & Sanitation",
+                    "id": "3",
+                    "language": "en",
+                    "icon": "/img/water.svg",
+                    "post_count": "4"
+                }
+                ]
         },
         
         state: {
             loaded: false,
             editing: false,
             currentPostId: null,
-            saving: false
+            saving: false,
+            sortKey: "published_at",
+            sortOrd: -1
         },
 
         async init() {
             // Initialize the application
-            app.bindEvents();
-            app.fetchPosts();
+            //app.bindEvents();
             await app.initCategories();
+            await app.fetchPosts();
+            app.themeToggle.init();
             app.state.loaded = true;
         },
 
@@ -49,10 +101,10 @@
         },
         
         async initCategories() {
-            let resp = await fetch("api/categories?language=en");
+            let resp = await fetch("api/categories?lang=en&x=getCategories");
             app.data.categories = await resp.json();
             
-            app.updateCategoryPostCounts();
+            //app.updateCategoryPostCounts();
             app.renderCategories();
             app.bindEvents();
         },
@@ -71,7 +123,7 @@
         },
 
         async fetchPosts() {
-            let resp = await fetch("https://thegivehub.com/site/admin/api/posts?language=en");
+            let resp = await fetch("api/posts?language=en");
             let posts = await resp.json();
 
             app.data.posts = posts;
@@ -80,13 +132,42 @@
             return posts;
         },
 
+        changeSort() {
+            app.state.sortKey = $("#sort-by").value;
+            app.state.sortOrd = $("input[name='sort-dir']:checked").value;
+            $("#sort-by option[selected]").removeAttribute("selected");
+            $(`#sort-by option[value='app.state.sortKey']`).addAttribute("selected");
+            document.querySelector("header .filters div.post-actions > details")?.removeAttribute("open");
+            app.sortPosts(app.data.posts);
+            app.renderPosts(app.data.posts);
+        },
+
+        sortPosts(postArr) {
+            postArr.sort((a, b) => {
+                let out = 0;
+                if (a[app.state.sortKey] < b[app.state.sortKey]) {
+                    out = -1;
+                } else if (a[app.state.sortKey] > b[app.state.sortKey]) {
+                    out = 1;
+                }
+                return out * app.state.sortOrd;
+            });
+            return postArr;
+        },
+
         renderPosts(postsToRender = app.data.posts) {
             const postsList = $('#posts-list');
+            
+            postsToRender = app.sortPosts(postsToRender);
+
             const postsHTML = postsToRender.map(post => app.createPostHTML(post)).join('');
             postsList.innerHTML = postsHTML;
         },
 
         createPostHTML(post) {
+            if (post.published_at) {
+                post.published_at = new Intl.DateTimeFormat("en-US", { weekday: "short", month: "short", day: "numeric", year: "numeric" }).format(new Date(post.published_at));
+            }
             return `
                 <div class="post-item" data-id="${post.id}">
                     <img src="${post.post_image}" alt="${post.title}" class="post-image">
@@ -102,6 +183,7 @@
                             </span>
                         </p>
                         <div class="post-actions">
+                            <span>
                             <button class="btn btn-outline" onclick="app.editPost(${post.id})">
                                 <i class="fas fa-edit"></i>
                                 Edit
@@ -110,9 +192,9 @@
                                 <i class="fas fa-eye"></i>
                                 Preview 
                             </button>
+                            </span>
 <button class="btn btn-danger" onclick="app.deletePost(${post.id})">
                                 <i class="fas fa-trash"></i>
-                                Delete
                             </button>
                         </div>
                     </div>
@@ -479,11 +561,14 @@
         },
         
         updateCategoryPostCounts() {
-            this.data.categories.forEach(category => {
-                category.postCount = this.data.posts.filter(post => 
-                    post.category_id === category.id
+            for (let i=0; i < app.data.categories.length; i++) {
+
+                let category = app.data.categories[i];
+                app.data.categories[i].postCount = app.data.posts.filter(post => 
+                    post.category_id == category.id &&
+                    post.language === "en"
                 ).length;
-            });
+            }
         },
 
         renderCategories() {
@@ -601,7 +686,7 @@
                 this.data.categories.push(newCategory);
             }
             
-            this.updateCategoryPostCounts();
+            //this.updateCategoryPostCounts();
             this.renderCategories();
             this.closeCategoryEditor();
         },
@@ -621,7 +706,7 @@
                 }
             });
             
-            this.updateCategoryPostCounts();
+            //this.updateCategoryPostCounts();
             this.renderCategories();
             this.renderPosts();
         },
@@ -633,7 +718,61 @@
         upslug(val) {
             $("#post-slug").value = val.replace(/[\W]/g, '-').toLowerCase();
 
+        },
+        themeToggle: {
+            init() {
+                // Add theme toggle button to header
+                const headerActions = document.querySelector('.header-content .post-actions');
+                const toggleBtn = document.createElement('button');
+                toggleBtn.className = 'theme-toggle';
+                toggleBtn.innerHTML = `
+                    <i class="fas fa-moon"></i>
+                `;
+                toggleBtn.onclick = this.toggleTheme.bind(this);
+                headerActions.appendChild(toggleBtn);
+        
+                // Initialize theme from localStorage
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                this.setTheme(savedTheme);
+                
+                // Watch for system theme changes
+                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                mediaQuery.addEventListener('change', e => {
+                    if (!localStorage.getItem('theme')) {
+                        this.setTheme(e.matches ? 'dark' : 'light');
+                    }
+                });
+            },
+        
+            toggleTheme() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                this.setTheme(newTheme);
+            },
+        
+            setTheme(theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+                localStorage.setItem('theme', theme);
+                
+                // Update toggle button icon
+                const toggleBtn = document.querySelector('.theme-toggle');
+                if (toggleBtn) {
+                    toggleBtn.innerHTML = `
+                        <i class="fas fa-${theme === 'dark' ? 'sun' : 'moon'}"></i>
+                    `;
+                }
+        
+                // Update SimpleMDE if it exists
+                if (app.editor) {
+                    if (theme === 'dark') {
+                        app.editor.codemirror.setOption('theme', 'monokai');
+                    } else {
+                        app.editor.codemirror.setOption('theme', 'default');
+                    }
+                }
+            }
         }
+
 
     };
 

@@ -45,11 +45,27 @@ switch ($in['x']) {
     case "remove":
         $out = remove($in['rsc'], $in['id']);
         break;
+    case "getCategories":
+        $out = getCategories(isset($in['lang']) ? $in['lang']:'');
+        break;
+
 }
 
 header("Content-Type: application/json");
 print json_encode($out);
 
+function getCategories($lang="en") {
+    global $link;
+    
+    $sql = "select categories.name, categories.id as id, posts.language, categories.icon, count(*) as post_count from posts, categories where posts.category_id=categories.id and posts.language='{$lang}' group by categories.name;";
+    $results = $link->query($sql);
+    $out = [];
+    while ($row = $results->fetch_object()) {
+        $out[] = $row;
+    }
+
+    return $out;
+}
 
 function get($rsc="posts", $id="") {
     global $link;
@@ -59,8 +75,8 @@ function get($rsc="posts", $id="") {
     if ($_GET['language']) {
         $cond[] = "language='".$_GET['language']."'";
     }
-
-    $sql = "SELECT * FROM {$rsc}";
+    $rsc = $link->real_escape_string($rsc);
+    $sql = "SELECT * FROM `{$rsc}`";
 
     if (isset($id) && $id!="") {
         if (is_numeric($id)) {
