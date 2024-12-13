@@ -1,34 +1,34 @@
-## The Give Hub - Terms of Service
+## The Give Hub - Términos de Servicio
 
-### 1. Terms
-By accessing the website at [https://thegivehub.com](https://thegivehub.com), you agree to be bound by these terms of service, all applicable laws and regulations, and acknowledge that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained on this website are protected by applicable copyright and trademark law.
+### 1. Términos
+Al acceder al sitio web en [https://thegivehub.com](https://thegivehub.com), usted acepta estar sujeto a estos términos de servicio, todas las leyes y regulaciones aplicables, y reconoce que es responsable del cumplimiento de cualquier ley local aplicable. Si no está de acuerdo con alguno de estos términos, se le prohíbe usar o acceder a este sitio. Los materiales contenidos en este sitio web están protegidos por las leyes aplicables de derechos de autor y marcas comerciales.
 
-### 2. Use License
-1. Permission is granted to temporarily download one copy of the materials (information or software) on The Give Hub's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-   1. modify or copy the materials;
-   2. use the materials for any commercial purpose, or for any public display (commercial or non-commercial);
-   3. attempt to decompile or reverse engineer any software contained on The Give Hub's website;
-   4. remove any copyright or other proprietary notations from the materials; or
-   5. transfer the materials to another person or "mirror" the materials on any other server.
-   
-2. This license shall automatically terminate if you violate any of these restrictions and may be terminated by The Give Hub at any time. Upon terminating your viewing of these materials or upon the termination of this license, you must destroy any downloaded materials in your possession whether in electronic or printed format.
+### 2. Licencia de Uso
+1. Se otorga permiso para descargar temporalmente una copia de los materiales (información o software) en el sitio web de The Give Hub solo para visualización personal y transitoria no comercial. Esta es la concesión de una licencia, no una transferencia de título, y bajo esta licencia usted no puede:
+   1. modificar o copiar los materiales;
+   2. usar los materiales para ningún propósito comercial o para cualquier exhibición pública (comercial o no comercial);
+   3. intentar descompilar o realizar ingeniería inversa de cualquier software contenido en el sitio web de The Give Hub;
+   4. eliminar cualquier notación de derechos de autor u otras notaciones de propiedad de los materiales; o
+   5. transferir los materiales a otra persona o "reflejar" los materiales en cualquier otro servidor.
 
-### 3. Disclaimer
-1. The materials on The Give Hub's website are provided on an 'as is' basis. The Give Hub makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties, including without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+2. Esta licencia terminará automáticamente si viola cualquiera de estas restricciones y puede ser terminada por The Give Hub en cualquier momento. Al terminar su visualización de estos materiales o al terminar esta licencia, debe destruir cualquier material descargado en su posesión, ya sea en formato electrónico o impreso.
 
-2. Further, The Give Hub does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+### 3. Descargo de Responsabilidad
+1. Los materiales en el sitio web de The Give Hub se proporcionan "tal cual". The Give Hub no ofrece garantías, expresas o implícitas, y por la presente rechaza y niega todas las otras garantías, incluyendo, sin limitación, garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular, o no infracción de propiedad intelectual u otra violación de derechos.
 
-### 4. Limitations
-In no event shall The Give Hub or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on The Give Hub's website, even if The Give Hub or an authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties or limitations of liability for consequential or incidental damages, these limitations may not apply to you.
+2. Además, The Give Hub no garantiza ni hace ninguna representación con respecto a la precisión, los resultados probables o la confiabilidad del uso de los materiales en su sitio web o de otra manera relacionados con dichos materiales o en cualquier sitio vinculado a este sitio.
 
-### 5. Accuracy of Materials
-The materials appearing on The Give Hub's website could include technical, typographical, or photographic errors. The Give Hub does not warrant that any of the materials on its website are accurate, complete, or current. The Give Hub may make changes to the materials on its website at any time without notice. However, The Give Hub does not make any commitment to update the materials.
+### 4. Limitaciones
+En ningún caso The Give Hub o sus proveedores serán responsables por cualquier daño (incluyendo, sin limitación, daños por pérdida de datos o beneficios, o debido a la interrupción del negocio) que surjan del uso o la imposibilidad de usar los materiales en el sitio web de The Give Hub, incluso si The Give Hub o un representante autorizado ha sido notificado oralmente o por escrito de la posibilidad de tal daño. Debido a que algunas jurisdicciones no permiten limitaciones en las garantías implícitas o limitaciones de responsabilidad por daños consecuentes o incidentales, estas limitaciones pueden no aplicarse a usted.
 
-### 6. Links
-The Give Hub has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by The Give Hub of the site. Use of any such linked website is at the user's own risk.
+### 5. Precisión de los Materiales
+Los materiales que aparecen en el sitio web de The Give Hub podrían incluir errores técnicos, tipográficos o fotográficos. The Give Hub no garantiza que ninguno de los materiales en su sitio web sea preciso, completo o actual. The Give Hub puede realizar cambios en los materiales contenidos en su sitio web en cualquier momento sin previo aviso. Sin embargo, The Give Hub no se compromete a actualizar los materiales.
 
-### 7. Modifications
-The Give Hub may revise these terms of service for its website at any time without notice. By using this website you agree to be bound by the then-current version of these terms of service.
+### 6. Enlaces
+The Give Hub no ha revisado todos los sitios vinculados a su sitio web y no es responsable del contenido de ningún sitio vinculado. La inclusión de cualquier enlace no implica el respaldo por parte de The Give Hub del sitio. El uso de cualquier sitio web vinculado es bajo el propio riesgo del usuario.
 
-### 8. Governing Law
-These terms and conditions are governed by and construed in accordance with the laws of California, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
+### 7. Modificaciones
+The Give Hub puede revisar estos términos de servicio para su sitio web en cualquier momento sin previo aviso. Al usar este sitio web, usted acepta estar sujeto a la versión actual de estos términos de servicio.
+
+### 8. Ley Aplicable
+Estos términos y condiciones se rigen e interpretan de acuerdo con las leyes de California, y usted se somete irrevocablemente a la jurisdicción exclusiva de los tribunales de ese Estado o ubicación.

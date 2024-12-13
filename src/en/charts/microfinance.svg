@@ -1,0 +1,106 @@
+<svg viewBox="0 0 1000 1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1000" height="1200" fill="#f8f9fa"/>
+  
+  <!-- Title Section -->
+  <rect x="100" y="30" width="800" height="80" rx="10" fill="#4267B2"/>
+  <text x="500" y="80" text-anchor="middle" fill="white" font-size="32" font-weight="bold">The Give Hub: Blockchain-Enabled Microfinance Platform</text>
+  
+  <!-- Core Platform Section -->
+  <rect x="50" y="150" width="900" height="200" rx="10" fill="#ffffff" stroke="#4267B2" stroke-width="2"/>
+  <text x="500" y="180" text-anchor="middle" font-size="24" font-weight="bold" fill="#4267B2">Core Platform</text>
+  
+  <!-- Platform Features -->
+  <circle cx="150" cy="240" r="30" fill="#4267B2"/>
+  <text x="150" y="245" text-anchor="middle" fill="white" font-size="20">1</text>
+  <text x="200" y="245" font-size="16">Stellar Blockchain Integration</text>
+  
+  <circle cx="400" cy="240" r="30" fill="#4267B2"/>
+  <text x="400" y="245" text-anchor="middle" fill="white" font-size="20">2</text>
+  <text x="450" y="245" font-size="16">Soroban Smart Contracts</text>
+  
+  <circle cx="650" cy="240" r="30" fill="#4267B2"/>
+  <text x="650" y="245" text-anchor="middle" fill="white" font-size="20">3</text>
+  <text x="700" y="245" font-size="16">Digital Assistants Network</text>
+  
+  <!-- Loan Products Section -->
+  <rect x="50" y="400" width="425" height="250" rx="10" fill="#ffffff" stroke="#4267B2" stroke-width="2"/>
+  <text x="262.5" y="430" text-anchor="middle" font-size="24" font-weight="bold" fill="#4267B2">Loan Products</text>
+  
+  <!-- Loan Types -->
+  <rect x="70" y="450" width="385" height="180" rx="5" fill="#f8f9fa"/>
+  <text x="100" y="480" font-size="16" font-weight="bold">Individual Loans:</text>
+  <text x="120" y="505" font-size="14">• $100-$2,000</text>
+  <text x="120" y="525" font-size="14">• 3-24 months</text>
+  
+  <text x="100" y="555" font-size="16" font-weight="bold">Group Loans:</text>
+  <text x="120" y="580" font-size="14">• 5-10 members</text>
+  <text x="120" y="600" font-size="14">• Joint liability</text>
+  
+  <!-- Impact Tracking Section -->
+  <rect x="525" y="400" width="425" height="250" rx="10" fill="#ffffff" stroke="#4267B2" stroke-width="2"/>
+  <text x="737.5" y="430" text-anchor="middle" font-size="24" font-weight="bold" fill="#4267B2">Impact Tracking</text>
+  
+  <!-- Impact Metrics -->
+  <rect x="545" y="450" width="385" height="180" rx="5" fill="#f8f9fa"/>
+  <text x="575" y="480" font-size="16" font-weight="bold">Business Metrics:</text>
+  <text x="595" y="505" font-size="14">• Revenue Growth</text>
+  <text x="595" y="525" font-size="14">• Job Creation</text>
+  
+  <text x="575" y="555" font-size="16" font-weight="bold">Social Impact:</text>
+  <text x="595" y="580" font-size="14">• Household Income</text>
+  <text x="595" y="600" font-size="14">• Education Access</text>
+  
+  <!-- Process Flow -->
+  <rect x="50" y="700" width="900" height="200" rx="10" fill="#ffffff" stroke="#4267B2" stroke-width="2"/>
+  <text x="500" y="730" text-anchor="middle" font-size="24" font-weight="bold" fill="#4267B2">Loan Process Flow</text>
+  
+  <!-- Process Steps -->
+  <circle cx="150" cy="800" r="30" fill="#4267B2"/>
+  <text x="150" y="805" text-anchor="middle" fill="white" font-size="20">1</text>
+  <text x="150" y="850" text-anchor="middle" font-size="14">Application</text>
+  
+  <line x1="180" y1="800" x2="270" y2="800" stroke="#4267B2" stroke-width="2"/>
+  
+  <circle cx="300" cy="800" r="30" fill="#4267B2"/>
+  <text x="300" y="805" text-anchor="middle" fill="white" font-size="20">2</text>
+  <text x="300" y="850" text-anchor="middle" font-size="14">Verification</text>
+  
+  <line x1="330" y1="800" x2="420" y2="800" stroke="#4267B2" stroke-width="2"/>
+  
+  <circle cx="450" cy="800" r="30" fill="#4267B2"/>
+  <text x="450" y="805" text-anchor="middle" fill="white" font-size="20">3</text>
+  <text x="450" y="850" text-anchor="middle" font-size="14">Smart Contract</text>
+  
+  <line x1="480" y1="800" x2="570" y2="800" stroke="#4267B2" stroke-width="2"/>
+  
+  <circle cx="600" cy="800" r="30" fill="#4267B2"/>
+  <text x="600" y="805" text-anchor="middle" fill="white" font-size="20">4</text>
+  <text x="600" y="850" text-anchor="middle" font-size="14">Disbursement</text>
+  
+  <line x1="630" y1="800" x2="720" y2="800" stroke="#4267B2" stroke-width="2"/>
+  
+  <circle cx="750" cy="800" r="30" fill="#4267B2"/>
+  <text x="750" y="805" text-anchor="middle" fill="white" font-size="20">5</text>
+  <text x="750" y="850" text-anchor="middle" font-size="14">Monitoring</text>
+  
+  <!-- Support Systems -->
+  <rect x="50" y="950" width="900" height="200" rx="10" fill="#ffffff" stroke="#4267B2" stroke-width="2"/>
+  <text x="500" y="980" text-anchor="middle" font-size="24" font-weight="bold" fill="#4267B2">Support Systems</text>
+  
+  <!-- Support Elements -->
+  <rect x="70" y="1000" width="250" height="120" rx="5" fill="#f8f9fa"/>
+  <text x="195" y="1030" text-anchor="middle" font-size="16" font-weight="bold">Financial Education</text>
+  <text x="195" y="1060" text-anchor="middle" font-size="14">Business Planning</text>
+  <text x="195" y="1085" text-anchor="middle" font-size="14">Digital Skills Training</text>
+  
+  <rect x="385" y="1000" width="250" height="120" rx="5" fill="#f8f9fa"/>
+  <text x="510" y="1030" text-anchor="middle" font-size="16" font-weight="bold">Risk Management</text>
+  <text x="510" y="1060" text-anchor="middle" font-size="14">Portfolio Diversification</text>
+  <text x="510" y="1085" text-anchor="middle" font-size="14">Default Prevention</text>
+  
+  <rect x="700" y="1000" width="250" height="120" rx="5" fill="#f8f9fa"/>
+  <text x="825" y="1030" text-anchor="middle" font-size="16" font-weight="bold">Community Support</text>
+  <text x="825" y="1060" text-anchor="middle" font-size="14">Group Meetings</text>
+  <text x="825" y="1085" text-anchor="middle" font-size="14">Peer Mentoring</text>
+</svg>

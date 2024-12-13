@@ -11,11 +11,11 @@
         <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="/css/quicksand.css" rel="stylesheet">
         
         <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/fontawesome.min.css" rel="stylesheet">
         <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
         <link href="/lib/animate/animate.min.css" rel="stylesheet">
         <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -135,7 +135,6 @@
             </div>
         </div>
         <!-- Top Bar End -->
-
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
@@ -146,37 +145,38 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="/en/index.html" class="nav-item nav-link">Home</a>
                         <div class="nav-item dropdown">
-                            <a href="about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                            <a href="/en/about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                             <div class="dropdown-menu">
-                                <a href="service.html" class="dropdown-item">What We Do</a>
-                                <a href="team.html" class="dropdown-item">Meet The Team</a>
-                                <a href="event.html" class="dropdown-item">Events</a>
+                                <a href="/en/service.html" class="dropdown-item">What We Do</a>
+                                <a href="/en/team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="/en/event.html" class="dropdown-item">Events</a>
                             </div>
                         </div>
-                        <a href="blog.php" class="nav-item nav-link">Blog</a>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
+                        <a href="/en/blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="/en/causes.html" class="nav-item nav-link">Causes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
-                                <a href="donate.html" class="dropdown-item">Donate Now</a>
-                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
-                                <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
-                                <a href="register-cause.html" class="dropdown-item">Register Cause</a>
+                                <a href="/en/donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="/en/volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                                <a href="/en/campaign.html" class="dropdown-item">Start a Campaign</a>
+                                <a href="/en/register-cause.html" class="dropdown-item">Register Cause</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
-                                <a href="user-docs.html" class="dropdown-item">User Documentation</a>
-                                <a href="api.html" class="dropdown-item">API Documentation</a>
-                                <a href="faqs.html" class="dropdown-item">FAQ's</a>
-                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
-                                <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
+                                <a href="/en/user-docs.html" class="dropdown-item">User Documentation</a>
+                                <a href="/en/api.html" class="dropdown-item">API Documentation</a>
+                                <a href="/sdk/" class="dropdown-item">SDK's</a>
+                                <a href="/en/faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="/en/architecture.html" class="dropdown-item">Platform Architecture</a>
+                                <a href="/en/pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
-                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                         <a href="/en/contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -210,7 +210,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="/site/img/chris.png" alt="Team Image">
+                                <img class="team-image" src="/img/chris.png" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Christopher Robison</h2>
@@ -227,7 +227,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="/site/img/kevin.png" alt="Team Image">
+                                <img class="team-image" src="/img/kevin.png" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Kevin Ready</h2>
@@ -244,7 +244,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="/site/img/danny.png" alt="Team Image">
+                                <img class="team-image" src="/img/danny.png" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Daniel Kanaan</h2>
@@ -261,7 +261,26 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="team-item">
                             <div class="team-img">
-                                <img style="border-radius:50%;" src="/site/img/heath.jpg" alt="Team Image">
+                                <img class="team-image" style="border-radius:50%;" src="/img/alessandro.png" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Alessandro Favognano</h2>
+                                <p>Founder / Cultural Liason</p>
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                           </div>
+                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img class="team-image" style="border-radius:50%;" src="/img/heath.jpg" alt="Team Image">
                             </div>
                             <div class="team-text">
                                 <h2>Heath Kornblum</h2>
@@ -275,6 +294,24 @@
                            </div>
                          </div>
                     </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-item">
+                            <div class="team-img">
+                                <img class="team-image" style="border-radius:50%;" src="/img/kathy.png" alt="Team Image">
+                            </div>
+                            <div class="team-text">
+                                <h2>Katherine Rodriguez</h2>
+                                <p>Enlazdora Comunitario / Language Specialist</p>
+                            <div class="team-social">
+                                <a href=""><i class="fab fa-twitter"></i></a>
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                                <a href=""><i class="fab fa-instagram"></i></a>
+                            </div>
+                           </div>
+                         </div>
+                    </div>
+  
                 </div>
             </div>
         </div>
@@ -302,20 +339,20 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Popular Links</h2>
-                            <a href="about.html">About Us</a>
-                            <a href="contact.html">Contact Us</a>
-                            <a href="causes.html">Popular Causes</a>
-                            <a href="event.html">Upcoming Events</a>
+                            <a href="/en/about.html">About Us</a>
+                            <a href="/en/contact.html">Contact Us</a>
+                            <a href="/en/causes.html">Popular Causes</a>
+                            <a href="/en/event.html">Upcoming Events</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Useful Links</h2>
-                            <a href="legal/tos.html">Terms of use</a>
-                            <a href="legal/privacy.html">Privacy policy</a>
-                            <a href="legal/cookies.html">Cookies</a>
-                            <a href="help.html">Help</a>
-                            <a href="faq.html">FAQs</a>
+                            <a href="/en/legal/tos.html">Terms of use</a>
+                            <a href="/en/legal/privacy.html">Privacy policy</a>
+                            <a href="/en/legal/cookies.html">Cookies</a>
+                            <a href="/en/help.html">Help</a>
+                            <a href="/en/faq.html">FAQs</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -354,8 +391,8 @@
         </div>
 
         <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/jquery-3.4.1.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
         <script src="/lib/easing/easing.min.js"></script>
         <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="/lib/waypoints/waypoints.min.js"></script>

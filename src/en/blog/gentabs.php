@@ -26,7 +26,7 @@ $itemtpl = file_get_contents("templates/post-item.html");
 
 $out .= '<div id="featured" class="container tab-pane active show">';
 
-$sql = "SELECT * FROM blog_posts WHERE language='en' AND featured=1";
+$sql = "SELECT * FROM posts WHERE language='en' AND featured=1";
 $result = $link->query($sql);
 
 while ($obj = $result->fetch_object()) {
@@ -65,7 +65,7 @@ $out .= "</div>";
 
 $out .= '<div id="latest" class="container tab-pane">';
 
-$sql = "SELECT * FROM blog_posts where language='en' order by published_at desc limit 5";
+$sql = "SELECT * FROM posts where language='en' order by published_at desc limit 5";
 $result = $link->query($sql);
 
 while ($obj = $result->fetch_object()) {
@@ -88,6 +88,6 @@ print $out;
 
 function get_post($id) {
     global $link;
-    $result = $link->query("select * from blog_posts where id='{$id}'");
+    $result = $link->query("select * from posts where id='{$id}'");
     return $result->fetch_object();
 }

@@ -20,28 +20,26 @@ while ($post = $results->fetch_object()) {
     $obj = new stdClass();
 
     $outfile = preg_replace("/\.md/", '.html', $post->url);
-
-    $titleparts = preg_split("/:/", preg_replace("/\*\s*/", '', $parts[1]));
-   
-    $title = $titleparts[0];
-    $subtitle = $titleparts[1];
     
-    $obj->fulltitle = $parts[1];
-    $obj->subtitle = $subtitle;
-    $obj->title = $title;
-    $obj->category = "Charity";
-    $obj->post_image = "/site/img/blog-{$cnt}.jpg";
-    $obj->link = "/site/blog/$outfile";
-    if ($title != "") {
-    $myposts[] = preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
-        global $obj;
-        if (isset($obj->{$m[1]})) {
-            return $obj->{$m[1]};
-        } else {
-            return "";
-        }
-  
-    }, $mypost);
+    $obj->fulltitle = $post->fulltitle;
+    $obj->subtitle = $post->subtitle;
+    $obj->title = $post->title;
+    $obj->category = $post->category;
+    $obj->category_id = $post->category_id;
+    $obj->post_image = $post->post_image; // "/site/img/blog-{$cnt}.jpg";
+    $obj->link = $post->url;
+    $obj->url = $post->url;
+
+    if ($obj->title != "") {
+        $myposts[] = preg_replace_callback("/\%\%(.+?)\%\%/", function ($m) {
+            global $obj;
+            if (isset($obj->{$m[1]})) {
+                return $obj->{$m[1]};
+            } else {
+                return "";
+            }
+      
+        }, $mypost);
     }
     ++$cnt;
 }

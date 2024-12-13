@@ -1,87 +1,87 @@
-## Privacy Policy
+## Política de Privacidad
 
-Your privacy is important to us. It is The Give Hub's policy to respect your privacy regarding any information we may collect from you across our website, [https://thegivehub.com](https://thegivehub.com), and other sites we own and operate.
+Su privacidad es importante para nosotros. Es política de The Give Hub respetar su privacidad con respecto a cualquier información que podamos recopilar de usted a través de nuestro sitio web, [https://thegivehub.com](https://thegivehub.com), y otros sitios que poseemos y operamos.
 
-### 1. Information we collect
+### 1. Información que recopilamos
 
-#### Log data
-When you visit our website, our servers may automatically log the standard data provided by your web browser. This may include your computer’s Internet Protocol (IP) address, your browser type and version, the pages you visit, the time and date of your visit, the time spent on each page, and other details.
+#### Datos de registro
+Cuando visita nuestro sitio web, nuestros servidores pueden registrar automáticamente los datos estándar proporcionados por su navegador web. Esto puede incluir la dirección de Protocolo de Internet (IP) de su computadora, el tipo y versión de su navegador, las páginas que visita, la hora y fecha de su visita, el tiempo dedicado a cada página y otros detalles.
 
-#### Device data
-We may also collect data about the device you’re using to access our website. This data may include the device type, operating system, unique device identifiers, device settings, and geo-location data. What we collect can depend on the individual settings of your device and software. We recommend checking the policies of your device manufacturer or software provider to learn what information they make available to us.
+#### Datos del dispositivo
+También podemos recopilar datos sobre el dispositivo que está utilizando para acceder a nuestro sitio web. Estos datos pueden incluir el tipo de dispositivo, sistema operativo, identificadores únicos del dispositivo, configuración del dispositivo y datos de geolocalización. Lo que recopilamos puede depender de la configuración individual de su dispositivo y software. Recomendamos verificar las políticas del fabricante de su dispositivo o proveedor de software para conocer qué información ponen a nuestra disposición.
 
-#### Personal information
-We may ask for personal information, such as your:
-- Name
-- Email
-- Social media profiles
+#### Información personal
+Podemos solicitar información personal, como:
+- Nombre
+- Correo electrónico
+- Perfiles de redes sociales
 
-### 2. Legal bases for processing
-We will process your personal information lawfully, fairly, and in a transparent manner. We collect and process information about you only where we have legal bases for doing so.
+### 2. Bases legales para el procesamiento
+Procesaremos su información personal de manera legal, justa y transparente. Recopilamos y procesamos información sobre usted solo cuando tenemos bases legales para hacerlo.
 
-These legal bases depend on the services you use and how you use them, meaning we collect and use your information only where:
-- it’s necessary for the performance of a contract to which you are a party or to take steps at your request before entering into such a contract (for example, when we provide a service you request from us);
-- it satisfies a legitimate interest (which is not overridden by your data protection interests), such as for research and development, to market and promote our services, and to protect our legal rights and interests;
-- you give us consent to do so for a specific purpose (for example, you might consent to us sending you our newsletter); or
-- we need to process your data to comply with a legal obligation.
+Estas bases legales dependen de los servicios que utilice y cómo los utilice, lo que significa que recopilamos y utilizamos su información solo cuando:
+- es necesario para la ejecución de un contrato del cual usted es parte o para tomar medidas a su solicitud antes de celebrar dicho contrato (por ejemplo, cuando proporcionamos un servicio que nos solicita);
+- satisface un interés legítimo (que no está anulado por sus intereses de protección de datos), como para investigación y desarrollo, para comercializar y promover nuestros servicios, y para proteger nuestros derechos e intereses legales;
+- nos da su consentimiento para hacerlo con un propósito específico (por ejemplo, puede consentir que le enviemos nuestro boletín informativo); o
+- necesitamos procesar sus datos para cumplir con una obligación legal.
 
-Where you consent to our use of information about you for a specific purpose, you have the right to change your mind at any time (but this will not affect any processing that has already taken place).
+Cuando consiente nuestro uso de información sobre usted para un propósito específico, tiene el derecho de cambiar de opinión en cualquier momento (pero esto no afectará ningún procesamiento que ya haya tenido lugar).
 
-We don’t keep personal information for longer than is necessary. While we retain this information, we will protect it within commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification. However, we advise that no method of electronic transmission or storage is 100% secure, and we cannot guarantee absolute data security. If necessary, we may retain your personal information for our compliance with a legal obligation or to protect your vital interests or the vital interests of another person.
+No conservamos información personal por más tiempo del necesario. Mientras conservamos esta información, la protegeremos dentro de medios comercialmente aceptables para prevenir pérdidas y robos, así como acceso, divulgación, copia, uso o modificación no autorizados. Sin embargo, advertimos que ningún método de transmisión o almacenamiento electrónico es 100% seguro, y no podemos garantizar la seguridad absoluta de los datos. Si es necesario, podemos retener su información personal para cumplir con una obligación legal o para proteger sus intereses vitales o los intereses vitales de otra persona.
 
-### 3. Collection and use of information
-We may collect, hold, use, and disclose information for the following purposes, and personal information will not be further processed in a manner that is incompatible with these purposes:
-- to enable you to customize or personalize your experience of our website;
-- to enable you to access and use our website, associated applications, and associated social media platforms;
-- to contact and communicate with you;
-- for analytics, market research, and business development, including to operate and improve our website, associated applications, and associated social media platforms;
-- for advertising and marketing, including to send you promotional information about our products and services and information about third parties that we consider may be of interest to you; and
-- to comply with our legal obligations and resolve any disputes that we may have.
+### 3. Recopilación y uso de información
+Podemos recopilar, mantener, usar y divulgar información para los siguientes propósitos, y la información personal no será procesada posteriormente de una manera que sea incompatible con estos propósitos:
+- para permitirle personalizar o personalizar su experiencia de nuestro sitio web;
+- para permitirle acceder y usar nuestro sitio web, aplicaciones asociadas y plataformas de redes sociales asociadas;
+- para contactar y comunicarnos con usted;
+- para análisis, investigación de mercado y desarrollo comercial, incluida la operación y mejora de nuestro sitio web, aplicaciones asociadas y plataformas de redes sociales asociadas;
+- para publicidad y marketing, incluido el envío de información promocional sobre nuestros productos y servicios e información sobre terceros que consideramos puede ser de su interés; y
+- para cumplir con nuestras obligaciones legales y resolver cualquier disputa que podamos tener.
 
-### 4. Disclosure of personal information to third parties
-We may disclose personal information to:
-- third-party service providers for the purpose of enabling them to provide their services, including (without limitation) IT service providers, data storage, hosting and server providers, ad networks, analytics, error loggers, debt collectors, maintenance or problem-solving providers, marketing or advertising providers, professional advisors, and payment systems operators; and
-- our employees, contractors, and/or related entities.
+### 4. Divulgación de información personal a terceros
+Podemos divulgar información personal a:
+- proveedores de servicios externos con el propósito de permitirles proporcionar sus servicios, incluidos (sin limitación) proveedores de servicios de TI, almacenamiento de datos, proveedores de alojamiento y servidores, redes publicitarias, análisis, registradores de errores, cobradores de deudas, proveedores de mantenimiento o solución de problemas, proveedores de marketing o publicidad, asesores profesionales y operadores de sistemas de pago; y
+- nuestros empleados, contratistas y/o entidades relacionadas.
 
-### 5. International transfers of personal information
-The personal information we collect is stored and processed in the United States, or where we or our partners, affiliates, and third-party providers maintain facilities. By providing us with your personal information, you consent to the disclosure to these overseas third parties.
+### 5. Transferencias internacionales de información personal
+La información personal que recopilamos se almacena y procesa en Estados Unidos, o donde nosotros o nuestros socios, afiliados y proveedores externos mantengan instalaciones. Al proporcionarnos su información personal, usted consiente la divulgación a estos terceros en el extranjero.
 
-We will ensure that any transfer of personal information from countries in the European Economic Area (EEA) to countries outside the EEA will be protected by appropriate safeguards, such as using standard data protection clauses approved by the European Commission, binding corporate rules, or other legally accepted means.
+Nos aseguraremos de que cualquier transferencia de información personal desde países en el Área Económica Europea (AEE) a países fuera del AEE esté protegida por garantías apropiadas, como el uso de cláusulas estándar de protección de datos aprobadas por la Comisión Europea, reglas corporativas vinculantes u otros medios legalmente aceptados.
 
-Where we transfer personal information from a non-EEA country to another country, you acknowledge that third parties in other jurisdictions may not be subject to similar data protection laws to those in our jurisdiction. There are risks if any such third party engages in any act or practice that would contravene the data privacy laws in our jurisdiction, which might mean that you will not be able to seek redress under our jurisdiction’s privacy laws.
+Cuando transferimos información personal desde un país no perteneciente al AEE a otro país, usted reconoce que los terceros en otras jurisdicciones pueden no estar sujetos a leyes de protección de datos similares a las de nuestra jurisdicción. Existen riesgos si cualquiera de estos terceros participa en cualquier acto o práctica que contravendría las leyes de privacidad de datos en nuestra jurisdicción, lo que podría significar que no podrá buscar reparación bajo las leyes de privacidad de nuestra jurisdicción.
 
-### 6. Your rights and controlling your personal information
+### 6. Sus derechos y el control de su información personal
 
-**Choice and consent:** By providing personal information to us, you consent to us collecting, holding, using, and disclosing your personal information in accordance with this privacy policy. If you are under 16 years of age, you must have, and warrant to the extent permitted by law, that you have your parent or legal guardian’s permission to access and use the website, and they have consented to you providing us with your personal information. You do not have to provide personal information to us, but it may affect your use of this website or the products and/or services offered on or through it.
+**Elección y consentimiento:** Al proporcionarnos información personal, usted consiente que recopilemos, mantengamos, usemos y divulguemos su información personal de acuerdo con esta política de privacidad. Si es menor de 16 años, debe tener, y garantizar en la medida permitida por la ley, que tiene el permiso de sus padres o tutores legales para acceder y usar el sitio web, y ellos han consentido que nos proporcione su información personal. No tiene que proporcionarnos información personal, pero puede afectar su uso de este sitio web o los productos y/o servicios ofrecidos en o a través de él.
 
-**Information from third parties:** If we receive personal information about you from a third party, we will protect it as set out in this privacy policy. If you are a third party providing personal information about someone else, you represent and warrant that you have such person’s consent to provide the personal information to us.
+**Información de terceros:** Si recibimos información personal sobre usted de un tercero, la protegeremos según lo establecido en esta política de privacidad. Si usted es un tercero que proporciona información personal sobre otra persona, declara y garantiza que tiene el consentimiento de dicha persona para proporcionarnos la información personal.
 
-**Restrict:** You may choose to restrict the collection or use of your personal information. If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time by contacting us using the details below. If you ask us to restrict or limit how we process your personal information, we will let you know how the restriction affects your use of our website or products and services.
+**Restricción:** Puede optar por restringir la recopilación o el uso de su información personal. Si previamente ha aceptado que usemos su información personal para propósitos de marketing directo, puede cambiar de opinión en cualquier momento contactándonos usando los detalles a continuación. Si nos solicita restringir o limitar cómo procesamos su información personal, le informaremos cómo la restricción afecta su uso de nuestro sitio web o productos y servicios.
 
-**Access and data portability:** You may request details of the personal information that we hold about you. You may request a copy of the personal information we hold about you. Where possible, we will provide this information in CSV format or other easily readable machine format. You may request that we erase the personal information we hold about you at any time. You may also request that we transfer this personal information to another third party.
+**Acceso y portabilidad de datos:** Puede solicitar detalles de la información personal que mantenemos sobre usted. Puede solicitar una copia de la información personal que mantenemos sobre usted. Cuando sea posible, proporcionaremos esta información en formato CSV u otro formato fácilmente legible por máquina. Puede solicitar que borremos la información personal que mantenemos sobre usted en cualquier momento. También puede solicitar que transfiramos esta información personal a otro tercero.
 
-**Correction:** If you believe that any information we hold about you is inaccurate, out of date, incomplete, irrelevant, or misleading, please contact us using the details below. We will take reasonable steps to correct any information found to be inaccurate, incomplete, misleading, or out of date.
+**Corrección:** Si cree que cualquier información que mantenemos sobre usted es inexacta, desactualizada, incompleta, irrelevante o engañosa, comuníquese con nosotros usando los detalles a continuación. Tomaremos medidas razonables para corregir cualquier información que se encuentre inexacta, incompleta, engañosa o desactualizada.
 
-**Notification of data breaches:** We will comply with laws applicable to us in respect of any data breach.
+**Notificación de violaciones de datos:** Cumpliremos con las leyes aplicables a nosotros con respecto a cualquier violación de datos.
 
-**Complaints:** If you believe that we have breached a relevant data protection law and wish to make a complaint, please contact us using the details below and provide us with full details of the alleged breach. We will promptly investigate your complaint and respond to you in writing, setting out the outcome of our investigation and the steps we will take to deal with your complaint. You also have the right to contact a regulatory body or data protection authority in relation to your complaint.
+**Quejas:** Si cree que hemos violado una ley relevante de protección de datos y desea presentar una queja, comuníquese con nosotros usando los detalles a continuación y proporciónenos todos los detalles de la presunta violación. Investigaremos rápidamente su queja y le responderemos por escrito, exponiendo el resultado de nuestra investigación y los pasos que tomaremos para tratar su queja. También tiene derecho a contactar a un organismo regulador o autoridad de protección de datos en relación con su queja.
 
-**Unsubscribe:** To unsubscribe from our e-mail database or opt-out of communications (including marketing communications), please contact us using the details below or opt-out using the opt-out facilities provided in the communication.
+**Cancelar suscripción:** Para cancelar su suscripción de nuestra base de datos de correo electrónico u optar por no recibir comunicaciones (incluidas las comunicaciones de marketing), comuníquese con nosotros usando los detalles a continuación u opte por no participar usando las instalaciones proporcionadas en la comunicación.
 
 ### 7. Cookies
-We use “cookies” to collect information about you and your activity across our site. A cookie is a small piece of data that our website stores on your computer, and accesses each time you visit, so we can understand how you use our site. This helps us serve you content based on preferences you have specified. Please refer to our Cookie Policy for more information.
+Utilizamos "cookies" para recopilar información sobre usted y su actividad en nuestro sitio. Una cookie es un pequeño fragmento de datos que nuestro sitio web almacena en su computadora y accede cada vez que lo visita, para que podamos entender cómo usa nuestro sitio. Esto nos ayuda a servirle contenido basado en las preferencias que ha especificado. Consulte nuestra Política de Cookies para obtener más información.
 
-### 8. Business transfers
-If we or our assets are acquired, or in the unlikely event that we go out of business or enter bankruptcy, we would include data among the assets transferred to any parties who acquire us. You acknowledge that such transfers may occur, and that any parties who acquire us may continue to use your personal information according to this policy.
+### 8. Transferencias comerciales
+Si nosotros o nuestros activos son adquiridos, o en el improbable caso de que quebremos o entremos en bancarrota, incluiríamos datos entre los activos transferidos a cualquier parte que nos adquiera. Usted reconoce que tales transferencias pueden ocurrir, y que cualquier parte que nos adquiera puede continuar usando su información personal de acuerdo con esta política.
 
-### 9. Limits of our policy
-Our website may link to external sites that are not operated by us. Please be aware that we have no control over the content and policies of those sites, and cannot accept responsibility or liability for their respective privacy practices.
+### 9. Límites de nuestra política
+Nuestro sitio web puede vincular a sitios externos que no operamos nosotros. Tenga en cuenta que no tenemos control sobre el contenido y las políticas de esos sitios, y no podemos aceptar responsabilidad u obligación por sus respectivas prácticas de privacidad.
 
-### 10. Changes to this policy
-At our discretion, we may change our privacy policy to reflect current acceptable practices. We will take reasonable steps to let users know about changes via our website. Your continued use of this site after any changes to this policy will be regarded as acceptance of our practices around privacy and personal information.
+### 10. Cambios en esta política
+A nuestra discreción, podemos cambiar nuestra política de privacidad para reflejar las prácticas actuales aceptables. Tomaremos medidas razonables para informar a los usuarios sobre los cambios a través de nuestro sitio web. Su uso continuado de este sitio después de cualquier cambio en esta política será considerado como aceptación de nuestras prácticas sobre privacidad e información personal.
 
-If we make a significant change to this privacy policy, for example changing a lawful basis on which we process your personal information, we will ask you to re-consent to the amended privacy policy.
+Si realizamos un cambio significativo en esta política de privacidad, por ejemplo, cambiar una base legal sobre la cual procesamos su información personal, le solicitaremos que vuelva a dar su consentimiento a la política de privacidad modificada.
 
-**The Give Hub Data Controller**  
-Christopher Robison  
+**Controlador de Datos de The Give Hub**
+Christopher Robison
 [chris@thegivehub.com](mailto:chris@thegivehub.com)

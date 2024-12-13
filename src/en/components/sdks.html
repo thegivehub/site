@@ -1,0 +1,111 @@
+<div class="container">
+    <div class="row align-items-center" style="justify-content: center;">
+        <div class="col-lg-7">
+            <div class="my-content"><h1 id="the-give-hub-sdks">The Give Hub SDKs</h1>
+<p>The Give Hub provides official SDKs to help you integrate our
+crowdfunding platform into your applications. Our SDKs offer type-safe,
+idiomatic implementations for each supported language, complete with
+comprehensive documentation and examples. Each SDK provides full access
+to The Give Hub’s features including campaign management, donations
+processing, impact tracking, and real-time notifications.</p>
+<h2 id="available-sdks">Available SDKs</h2>
+<h3 id="javascript-sdk">JavaScript SDK</h3>
+<p>The JavaScript SDK provides seamless integration for both browser and
+Node.js environments, with support for modern ES6+ features and
+TypeScript definitions.</p>
+<ul>
+<li><strong>Documentation</strong>: <a href="/sdk/js">/sdk/js</a></li>
+<li><strong>GitHub Repository</strong>: <a
+href="https://github.com/thegivehub/sdk-js">github.com/thegivehub/sdk-js</a></li>
+<li><strong>Download</strong>: <a
+href="/sdk/givehub-sdk-js-1.0.2.tgz">givehub-sdk-js-1.0.2.tgz</a></li>
+<li><strong>Package Manager</strong>:
+<code>npm install givehub-sdk</code> or
+<code>yarn add givehub-sdk</code></li>
+</ul>
+<h3 id="php-sdk">PHP SDK</h3>
+<p>Our PHP SDK offers a clean, modern implementation supporting PHP 7.4+
+with full composer integration and PSR compliance.</p>
+<ul>
+<li><strong>Documentation</strong>: <a href="/sdk/php">/sdk/php</a></li>
+<li><strong>GitHub Repository</strong>: <a
+href="https://github.com/thegivehub/sdk-php">github.com/thegivehub/sdk-php</a></li>
+<li><strong>Download</strong>: <a
+href="/sdk/givehub-sdk-php-1.0.2.tgz">givehub-sdk-php-1.0.0.tgz</a></li>
+<li><strong>Package Manager</strong>:
+<code>composer require givehub/sdk</code></li>
+</ul>
+<h3 id="python-sdk">Python SDK</h3>
+<p>The Python SDK provides async/await support and type hints,
+compatible with Python 3.8+ and modern async frameworks.</p>
+<ul>
+<li><strong>Documentation</strong>: <a
+href="/sdk/python">/sdk/python</a></li>
+<li><strong>GitHub Repository</strong>: <a
+href="https://github.com/thegivehub/sdk-python">github.com/thegivehub/sdk-python</a></li>
+<li><strong>Download</strong>: <a
+href="/sdk/givehub-sdk-python-1.0.2.tgz">givehub-sdk-python-1.0.2.tgz</a></li>
+<li><strong>Package Manager</strong>:
+<code>pip install givehub-sdk</code> or
+<code>poetry add givehub-sdk</code></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>Each SDK follows similar patterns for initialization and usage:</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// JavaScript</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> givehub <span class="op">=</span> <span class="kw">new</span> <span class="fu">GiveHub</span>({</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">apiKey</span><span class="op">:</span> <span class="st">&#39;your-api-key&#39;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode php"><code class="sourceCode php"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// PHP</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">$givehub</span> <span class="op">=</span> <span class="kw">new</span> <span class="cn">G</span>iveHubSDK([</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;apiKey&#39;</span> =&gt; <span class="st">&#39;your-api-key&#39;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>])<span class="ot">;</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>givehub <span class="op">=</span> GiveHubSDK({</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;api_key&#39;</span>: <span class="st">&#39;your-api-key&#39;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div>
+<h2 id="sdk-features">SDK Features</h2>
+<ul>
+<li><strong>Campaign Management</strong>: Create and manage fundraising
+campaigns</li>
+<li><strong>Donation Processing</strong>: Handle one-time and recurring
+donations</li>
+<li><strong>Impact Tracking</strong>: Monitor and report on campaign
+impact metrics</li>
+<li><strong>Real-time Updates</strong>: WebSocket support for live
+notifications</li>
+<li><strong>File Handling</strong>: Upload and manage campaign
+media</li>
+<li><strong>Authentication</strong>: Secure token-based
+authentication</li>
+<li><strong>Error Handling</strong>: Comprehensive error handling and
+reporting</li>
+</ul>
+<h2 id="support">Support</h2>
+<p>If you need help with our SDKs:</p>
+<ul>
+<li><strong>Documentation</strong>: Visit the specific SDK documentation
+linked above</li>
+<li><strong>GitHub Issues</strong>: Report issues on the respective
+GitHub repositories</li>
+<li><strong>Email Support</strong>: Contact us at
+sdk-support@givehub.com</li>
+<li><strong>Community Forum</strong>: Join our <a
+href="https://community.givehub.com">developer community</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>We welcome contributions to our SDKs! Please see the CONTRIBUTING.md
+file in each SDK’s GitHub repository for guidelines.</p>
+<h2 id="license">License</h2>
+<p>All our SDKs are released under the MIT License. See the LICENSE file
+in each repository for details.</p>
+<h2 id="sdk-updates">SDK Updates</h2>
+<p>Subscribe to our <a
+href="https://givehub.com/developers/newsletter">developer
+newsletter</a> for updates about new SDK releases and features.</p>
+            </div>
+        </div>
+    </div>
+</div>

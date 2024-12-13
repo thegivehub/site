@@ -1,0 +1,311 @@
+<div class="container">
+    <div class="row align-items-center" style="justify-content: center;">
+        <div class="col-lg-7">
+            <div class="my-content"><h1 id="the-give-hub-api-documentation">The Give Hub API
+Documentation</h1>
+<h2 id="overview">Overview</h2>
+<p>The Give Hub API provides RESTful endpoints for managing campaigns,
+donations, users, and impact metrics on the crowdfunding platform. All
+endpoints are accessed via HTTPS and return JSON responses.</p>
+<h2 id="base-url">Base URL</h2>
+<pre><code>https://api.thegivehub.com</code></pre>
+<h2 id="authentication">Authentication</h2>
+<p>All authenticated endpoints require a valid JWT token in the
+Authorization header:</p>
+<pre><code>Authorization: Bearer &lt;token&gt;</code></pre>
+<h2 id="endpoints">Endpoints</h2>
+<h3 id="authentication-1">Authentication</h3>
+<h4 id="login">Login</h4>
+<ul>
+<li><p><strong>POST</strong> <code>/api/auth/login</code></p></li>
+<li><p>Authenticates a user and returns access tokens</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;username&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span> <span class="er">//</span> <span class="er">Email</span> <span class="er">or</span> <span class="er">username</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;password&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+<li><p><strong>Response:</strong></p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;success&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;user&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;id&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;email&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;username&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;profile&quot;</span><span class="fu">:</span> <span class="fu">{</span><span class="er">...</span><span class="fu">}</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;tokens&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;accessToken&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;refreshToken&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;expires&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h4 id="register">Register</h4>
+<ul>
+<li><p><strong>POST</strong> <code>/api/auth/register</code></p></li>
+<li><p>Creates a new user account</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;email&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;username&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;password&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;firstName&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;lastName&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;lang&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;profile&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="er">//</span> <span class="er">Additional</span> <span class="er">profile</span> <span class="er">fields</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+<li><p><strong>Response:</strong></p>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;success&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;message&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;userId&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h4 id="verify-email">Verify Email</h4>
+<ul>
+<li><p><strong>POST</strong>
+<code>/api/auth/request-verification</code></p></li>
+<li><p>Verifies user’s email with verification code</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;email&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;code&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h3 id="campaigns">Campaigns</h3>
+<h4 id="create-campaign">Create Campaign</h4>
+<ul>
+<li><p><strong>POST</strong> <code>/api/campaigns</code></p></li>
+<li><p>Creates a new fundraising campaign</p></li>
+<li><p><strong>Required Auth:</strong> Yes</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;target_amount&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;creator_id&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;stellar_account&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;milestones&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;amount&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;verification_docs&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="st">&quot;string&quot;</span><span class="ot">]</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h4 id="get-campaigns">Get Campaigns</h4>
+<ul>
+<li><strong>GET</strong> <code>/api/campaigns</code></li>
+<li>Returns list of campaigns</li>
+<li><strong>Query Parameters:</strong>
+<ul>
+<li><code>status</code>: Filter by status</li>
+<li><code>category</code>: Filter by category</li>
+<li><code>page</code>: Page number</li>
+<li><code>limit</code>: Results per page</li>
+</ul></li>
+</ul>
+<h4 id="get-campaign-details">Get Campaign Details</h4>
+<ul>
+<li><p><strong>GET</strong> <code>/api/campaigns/:id</code></p></li>
+<li><p>Returns detailed campaign information</p></li>
+<li><p><strong>Response:</strong></p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;_id&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;description&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;target_amount&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;current_amount&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;creator_id&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;stellar_account&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;milestones&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="er">...</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;created_at&quot;</span><span class="fu">:</span> <span class="st">&quot;date&quot;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h3 id="impact-metrics">Impact Metrics</h3>
+<h4 id="create-impact-metric">Create Impact Metric</h4>
+<ul>
+<li><p><strong>POST</strong> <code>/api/impactmetrics</code></p></li>
+<li><p>Records impact metrics for a campaign</p></li>
+<li><p><strong>Required Auth:</strong> Yes</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;campaignId&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;category&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;metrics&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;baseline&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;current&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;target&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;unit&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;verificationMethod&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">]</span><span class="fu">,</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;beneficiaries&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;direct&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;indirect&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h4 id="get-impact-metrics">Get Impact Metrics</h4>
+<ul>
+<li><strong>GET</strong>
+<code>/api/impactmetrics/:campaignId</code></li>
+<li>Returns impact metrics for a campaign</li>
+<li><strong>Query Parameters:</strong>
+<ul>
+<li><code>from</code>: Start date</li>
+<li><code>to</code>: End date</li>
+</ul></li>
+</ul>
+<h3 id="updates">Updates</h3>
+<h4 id="create-update">Create Update</h4>
+<ul>
+<li><p><strong>POST</strong> <code>/api/updates</code></p></li>
+<li><p>Posts an update to a campaign</p></li>
+<li><p><strong>Required Auth:</strong> Yes</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;campaignId&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;title&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;content&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;media&quot;</span><span class="fu">:</span> <span class="ot">[</span><span class="fu">{</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;type&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;url&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;caption&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span><span class="ot">]</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h4 id="get-updates">Get Updates</h4>
+<ul>
+<li><strong>GET</strong> <code>/api/updates</code></li>
+<li>Returns campaign updates</li>
+<li><strong>Query Parameters:</strong>
+<ul>
+<li><code>campaignId</code>: Filter by campaign</li>
+<li><code>type</code>: Update type</li>
+<li><code>page</code>: Page number</li>
+<li><code>limit</code>: Results per page</li>
+</ul></li>
+</ul>
+<h3 id="donations">Donations</h3>
+<h4 id="create-donation">Create Donation</h4>
+<ul>
+<li><p><strong>POST</strong> <code>/api/donations</code></p></li>
+<li><p>Records a new donation</p></li>
+<li><p><strong>Required Auth:</strong> Yes</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;userId&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;campaignId&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;amount&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;value&quot;</span><span class="fu">:</span> <span class="st">&quot;number&quot;</span><span class="fu">,</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;currency&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">},</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;transaction&quot;</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;txHash&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span><span class="fu">,</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;stellarAddress&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">}</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h4 id="get-donations">Get Donations</h4>
+<ul>
+<li><strong>GET</strong> <code>/api/donations</code></li>
+<li>Returns donation records</li>
+<li><strong>Query Parameters:</strong>
+<ul>
+<li><code>campaignId</code>: Filter by campaign</li>
+<li><code>userId</code>: Filter by user</li>
+<li><code>status</code>: Filter by status</li>
+</ul></li>
+</ul>
+<h3 id="notifications">Notifications</h3>
+<h4 id="get-user-notifications">Get User Notifications</h4>
+<ul>
+<li><strong>GET</strong> <code>/api/notifications</code></li>
+<li>Returns user notifications</li>
+<li><strong>Required Auth:</strong> Yes</li>
+<li><strong>Query Parameters:</strong>
+<ul>
+<li><code>status</code>: Filter by status</li>
+<li><code>type</code>: Filter by type</li>
+<li><code>page</code>: Page number</li>
+</ul></li>
+</ul>
+<h4 id="update-notification-status">Update Notification Status</h4>
+<ul>
+<li><p><strong>PUT</strong> <code>/api/notifications/:id</code></p></li>
+<li><p>Updates notification status</p></li>
+<li><p><strong>Required Auth:</strong> Yes</p></li>
+<li><p><strong>Body:</strong></p>
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;status&quot;</span><span class="fu">:</span> <span class="st">&quot;string&quot;</span> <span class="er">//</span> <span class="er">read</span><span class="fu">,</span> <span class="er">archived</span><span class="fu">,</span> <span class="er">deleted</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div></li>
+</ul>
+<h2 id="error-responses">Error Responses</h2>
+<p>All endpoints return error responses in the following format:</p>
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;success&quot;</span><span class="fu">:</span> <span class="kw">false</span><span class="fu">,</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&quot;error&quot;</span><span class="fu">:</span> <span class="st">&quot;Error message&quot;</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span></code></pre></div>
+<p>Common HTTP status codes:</p>
+<ul>
+<li><code>200</code>: Success</li>
+<li><code>400</code>: Bad Request</li>
+<li><code>401</code>: Unauthorized</li>
+<li><code>403</code>: Forbidden</li>
+<li><code>404</code>: Not Found</li>
+<li><code>451</code>: Government Blocked</li>
+<li><code>500</code>: Internal Server Error</li>
+</ul>
+<h2 id="rate-limiting">Rate Limiting</h2>
+<p>API requests are limited to:</p>
+<ul>
+<li>100 requests per minute for authenticated users</li>
+<li>20 requests per minute for unauthenticated users</li>
+</ul>
+<h2 id="webhook-events">Webhook Events</h2>
+<p>The API can send webhook notifications for the following events:</p>
+<ul>
+<li>Campaign created/updated</li>
+<li>Donation received</li>
+<li>Milestone completed</li>
+<li>Impact metric updated</li>
+<li>Verification required</li>
+</ul>
+<h2 id="development-environment">Development Environment</h2>
+<p>A sandbox environment is available for testing:</p>
+<pre><code>https://sandbox-api.thegivehub.com</code></pre>
+<h2 id="sdk-support">SDK Support</h2>
+<p>Official SDK libraries are available for:</p>
+<ul>
+<li><a href="/sdk/js/">JavaScript/Node.js</a></li>
+<li><a href="/sdk/php/">PHP</a></li>
+<li><a href="/sdk/python/">Python</a></li>
+</ul>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="/api/changelog">API Changelog</a></li>
+<li><a href="/api/examples">Sample Code</a></li>
+<li><a href="/api/webhooks">Webhook Integration Guide</a></li>
+</ul>
+            </div>
+        </div>
+    </div>
+</div>

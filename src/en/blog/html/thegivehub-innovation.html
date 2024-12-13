@@ -11,17 +11,93 @@
         <link href="/img/favicon.svg" type="image/svg+xml" rel="icon">
 
         <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="/css/quicksand.css" rel="stylesheet">
         
         <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/fontawesome.min.css" rel="stylesheet">
         <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
         <link href="/lib/animate/animate.min.css" rel="stylesheet">
         <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: #ddd; text-decoration: none; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        background-color: #232629;
+        color: #7a7c7d;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #7a7c7d;  padding-left: 4px; }
+    div.sourceCode
+      { color: #cfcfc2; background-color: #232629; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #cfcfc2; } /* Normal */
+    code span.al { color: #95da4c; background-color: #4d1f24; font-weight: bold; } /* Alert */
+    code span.an { color: #3f8058; } /* Annotation */
+    code span.at { color: #2980b9; } /* Attribute */
+    code span.bn { color: #f67400; } /* BaseN */
+    code span.bu { color: #7f8c8d; } /* BuiltIn */
+    code span.cf { color: #fdbc4b; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #3daee9; } /* Char */
+    code span.cn { color: #27aeae; font-weight: bold; } /* Constant */
+    code span.co { color: #7a7c7d; } /* Comment */
+    code span.cv { color: #7f8c8d; } /* CommentVar */
+    code span.do { color: #a43340; } /* Documentation */
+    code span.dt { color: #2980b9; } /* DataType */
+    code span.dv { color: #f67400; } /* DecVal */
+    code span.er { color: #da4453; text-decoration: underline; } /* Error */
+    code span.ex { color: #0099ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #f67400; } /* Float */
+    code span.fu { color: #8e44ad; } /* Function */
+    code span.im { color: #27ae60; } /* Import */
+    code span.in { color: #c45b00; } /* Information */
+    code span.kw { color: #cfcfc2; font-weight: bold; } /* Keyword */
+    code span.op { color: #cfcfc2; } /* Operator */
+    code span.ot { color: #27ae60; } /* Other */
+    code span.pp { color: #27ae60; } /* Preprocessor */
+    code span.re { color: #2980b9; background-color: #153042; } /* RegionMarker */
+    code span.sc { color: #3daee9; } /* SpecialChar */
+    code span.ss { color: #da4453; } /* SpecialString */
+    code span.st { color: #f44f4f; } /* String */
+    code span.va { color: #27aeae; } /* Variable */
+    code span.vs { color: #da4453; } /* VerbatimString */
+    code span.wa { color: #da4453; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
 
         <!-- Template Stylesheet -->
         <link href="/css/style.css" rel="stylesheet">
+
     </head>
 
     <body>
@@ -59,7 +135,6 @@
             </div>
         </div>
         <!-- Top Bar End -->
-
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
@@ -70,37 +145,38 @@
 
                 <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                     <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="/en/index.html" class="nav-item nav-link">Home</a>
                         <div class="nav-item dropdown">
-                            <a href="about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
+                            <a href="/en/about.html" class="nav-link dropdown-toggle" data-toggle="dropdown">About</a>
                             <div class="dropdown-menu">
-                                <a href="service.html" class="dropdown-item">What We Do</a>
-                                <a href="team.html" class="dropdown-item">Meet The Team</a>
-                                <a href="event.html" class="nav-item nav-link">Events</a>
+                                <a href="/en/service.html" class="dropdown-item">What We Do</a>
+                                <a href="/en/team.html" class="dropdown-item">Meet The Team</a>
+                                <a href="/en/event.html" class="dropdown-item">Events</a>
                             </div>
                         </div>
-                        <a href="blog.php" class="nav-item nav-link">Blog</a>
-                        <a href="causes.html" class="nav-item nav-link">Causes</a>
+                        <a href="/en/blog.php" class="nav-item nav-link">Blog</a>
+                        <a href="/en/causes.html" class="nav-item nav-link">Causes</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
-                                <a href="donate.html" class="dropdown-item">Donate Now</a>
-                                <a href="volunteer.html" class="dropdown-item">Become A Volunteer</a>
-                                <a href="campaign.html" class="dropdown-item">Start a Campaign</a>
-                                <a href="register-cause.html" class="dropdown-item">Register Cause</a>
+                                <a href="/en/donate.html" class="dropdown-item">Donate Now</a>
+                                <a href="/en/volunteer.html" class="dropdown-item">Become A Volunteer</a>
+                                <a href="/en/campaign.html" class="dropdown-item">Start a Campaign</a>
+                                <a href="/en/register-cause.html" class="dropdown-item">Register Cause</a>
                             </div>
                         </div>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu">
-                                <a href="user-docs.html" class="dropdown-item">User Documentation</a>
-                                <a href="api.html" class="dropdown-item">API Documentation</a>
-                                <a href="faqs.html" class="dropdown-item">FAQ's</a>
-                                <a href="architecture.html" class="dropdown-item">Platform Architecture</a>
-                                <a href="pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
+                                <a href="/en/user-docs.html" class="dropdown-item">User Documentation</a>
+                                <a href="/en/api.html" class="dropdown-item">API Documentation</a>
+                                <a href="/sdk/" class="dropdown-item">SDK's</a>
+                                <a href="/en/faqs.html" class="dropdown-item">FAQ's</a>
+                                <a href="/en/architecture.html" class="dropdown-item">Platform Architecture</a>
+                                <a href="/en/pitchdeck.html" class="dropdown-item">Funding Pitch Deck</a>
                             </div>
                         </div>
-                         <a href="contact.html" class="nav-item nav-link">Contact</a>
+                         <a href="/en/contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </div>
@@ -300,12 +376,12 @@ future for giving. Let’s start today.</p>
     <div class="recent-post">
                 <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-1.jpg" />
+                <img src="/img/blog-19.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/empowering-communities.html">Empowering Communities</a>
+                <a href="/en/blog/wallet-to-impact.html">From Wallet to Impact</a>
                 <div class="post-meta">
-                    <p>By<a href="">Christopher Robison</a></p>
+                    <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
                 </div>
             </div>
@@ -314,13 +390,13 @@ future for giving. Let’s start today.</p>
 
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-2.jpg" />
+                <img src="/img/blog-3.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/unbanked.html">The Role of Blockchain in Reaching the Unbanked</a>
+                <a href="/en/blog/top-5-reasons-to-give.html">Support via Blockchain</a>
                 <div class="post-meta">
-                    <p>By<a href="">Christopher Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Water & Sanitation</a></p>
                 </div>
             </div>
         </div>
@@ -328,13 +404,13 @@ future for giving. Let’s start today.</p>
 
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-3.jpg" />
+                <img src="/img/blog-15.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/growth.html">From Giving to Growth</a>
+                <a href="/en/blog/thegivehub-innovation.html">The Give Hub Platform</a>
                 <div class="post-meta">
-                    <p>By<a href="">Christopher Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Community Development</a></p>
                 </div>
             </div>
         </div>
@@ -342,13 +418,13 @@ future for giving. Let’s start today.</p>
 
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-4.jpg" />
+                <img src="/img/blog-5.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/bridging-gap.html">Bridging the Financial Gap</a>
+                <a href="/en/blog/smart-contracts.html">Secure, Transparent, Smart</a>
                 <div class="post-meta">
-                    <p>By<a href="">Christopher Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Health & Wellbeing</a></p>
                 </div>
             </div>
         </div>
@@ -356,12 +432,12 @@ future for giving. Let’s start today.</p>
 
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-5.jpg" />
+                <img src="/img/blog-19.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/philantropy.html">The Future of Philanthropy</a>
+                <a href="/en/blog/myths-debunked.html">Charity Myths Debunked</a>
                 <div class="post-meta">
-                    <p>By<a href="">Christopher Robison</a></p>
+                    <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
                 </div>
             </div>
@@ -398,10 +474,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-1.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/empowering-communities.html">Empowering Communities</a>
+                <a href="/en/blog/empowering-communities.html">Empowering Communities</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Water & Sanitation</a></p>
                 </div>
             </div>
         </div>
@@ -411,23 +487,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-6.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/essentials.html">Crowdfunding Essentials</a>
+                <a href="/en/blog/essentials.html">Crowdfunding Essentials</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
-                </div>
-            </div>
-        </div>
- 
-        <div class="post-item">
-            <div class="post-img">
-                <img src="/site/img/blog-12.jpg" />
-            </div>
-            <div class="post-text">
-                <a href="/site/blog/smartphone-to-aid.html">From Smartphone to Smart Aid</a>
-                <div class="post-meta">
-                    <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Infrastructure</a></p>
                 </div>
             </div>
         </div>
@@ -437,10 +500,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-16.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/direct-impact.html">Direct Impact</a>
+                <a href="/en/blog/direct-impact.html">Direct Impact</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Health & Wellbeing</a></p>
                 </div>
             </div>
         </div>
@@ -450,10 +513,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-2.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/unbanked-billion.html">Unbanked Billions</a>
+                <a href="/en/blog/unbanked-billion.html">Unbanked Billions</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Education & Skills</a></p>
                 </div>
             </div>
         </div>
@@ -463,10 +526,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-3.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/growth.html">From Giving to Growth</a>
+                <a href="/en/blog/growth.html">From Giving to Growth</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Water & Sanitation</a></p>
                 </div>
             </div>
         </div>
@@ -476,10 +539,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-13.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/transparency.html">Transparency in Giving</a>
+                <a href="/en/blog/transparency.html">Transparency in Giving</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Community Development</a></p>
                 </div>
             </div>
         </div>
@@ -489,10 +552,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-11.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/beyond-banking.html">Beyond Banking</a>
+                <a href="/en/blog/beyond-banking.html">Beyond Banking</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Water & Sanitation</a></p>
                 </div>
             </div>
         </div>
@@ -502,10 +565,10 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-15.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/hidden-costs.html">The Hidden Costs of Being Unbanked</a>
+                <a href="/en/blog/hidden-costs.html">The Hidden Costs of Being Unbanked</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Climate & Environment</a></p>
                 </div>
             </div>
         </div>
@@ -515,20 +578,20 @@ future for giving. Let’s start today.</p>
                 <img src="/site/img/blog-16.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/direct-impact.html">Direct Impact</a>
+                <a href="/en/blog/direct-impact.html">Direct Impact</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Health & Wellbeing</a></p>
                 </div>
             </div>
         </div>
  
 </div><div id="latest" class="container tab-pane">        <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-15.jpg" />
+                <img src="/img/blog-19.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/hidden-costs.html">The Hidden Costs of Being Unbanked</a>
+                <a href="/en/blog/wallet-to-impact.html">From Wallet to Impact</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -538,10 +601,36 @@ future for giving. Let’s start today.</p>
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-2.jpg" />
+                <img src="/img/blog-19.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/unbanked-billion.html">Unbanked Billions</a>
+                <a href="/en/blog/micro-donations.html">Micro</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Health & Wellbeing</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-18.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="/en/blog/millenial-charity.html">Young Philantropists</a>
+                <div class="post-meta">
+                    <p>By<a href="">Chris Robison</a></p>
+                    <p>In<a href="">Health & Wellbeing</a></p>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="post-item">
+            <div class="post-img">
+                <img src="/img/blog-19.jpg" />
+            </div>
+            <div class="post-text">
+                <a href="/en/blog/myths-debunked.html">Charity Myths Debunked</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
                     <p>In<a href="">Charity</a></p>
@@ -551,39 +640,13 @@ future for giving. Let’s start today.</p>
  
         <div class="post-item">
             <div class="post-img">
-                <img src="/site/img/blog-19.jpg" />
+                <img src="/img/blog-5.jpg" />
             </div>
             <div class="post-text">
-                <a href="/site/blog/inclusion.html">Financial Inclusion in Action</a>
+                <a href="/en/blog/smart-contracts.html">Secure, Transparent, Smart</a>
                 <div class="post-meta">
                     <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
-                </div>
-            </div>
-        </div>
- 
-        <div class="post-item">
-            <div class="post-img">
-                <img src="/site/img/blog-18.jpg" />
-            </div>
-            <div class="post-text">
-                <a href="/site/blog/trust-through-technology.html">Trust Through Technology</a>
-                <div class="post-meta">
-                    <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
-                </div>
-            </div>
-        </div>
- 
-        <div class="post-item">
-            <div class="post-img">
-                <img src="/site/img/blog-17.jpg" />
-            </div>
-            <div class="post-text">
-                <a href="/site/blog/small-donations.html">Small Donations, Big Change</a>
-                <div class="post-meta">
-                    <p>By<a href="">Chris Robison</a></p>
-                    <p>In<a href="">Charity</a></p>
+                    <p>In<a href="">Health & Wellbeing</a></p>
                 </div>
             </div>
         </div>
@@ -624,20 +687,20 @@ future for giving. Let’s start today.</p>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Popular Links</h2>
-                            <a href="about.html">About Us</a>
-                            <a href="contact.html">Contact Us</a>
-                            <a href="causes.html">Popular Causes</a>
-                            <a href="event.html">Upcoming Events</a>
+                            <a href="/en/about.html">About Us</a>
+                            <a href="/en/contact.html">Contact Us</a>
+                            <a href="/en/causes.html">Popular Causes</a>
+                            <a href="/en/event.html">Upcoming Events</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-link">
                             <h2>Useful Links</h2>
-                            <a href="legal/tos.html">Terms of use</a>
-                            <a href="legal/privacy.html">Privacy policy</a>
-                            <a href="legal/cookies.html">Cookies</a>
-                            <a href="help.html">Help</a>
-                            <a href="faq.html">FAQs</a>
+                            <a href="/en/legal/tos.html">Terms of use</a>
+                            <a href="/en/legal/privacy.html">Privacy policy</a>
+                            <a href="/en/legal/cookies.html">Cookies</a>
+                            <a href="/en/help.html">Help</a>
+                            <a href="/en/faq.html">FAQs</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -676,8 +739,8 @@ future for giving. Let’s start today.</p>
         </div>
 
         <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="/js/jquery-3.4.1.min.js"></script>
+        <script src="/js/bootstrap.bundle.min.js"></script>
         <script src="/lib/easing/easing.min.js"></script>
         <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="/lib/waypoints/waypoints.min.js"></script>
