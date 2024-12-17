@@ -17,41 +17,8 @@ project updates. This document outlines each core component, service,
 and key technical feature, including security, scalability, and disaster
 recovery strategies.</p>
 <h2 id="core-components">Core Components</h2>
-<pre><code>                                      ┌──────────────┐
-                                      │              │
-                      ┌───────────────┤   Frontend   ├───────────────┐
-                      │               │              │               │
-                      │               └──────────────┘               │
-                      ▼                                             ▼
-              ┌───────────────┐                             ┌───────────────┐
-              │               │                             │               │
-              │    API        │                             │  Auth Service │
-              │    Gateway    │                             │               │
-              │               │                             │               │
-              └───────┬───────┘                             └───────────────┘
-                     │
-         ┌──────────┼──────────┬─────────────┬─────────────┐
-         ▼          ▼          ▼             ▼             ▼
-┌──────────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐
-│              │ │         │ │         │ │         │ │         │
-│  Campaign    │ │ User    │ │ Impact  │ │ Payment │ │ Updates │
-│  Service     │ │ Service │ │ Service │ │ Service │ │ Service │
-│              │ │         │ │         │ │         │ │         │
-└──────┬───────┘ └────┬────┘ └────┬────┘ └────┬────┘ └────┬────┘
-       │              │           │           │           │
-       └──────────────┴───────────┴───────────┴───────────┘
-                              │
-                      ┌───────┴────────┐
-                      │                │
-                      │   Database     │
-                      │   Cluster      │
-                      │                │
-                      └───────┬────────┘
-                              │
-                      ┌───────┴────────┐
-                      │   Blockchain   │
-                      │   Network      │
-                      └────────────────┘</code></pre>
+<img src="/img/system-architecture.svg" width="100%">
+<br>
 <h3 id="frontend-layer">Frontend Layer</h3>
 <ul>
 <li><strong>Framework</strong>: Next.js 14 for an interactive,

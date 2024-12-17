@@ -9,23 +9,27 @@
     --danger-color: #dc2626;
     --card-bg: white;
     --hover-bg: #f3f4f6;
-    --modal-overlay: rgba(0, 0, 0, 0.5);
+    --modal-overlay: rgba(0, 0, 0, 0.7);
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
-
+dialog::backdrop {
+    background-color: #0009;
+}
 [data-theme="dark"] {
     /* Dark theme variables */
     --primary-color: #3b82f6;
     --secondary-color: #60a5fa;
     --bg-color: #111827;
+    --bg-secondary-color: #1f2937;
     --text-color: #e5e7eb;
     --border-color: #374151;
     --success-color: #10b981;
     --danger-color: #ef4444;
     --card-bg: #1f2937;
     --hover-bg: #374151;
-    --modal-overlay: rgba(0, 0, 0, 0.7);
+    --modal-overlay: #0009;
     --shadow-color: rgba(0, 0, 0, 0.3);
+    color-scheme: dark;
 }
 
 /* Update existing elements to use new variables */
@@ -35,7 +39,7 @@ body {
 }
 
 .sidebar, .posts-section, .modal-content {
-    background: var(--card-bg);
+    background: var(--bg-secondary-color);
     box-shadow: 0 1px 3px var(--shadow-color);
 }
 
@@ -393,12 +397,12 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rgba(0, 0, 0, 0.5);
+background: var(--modal-overlay);
 z-index: 1000;
 }
 
 .modal-content {
-background: white;
+background: var(--bg-secondary-color);
 width: 90%;
 max-width: 800px;
 margin: 2rem auto;
@@ -725,3 +729,12 @@ margin: 1em 0 0.5em;
 margin: 0.5em 0;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background: var(--bg-color);
+        color-scheme: dark;
+    }
+    .modal-content {
+        background: var(--bg-secondary-color);
+    }
+}

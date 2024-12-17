@@ -193,5 +193,75 @@
             "components/faqs.html",
             "components/end.html"
         ]
+    },
+    {
+        "title": "Bio of Christopher Robison",
+        "file": "chris-bio.html",
+        "markdown": "md/chris-bio.md",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/chris-bio.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Bio of Kevin Ready",
+        "file": "kevin-bio.html",
+        "markdown": "md/kevin-bio.md",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/kevin-bio.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Bio of Heath Kornblum",
+        "file": "heath-bio.html",
+        "markdown": "md/heath-bio.md",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/heath-bio.html",
+            "components/end.html"
+        ]
+    },
+     {
+        "title": "Bio of Katherine Rodriguez",
+        "file": "kathy-bio.html",
+        "markdown": "md/kathy-bio.md",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/kathy-bio.html",
+            "components/end.html"
+        ]
+    },
+     {
+        "title": "Bio of Daniel Kanaan",
+        "file": "danny-bio.html",
+        "markdown": "md/danny-bio.md",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/danny-bio.html",
+            "components/end.html"
+        ]
+    },
+    {
+        "title": "Bio of Alessandro Favognano",
+        "file": "alessandro-bio.html",
+        "markdown": "md/alessandro-bio.md",
+        "templates": [
+            "components/start.html",
+            "components/pageheader.html",
+            "components/alessandro-bio.html",
+            "components/end.html"
+        ]
     }
+
+
+
+
 ]

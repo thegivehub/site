@@ -7,6 +7,10 @@ if (!file_exists("newsite")) mkdir("newsite");
 
 foreach ($pages as $page) {
     $out = "";
+    if (isset($page->markdown)) {
+        print "Generating HTML from markdown for {$page->markdown}\n";
+        $result = `./mkpage.php {$page->markdown}`;
+    }
     print "Working on {$page->title} (";
     foreach ($page->templates as $tpl) {
         $out .= preg_replace_callback("/\%\%(.+?)\%\%/", function($m) {
