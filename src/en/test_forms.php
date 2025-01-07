@@ -35,7 +35,7 @@ $testData = [
         'availability' => 'Weekends',
         'message' => 'I want to help!'
     ],
-    'donate' => [
+    'donor' => [
         'form_type' => 'donate',
         'name' => 'Test Donor',
         'email' => 'donor@test.com',

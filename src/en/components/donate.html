@@ -20,25 +20,31 @@
                             <form action="/api.php" method="POST" onsubmit="return app.donate(event)">
                                 <input type="hidden" name="form_type" value="donor">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required" />
+                                    <input type="text" style="width:49%;display:inline-block;" class="form-control" id="first_name" name="first_name" placeholder="First Name" required="required" />
+                                    <input type="text" style="width:49%;display:inline-block;" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required="required" />
+
                                 </div>
                                 <div class="control-group">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required" />
                                 </div>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-custom active">
-                                        <input type="radio" name="amount" checked> $10
+                                        <input type="radio" name="amount" checked value="10"> $10
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="amount"> $20
+                                        <input type="radio" name="amount" value="25"> $25
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="amount"> $30
+                                        <input type="radio" name="amount" value="100"> $100
                                     </label>
-                                </div>
+                                    <label class="btn btn-custom">
+                                        <input type="radio" name="amount" value="other"> Other
+                                    </label>
+                                 </div>
                                 <div>
                                     <button class="btn btn-custom" type="submit">Donate Now</button>
                                 </div>
+                                <img src="/img/qrcode.png" width="100%">
                             </form>
                         </div>
                     </div>

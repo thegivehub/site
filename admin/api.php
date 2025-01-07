@@ -101,14 +101,36 @@ function get($rsc="posts", $id="") {
     return $out;
 }
 
-function update($rsc="posts", $id, $data) {
+function fields($rsc) {
     global $link;
     
+    $rsc = $link->real_escape_string($rsc);
+    $result = $link->query("SELECT * from $rsc");
+    $fieldinfo = $result->fetch_fields();
+
+    $fields = [];
+    foreach ($fieldinfo as $field) {
+        $fields[] = $field->name;
+    }
+    return $fields;
+}
+
+function update($rsc="posts", $id, $data) {
+    global $link;
+
+    $fields = fields($rsc);
+
     $sql = "UPDATE {$rsc} SET ";
     $sets = [];
-
-    foreach ($data as $key=>$val) {
-        $sets[] = "`{$key}`='".$link->real_escape_string($val)."'";
+    
+    if (!isset($data->id)) {
+        $data->id = $id;
+    }
+    foreach ($fields as $key) {
+        if (isset($data->{$key})) {
+            $val = $data->{$key};
+            $sets[] = "`{$key}`='".$link->real_escape_string($val)."'";
+        }
     }
     $sql .= join(", ", $sets) . " WHERE id='".$link->real_escape_string($id)."'";
 
