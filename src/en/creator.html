@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <title>Page Creator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * { box-sizing: border-box; padding:0; margin:0; }
+        body {
+            font-family: "Lexend", "Helvetica Neue", "Helvetica", sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 300;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background-color:#f9f9f9;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        nav {
+            width: 20vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #fff;
+            resize: horizontal;
+            min-width: 15vw;
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid #ccc;
+        }
+
+        header {
+            height: 10vh;
+            background: #fff;
+            width: 100%;
+            overflow: auto;
+            border-bottom: 1px solid #ccc;
+        }
+        
+        article {
+            flex: 3;
+            background: #fff;
+            width: 100%;
+            overflow-y: auto;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            flex: 3;
+            height: 100vh;
+        }
+        
+        nav h1 {
+            padding: 0.5rem;
+            text-align: center;
+            background: #333;
+            color: #fff;
+            font-weight: 600;
+            white-space: nowrap;
+            text-transform: uppercase;
+        }
+
+        .component {
+            padding: 0.5rem;
+            cursor: pointer;
+        }
+
+        .component:hover {
+            background-color: #f0f0f0;
+        }
+
+        #preview {
+            width: 100%;
+            height: 30vh;
+            border: 1px solid #ccc;
+            overflow-y: auto;
+            background-color: #fff;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <h1>Page Creator</h1>
+    <div>
+        <label for="page-select" class="form-label">Choose a page template:</label>
+        <select id="page-select" class="form-select"></select>
+    </div>
+
+    <h5>Available Components</h5>
+    <div id="templates" style="overflow-y:auto; height:calc(100vh - 300px);"></div>
+</nav>
+<main>
+    <header>
+        <h1>Selected Components</h1>
+    </header>
+    <article>
+        <div id="selected-components" style="padding: 10px; border-bottom: 1px solid #ccc;"></div>
+        <button id="generate-page" class="btn btn-primary">Generate Page</button>
+        <div id="preview">
+            <iframe id="previewFrame" height="100%" width="100%"></iframe>
+        </div>
+    </article>
+</main>
+<script>
+(function() {
+    const $ = str => document.querySelector(str);
+    const $$ = str => document.querySelectorAll(str);
+
+    const app = {
+        data: [],
+        allComponents: new Set(),
+        state: {
+            loaded: false
+        },
+        init() {
+            this.fetch('pages.json', this.populatePageSelect);
+        },
+        fetch(url, callback) {
+            fetch(url).then(response => response.json()).then(data => {
+                this.data = data;
+                this.state.loaded = true;
+                this.extractAllComponents();
+                if (callback && typeof callback === "function") {
+                    callback(data);
+                }
+            }).catch(error => console.error('Fetch error:', error));
+        },
+        extractAllComponents() {
+            this.data.forEach(page => {
+                page.templates.forEach(template => this.allComponents.add(template));
+            });
+            this.displayAllComponents();
+        },
+        displayAllComponents() {
+            const templatesDiv = $('#templates');
+            templatesDiv.innerHTML = '';
+            this.allComponents.forEach(template => {
+                const div = document.createElement('div');
+                div.setAttribute("draggable", true);
+
+                div.dataset.component = template;
+                div.textContent = template.replace(/^.+?\//, '').replace(/\.html/, '');;
+
+                div.className = 'component';
+                templatesDiv.appendChild(div);
+            });
+        },
+        populatePageSelect(data) {
+            const pageSelect = $('#page-select');
+            data.forEach(page => {
+                const option = document.createElement('option');
+                option.value = page.file;
+                option.textContent = page.title;
+                pageSelect.appendChild(option);
+            });
+            pageSelect.addEventListener('change', () => {
+                app.displaySelectedComponents(pageSelect.value);
+            });
+            pageSelect.dispatchEvent(new Event('change'));
+        },
+        displaySelectedComponents(file) {
+            const page = this.data.find(p => p.file === file);
+            const selectedComponentsDiv = $('#selected-components');
+
+            selectedComponentsDiv.innerHTML = '';
+
+            if (page) {
+                page.templates.forEach(template => {
+                    const div = document.createElement('div');
+                    div.textContent = template;
+                    div.className = 'component';
+                    selectedComponentsDiv.appendChild(div);
+                });
+            }
+        },
+        async generatePage() {
+            const selectedComponentsDiv = $('#selected-components');
+            const selectedTemplates = Array.from(selectedComponentsDiv.children).map(div => div.textContent);
+
+            if (selectedTemplates.length > 0) {
+                const snippets = await Promise.all(
+                    selectedTemplates.map(template => fetch(template).then(res => res.text()))
+                );
+                const output = snippets.join('\n');
+                $('#previewFrame').contentDocument.documentElement.innerHTML = `${output}`;
+            } else {
+                $('#preview').innerHTML = '<p>No components selected!</p>';
+            }
+        }
+    };
+
+    $('#generate-page').addEventListener('click', () => app.generatePage());
+
+    window.app = app;
+    app.init();
+})();
+</script>
+</body>
+</html>

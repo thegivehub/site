@@ -4,15 +4,16 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5">
                         <div class="volunteer-form">
-                            <form>
+                            <form action="/api.php" method="POST" onsubmit="return app.volunteer()">
+                                <input type="hidden" name="form_type" value="volunteer">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" placeholder="Why you want to become a volunteer?" required="required"></textarea>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Why you want to become a volunteer?" required="required"></textarea>
                                 </div>
                                 <div>
                                     <button class="btn btn-custom" type="submit">Become a volunteer</button>

@@ -63,7 +63,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">The Give Hub</a>
+                <a href="index.html" class="navbar-brand"><img src="/img/favicon.svg" height="50"> The Give Hub</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -131,15 +131,16 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5">
                         <div class="volunteer-form">
-                            <form>
+                            <form action="/api.php" method="POST" onsubmit="return app.volunteer()">
+                                <input type="hidden" name="form_type" value="volunteer">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <textarea class="form-control" placeholder="Why you want to become a volunteer?" required="required"></textarea>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Why you want to become a volunteer?" required="required"></textarea>
                                 </div>
                                 <div>
                                     <button class="btn btn-custom" type="submit">Become a volunteer</button>
@@ -207,8 +208,9 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-newsletter">
                             <h2>Newsletter</h2>
-                            <form>
-                                <input class="form-control" placeholder="Email goes here">
+                            <form action="/api.php" method="POST">
+                                <input type="hidden" name="form_type" value="newsletter">
+                                <input class="form-control" name="email" id="newsletter_email" placeholder="Email goes here">
                                 <button class="btn btn-custom">Submit</button>
                                 <label>Don't worry, we don't spam!</label>
                             </form>
@@ -220,9 +222,7 @@
             <div class="container copyright">
                 <div class="row">
                     <div class="col-md-6">
-                   </div>
-                    <div class="col-md-6">
-                        <p>&copy; <a href="#">The Give Hub</a>, All Right Reserved.</p>
+                        <p>&copy; 2025 <a href="#">The Give Hub</a>, All Right Reserved.</p>
                     </div>
                     <div class="col-md-6">
                     </div>

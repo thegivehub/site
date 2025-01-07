@@ -17,22 +17,23 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="donate-form">
-                            <form>
+                            <form action="/api.php" method="POST" onsubmit="return app.donate(event)">
+                                <input type="hidden" name="form_type" value="donor">
                                 <div class="control-group">
-                                    <input type="text" class="form-control" placeholder="Name" required="required" />
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required" />
                                 </div>
                                 <div class="control-group">
-                                    <input type="email" class="form-control" placeholder="Email" required="required" />
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required="required" />
                                 </div>
                                 <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-custom active">
-                                        <input type="radio" name="options" checked> $10
+                                        <input type="radio" name="amount" checked> $10
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="options"> $20
+                                        <input type="radio" name="amount"> $20
                                     </label>
                                     <label class="btn btn-custom">
-                                        <input type="radio" name="options"> $30
+                                        <input type="radio" name="amount"> $30
                                     </label>
                                 </div>
                                 <div>

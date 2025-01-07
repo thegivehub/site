@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="792" viewBox="0 0 612 792" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Top Border -->
+  <rect x="0" y="0" width="612" height="10" fill="#0033A0" />
+  <rect x="0" y="12" width="612" height="6" fill="#FFD700" />
+
+  <!-- Logo Placeholder -->
+  <circle cx="60" cy="60" r="40" fill="#FFD700" stroke="#0033A0" stroke-width="3" />
+  <text x="60" y="65" font-size="20" font-family="Arial, sans-serif" text-anchor="middle" fill="#0033A0" font-weight="bold">
+    LOGO
+  </text>
+
+  <!-- Text Details -->
+  <text x="120" y="40" font-size="20" font-family="Georgia, serif" fill="#0033A0" font-weight="bold">
+    Oficina de la Senadora María José Pizarro Rodríguez
+  </text>
+  <text x="120" y="70" font-size="16" font-family="Georgia, serif" fill="#0033A0">
+    Senado de la República de Colombia
+  </text>
+  <text x="120" y="95" font-size="16" font-family="Georgia, serif" fill="#0033A0">
+    Bogotá, Colombia
+  </text>
+
+  <!-- Bottom Border -->
+  <rect x="0" y="782" width="612" height="6" fill="#FFD700" />
+  <rect x="0" y="788" width="612" height="10" fill="#0033A0" />
+</svg>
