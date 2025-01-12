@@ -55,7 +55,7 @@ for ($i=0; $i<5; $i++) {
     print $newobj->raised . " / " .$newobj->goal."\n";
     $newobj->cnt = $i;
     $newobj->progress = floor(($newobj->raised / $newobj->goal) * 100);
-    $newobj->id = $obj->_id->{'$oid'};
+    $newobj->id = $obj->_id;
 
     $out .= preg_replace_callback("/\%\%(.+?)\%\%/", function($m) {
         global $newobj;
