@@ -89,18 +89,23 @@
             width: 100%;
             padding: 10px;
         }
+        h5 {
+            background: #333;
+            color: #fff;
+            padding: 0.25em;
+        }
     </style>
 </head>
 <body>
 <nav>
-    <h1>Page Creator</h1>
-    <div>
-        <label for="page-select" class="form-label">Choose a page template:</label>
-        <select id="page-select" class="form-select"></select>
+    <h5>Page Creator</h5>
+    <div style="display:flex;flex-direction:column;">
+        <label for="page-select" class="form-label">Pages</label>
+        <div id="page-select" class="form-select"></div>
     </div>
 
     <h5>Available Components</h5>
-    <div id="templates" style="overflow-y:auto; height:calc(100vh - 300px);"></div>
+    <div id="templates" style="overflow-y:auto;"></div>
 </nav>
 <main>
     <header>
