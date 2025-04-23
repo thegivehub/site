@@ -5,7 +5,7 @@ $link = mysqli_connect($env->db->host, $env->db->user, $env->db->pass, "givehub"
 
 $results = $link->query("select * from posts order by id desc limit 5");
 
-$posts = preg_split("/\n/", $txt);
+//$posts = preg_split("/\n/", $txt);
 
 /* 
 id, slug, title, subtitle, content, excerpt, featured_image_url, author_id, status, language, reading_time_minutes

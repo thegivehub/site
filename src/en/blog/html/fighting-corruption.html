@@ -28,7 +28,20 @@
 
         <!-- Template Stylesheet -->
         <link href="/css/style.css" rel="stylesheet">
-
+        <style>
+            .signup-btn {
+                color:#dd9922;border-radius: 5px;padding: 4px 0.4em; border:3px solid #dd9922;
+                transition: all 200ms linear;
+                scale: 1;
+            }
+            .signup-btn:hover {
+                scale: 1.1;
+            }
+            .signup-btn:active {
+                background: #dd9922;
+                color: #fff;
+            }
+        </style>
     </head>
 
     <body>
@@ -51,6 +64,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="top-bar-right">
+                            <a class='signup-btn' style="color:#dd9922;border-radius: 5px;padding: 4px 0.4em; border:3px solid #dd9922;" href="https://app.thegivehub.com/register.html" target="_blank"><img src="/img/signup.svg" height="28"> Signup</a>
                             <div class="social">
                                 <a href="https://x.com/thegivehub97501"><i class="fab fa-twitter"></i></a>
                                 <a href="https://www.facebook.com/people/The-Give-Hub/61568306136450/"><i class="fab fa-facebook-f"></i></a>
@@ -69,7 +83,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="/index.html" class="navbar-brand"><img src="/img/favicon.svg" height="50"> The Give Hub</a>
+                <a href="/en/index.html" class="navbar-brand"><img src="/img/favicon.svg" height="50"> The Give Hub</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -86,7 +100,7 @@
                             </div>
                         </div>
                         <a href="https://blog.thegivehub.com/en/" class="nav-item nav-link">Blog</a>
-                        <a href="https://thegivehub.com/en/causes.html" class="nav-item nav-link">Causes</a>
+                        <a href="https://app.thegivehub.com/" class="nav-item nav-link">App</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Participate</a>
                             <div class="dropdown-menu">
@@ -318,9 +332,7 @@ dollar goes where it’s needed most.</p>
                             </form>
                         </div>
                     </div>
-                    
-Warning: Undefined variable $txt in /home/cdr/domains/thegivehub.com/www/site/src/en/blog/genrecent.php on line 8
-<div class="sidebar-widget">
+                    <div class="sidebar-widget">
     <h2 class="widget-title">Recent Posts</h2>
     <div class="recent-post">
                 <div class="post-item">
