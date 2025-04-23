@@ -777,6 +777,7 @@
                     <div class="col-lg-5">
                         <div class="volunteer-form">
                             <form action="/api.php" method="POST" onsubmit="return app.volunteer()">
+                                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
                                 <input type="hidden" name="form_type" value="volunteer">
                                 <div class="control-group">
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Name" required="required" />
@@ -787,6 +788,7 @@
                                 <div class="control-group">
                                     <textarea class="form-control" id="message" name="message" placeholder="Why you want to become a volunteer?" required="required"></textarea>
                                 </div>
+                                <div class="g-recaptcha" data-sitekey="6LcVSiIrAAAAAO5xWxeb0omOu8yQStZTEX1J6Gut"></div>
                                 <div>
                                     <button class="btn btn-custom" type="submit">Become a volunteer</button>
                                 </div>
